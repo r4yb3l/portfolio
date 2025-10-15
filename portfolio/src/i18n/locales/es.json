@@ -1,7 +1,7 @@
 {
   "navigation": {
     "hero": "Inicio",
-    "about": "Sobre Mí",
+    "about": "Me presento",
     "skills": "Habilidades",
     "projects": "Proyectos",
     "contact": "Contacto"
@@ -16,10 +16,10 @@
     }
   },
   "about": {
-    "title": "Sobre Mí",
+    "title": "Me presento",
     "subtitle": "Desarrollador Full Stack",
-    "description1": "Soy un desarrollador apasionado por crear soluciones digitales innovadoras. Me especializo en tecnologías modernas como React, Node.js, y Python, siempre buscando la mejor experiencia para el usuario.",
-    "description2": "Con más de 3 años de experiencia en desarrollo web, he trabajado en proyectos que van desde aplicaciones web simples hasta sistemas complejos de e-commerce y aplicaciones móviles.",
+    "description1": "Ingeniero de software con 4+ años en desarrollo web y móvil. Sólido dominio de React y TypeScript en frontend (arquitectura de componentes, gestión de estado con Redux/Context y performance web) y especialización en Flutter/Firebase para productos multiplataforma.",
+    "description2": "He liderado y contribuido en proyectos como SnapnFund, All in Biking y TimeForemost, integrando APIs REST, Stripe/QuickBooks y Google Cloud. Enfoque en soluciones escalables y experiencias fluidas. Fan de la F1 por la precisión y la velocidad, cualidades que traslado al código y al trabajo en equipo.",
     "technologies": {
       "react": "React",
       "nodejs": "Node.js",
@@ -35,7 +35,14 @@
     "frontendDesc": "React, Vue, Angular",
     "backendDesc": "Node.js, Python, PHP",
     "designDesc": "Figma, Adobe XD",
-    "cloudDesc": "AWS, Vercel, Netlify"
+    "cloudDesc": "AWS, Vercel, Netlify",
+    "tags": {
+      "frontend": ["React", "TypeScript", "Redux", "Next.js", "Vite"],
+      "backend": ["Node.js", "ASP.NET Core", "NestJS", "REST APIs"],
+      "mobile": ["Flutter", "React Native", "Firebase"],
+      "cloud": ["Google Cloud", "AWS", "Stripe", "QuickBooks"],
+      "tools": ["Git", "GitHub", "SCRUM", "Figma"]
+    }
   },
   "projects": {
     "title": "Proyectos",

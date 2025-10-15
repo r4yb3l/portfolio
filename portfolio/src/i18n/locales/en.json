@@ -1,7 +1,7 @@
 {
   "navigation": {
     "hero": "Home",
-    "about": "About",
+    "about": "About Me",
     "skills": "Skills",
     "projects": "Projects",
     "contact": "Contact"
@@ -18,8 +18,8 @@
   "about": {
     "title": "About Me",
     "subtitle": "Full Stack Developer",
-    "description1": "I'm a developer passionate about creating innovative digital solutions. I specialize in modern technologies like React, Node.js, and Python, always seeking the best user experience.",
-    "description2": "With over 3 years of web development experience, I've worked on projects ranging from simple web applications to complex e-commerce systems and mobile applications.",
+    "description1": "Software engineer with 4+ years in web and mobile development. Strong command of React and TypeScript on the frontend (component architecture, state management with Redux/Context, and web performance), plus specialization in Flutter/Firebase for cross‑platform products.",
+    "description2": "I have led and contributed to projects like SnapnFund, All in Biking, and TimeForemost, integrating REST APIs, Stripe/QuickBooks, and Google Cloud. Focused on scalable solutions and smooth UX. An F1 fan for precision and speed—qualities I bring to code and teamwork.",
     "technologies": {
       "react": "React",
       "nodejs": "Node.js",
@@ -35,7 +35,14 @@
     "frontendDesc": "React, Vue, Angular",
     "backendDesc": "Node.js, Python, PHP",
     "designDesc": "Figma, Adobe XD",
-    "cloudDesc": "AWS, Vercel, Netlify"
+    "cloudDesc": "AWS, Vercel, Netlify",
+    "tags": {
+      "frontend": ["React", "TypeScript", "Redux", "Next.js", "Vite"],
+      "backend": ["Node.js", "ASP.NET Core", "NestJS", "REST APIs"],
+      "mobile": ["Flutter", "React Native", "Firebase"],
+      "cloud": ["Google Cloud", "AWS", "Stripe", "QuickBooks"],
+      "tools": ["Git", "GitHub", "SCRUM", "Figma"]
+    }
   },
   "projects": {
     "title": "Projects",

@@ -17,7 +17,7 @@ const Hero = () => {
     <section 
       id="hero"
       ref={ref}
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative h-screen flex items-start justify-center overflow-hidden pt-16 md:pt-24"
     >
 
       {/* Content */}
@@ -92,7 +92,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-24 md:bottom-28 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
