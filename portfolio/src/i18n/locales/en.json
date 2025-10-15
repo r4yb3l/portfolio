@@ -1,0 +1,90 @@
+{
+  "navigation": {
+    "hero": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Raybel Hernández",
+    "title": "Full Stack Developer with strong frontend mobile and web expertise.",
+    "subtitle": "Passionate about F1's speed and precision in every line of code.",
+    "cta": {
+      "projects": "View Projects",
+      "contact": "Get in Touch"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Full Stack Developer",
+    "description1": "I'm a developer passionate about creating innovative digital solutions. I specialize in modern technologies like React, Node.js, and Python, always seeking the best user experience.",
+    "description2": "With over 3 years of web development experience, I've worked on projects ranging from simple web applications to complex e-commerce systems and mobile applications.",
+    "technologies": {
+      "react": "React",
+      "nodejs": "Node.js",
+      "python": "Python"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "design": "Design",
+    "cloud": "Cloud",
+    "frontendDesc": "React, Vue, Angular",
+    "backendDesc": "Node.js, Python, PHP",
+    "designDesc": "Figma, Adobe XD",
+    "cloudDesc": "AWS, Vercel, Netlify"
+  },
+  "projects": {
+    "title": "Projects",
+    "ecommerce": {
+      "title": "E-commerce Platform",
+      "description": "Complete e-commerce platform with React, Node.js and MongoDB"
+    },
+    "taskManager": {
+      "title": "Task Management App",
+      "description": "Task management application with drag & drop and real-time features"
+    },
+    "weatherDashboard": {
+      "title": "Weather Dashboard",
+      "description": "Weather dashboard with interactive visualizations"
+    },
+    "technologies": {
+      "react": "React",
+      "nodejs": "Node.js",
+      "mongodb": "MongoDB",
+      "stripe": "Stripe",
+      "socketio": "Socket.io",
+      "express": "Express",
+      "postgresql": "PostgreSQL",
+      "vuejs": "Vue.js",
+      "chartjs": "Chart.js",
+      "api": "API Integration"
+    },
+    "actions": {
+      "github": "GitHub",
+      "liveDemo": "Live Demo"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's Talk!",
+    "description": "Have a project in mind? I'd love to hear about it. I'm always open to new opportunities and interesting collaborations.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your@email.com",
+      "messagePlaceholder": "Tell me about your project...",
+      "submit": "Send Message"
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    }
+  }
+}

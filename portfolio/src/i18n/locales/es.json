@@ -1,0 +1,90 @@
+{
+  "navigation": {
+    "hero": "Inicio",
+    "about": "Sobre Mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "name": "Raybel Hernández",
+    "title": "Desarrollador Full Stack con fuerte formación en frontend mobile y web.",
+    "subtitle": "Apasionado por la velocidad y precisión de la F1 en cada línea de código.",
+    "cta": {
+      "projects": "Ver Proyectos",
+      "contact": "Contactar"
+    }
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "subtitle": "Desarrollador Full Stack",
+    "description1": "Soy un desarrollador apasionado por crear soluciones digitales innovadoras. Me especializo en tecnologías modernas como React, Node.js, y Python, siempre buscando la mejor experiencia para el usuario.",
+    "description2": "Con más de 3 años de experiencia en desarrollo web, he trabajado en proyectos que van desde aplicaciones web simples hasta sistemas complejos de e-commerce y aplicaciones móviles.",
+    "technologies": {
+      "react": "React",
+      "nodejs": "Node.js",
+      "python": "Python"
+    }
+  },
+  "skills": {
+    "title": "Habilidades",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "design": "Design",
+    "cloud": "Cloud",
+    "frontendDesc": "React, Vue, Angular",
+    "backendDesc": "Node.js, Python, PHP",
+    "designDesc": "Figma, Adobe XD",
+    "cloudDesc": "AWS, Vercel, Netlify"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "ecommerce": {
+      "title": "E-commerce Platform",
+      "description": "Plataforma completa de e-commerce con React, Node.js y MongoDB"
+    },
+    "taskManager": {
+      "title": "Task Management App",
+      "description": "Aplicación de gestión de tareas con drag & drop y tiempo real"
+    },
+    "weatherDashboard": {
+      "title": "Weather Dashboard",
+      "description": "Dashboard meteorológico con visualizaciones interactivas"
+    },
+    "technologies": {
+      "react": "React",
+      "nodejs": "Node.js",
+      "mongodb": "MongoDB",
+      "stripe": "Stripe",
+      "socketio": "Socket.io",
+      "express": "Express",
+      "postgresql": "PostgreSQL",
+      "vuejs": "Vue.js",
+      "chartjs": "Chart.js",
+      "api": "API Integration"
+    },
+    "actions": {
+      "github": "GitHub",
+      "liveDemo": "Live Demo"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¡Hablemos!",
+    "description": "¿Tienes un proyecto en mente? Me encantaría escuchar sobre él. Estoy siempre abierto a nuevas oportunidades y colaboraciones interesantes.",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje",
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "tu@email.com",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+      "submit": "Enviar Mensaje"
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Teléfono",
+      "location": "Ubicación"
+    }
+  }
+}

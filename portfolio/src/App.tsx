@@ -7,7 +7,6 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Navigation from './components/Navigation'
 import Iridescence from './components/Iridescence'
-import FloatingParticles from './components/FloatingParticles'
 
 function App() {
   const [webglSupported, setWebglSupported] = useState(true)
@@ -19,9 +18,9 @@ function App() {
   }, [])
 
   return (
-    <div className="relative min-h-screen">
-      {/* Fixed iridescent background */}
-      <div className="fixed inset-0 w-full h-full z-0">
+    <div className="relative">
+      {/* Fondo iridiscente de OGL */}
+      <div className="fixed inset-0 w-full h-full z-0 pointer-events-none">
         {webglSupported ? (
           <Iridescence
             color={[0.8, 0.0, 0.0]}
@@ -30,17 +29,14 @@ function App() {
             speed={1.5}
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-red-900 via-red-800 to-red-700 animate-pulse" />
+          <div className="w-full h-full bg-gradient-to-br from-red-900 via-red-800 to-red-700" />
         )}
       </div>
-      
-      {/* Floating particles */}
-      <FloatingParticles />
       
       {/* Content that scrolls over the background */}
       <div className="relative z-10">
         <Navigation />
-        <main className="overflow-x-hidden">
+        <main>
           <Hero />
           <About />
           <Skills />
