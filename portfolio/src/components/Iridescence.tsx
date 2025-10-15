@@ -59,9 +59,6 @@ export default function Iridescence({ color = [1, 1, 1], speed = 1.0, amplitude 
     if (!ctnDom.current) return;
     const ctn = ctnDom.current;
     
-    // Si ya está inicializado, no reiniciar
-    if (rendererRef.current) return;
-    
     try {
       const renderer = new Renderer();
       const gl = renderer.gl;
@@ -146,9 +143,8 @@ export default function Iridescence({ color = [1, 1, 1], speed = 1.0, amplitude 
     } catch (error) {
       console.error('Error initializing Iridescence:', error);
     }
-    // Solo inicializar una vez
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [color, speed, amplitude, mouseReact]);
 
   return (
     <div ref={ctnDom} className="iridescence-container" {...rest}>
