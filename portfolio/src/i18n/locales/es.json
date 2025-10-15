@@ -26,6 +26,7 @@
       "python": "Python"
     }
   },
+
   "skills": {
     "title": "Habilidades",
     "frontend": "Frontend",
@@ -58,6 +59,27 @@
       "title": "Weather Dashboard",
       "description": "Dashboard meteorológico con visualizaciones interactivas"
     },
+    "entries": {
+      "snapnfund": {
+        "description": "SnapnFund Development: SnapnFund permite que los compradores conviertan sus compras diarias en donaciones escaneando recibos y dirigiendo fondos a organizaciones sin fines de lucro aliadas. Lideré la entrega full stack entre la app móvil en Flutter, la experiencia web en React y los servicios en Firebase + ASP.NET, encargándome de la arquitectura, gestión de estado y automatización de despliegues. Colaboré en un equipo SCRUM para integrar OCR, flujos de pago seguros y ajustes de UI responsiva que mantuvieron el flujo de donaciones rápido y confiable."
+      },
+      "dealerslash": {
+        "description": "DealerSlash Marketplace: Plataforma de compra y venta de vehículos modernizada desde un API Java Spring heredado hacia un backend escalable en ASP.NET Core. Guié la migración a servicios de Google Cloud y diseñé una experiencia móvil en Flutter con componentes UI a medida, flujos de inventario en tiempo real y animaciones pulidas que hicieron que explorar y reservar vehículos se sintiera premium."
+      },
+      "automedic": {
+        "description": "AutoMedic Mobile: Desarrollé la app móvil para AutoMedic, una franquicia de talleres mecánicos enfocada en mantenimiento preventivo y reparaciones de emergencia. La solución en Flutter ofrece alertas de fallas en tiempo real, agenda de citas y facturación integrada con QuickBooks, apoyada por servicios en Google Cloud y APIs en ASP.NET. Implementé funciones avanzadas de Google Maps para localizar sucursales, rutas y recordatorios de servicio, destacando mi dominio de arquitectura móvil y de Dart."
+      }
+    },
+    "timeline": {
+      "prodev": {
+        "name": "ProDev Solutions LLC",
+        "period": "septiembre 2021 a junio de 2023"
+      },
+      "ntsprint": {
+        "name": "NTSprint",
+        "period": "marzo 2023 a junio de 2023"
+      }
+    },
     "technologies": {
       "react": "React",
       "nodejs": "Node.js",
@@ -72,7 +94,9 @@
     },
     "actions": {
       "github": "GitHub",
-      "liveDemo": "Live Demo"
+      "liveDemo": "Live Demo",
+      "visitSite": "Visitar sitio",
+      "notAvailable": "Actualmente no disponible"
     }
   },
   "contact": {

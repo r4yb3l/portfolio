@@ -1,5 +1,6 @@
-import { Renderer, Program, Mesh, Color, Triangle } from 'ogl';
+import { Renderer, Program, Mesh, Color, Triangle, Geometry } from 'ogl';
 import { useEffect, useRef, useState } from 'react';
+import type { MouseEvent } from 'react';
 
 import './Iridescence.css';
 
@@ -46,14 +47,14 @@ void main() {
 }
 `;
 
-export default function Iridescence({ color = [1, 1, 1], speed = 1.0, amplitude = 0.1, mouseReact = true, ...rest }) {
-  const ctnDom = useRef(null);
+export default function Iridescence({ color = [0.4, 0.65, 1], speed = 1.0, amplitude = 0.1, mouseReact = true, ...rest }) {
+  const ctnDom = useRef<HTMLDivElement | null>(null);
   const mousePos = useRef({ x: 0.5, y: 0.5 });
   const [isLoaded, setIsLoaded] = useState(false);
-  const rendererRef = useRef(null);
-  const programRef = useRef(null);
-  const meshRef = useRef(null);
-  const animateIdRef = useRef(null);
+  const rendererRef = useRef<Renderer | null>(null);
+  const programRef = useRef<Program | null>(null);
+  const meshRef = useRef<Mesh<Geometry, Program> | null>(null);
+  const animateIdRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (!ctnDom.current) return;
@@ -62,7 +63,7 @@ export default function Iridescence({ color = [1, 1, 1], speed = 1.0, amplitude 
     try {
       const renderer = new Renderer();
       const gl = renderer.gl;
-      gl.clearColor(1, 1, 1, 1);
+      gl.clearColor(0.9, 0.95, 1, 1);
       
       // Guardar referencias
       rendererRef.current = renderer;
@@ -103,7 +104,7 @@ export default function Iridescence({ color = [1, 1, 1], speed = 1.0, amplitude 
     const mesh = new Mesh(gl, { geometry, program });
     meshRef.current = mesh;
 
-    function update(t) {
+    function update(t: number) {
       animateIdRef.current = requestAnimationFrame(update);
       program.uniforms.uTime.value = t * 0.001;
       renderer.render({ scene: mesh });
@@ -112,7 +113,7 @@ export default function Iridescence({ color = [1, 1, 1], speed = 1.0, amplitude 
     ctn.appendChild(gl.canvas);
     setIsLoaded(true);
 
-    function handleMouseMove(e) {
+    function handleMouseMove(e: MouseEvent) {
       const rect = ctn.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width;
       const y = 1.0 - (e.clientY - rect.top) / rect.height;
@@ -123,7 +124,7 @@ export default function Iridescence({ color = [1, 1, 1], speed = 1.0, amplitude 
       }
     }
     if (mouseReact) {
-      ctn.addEventListener('mousemove', handleMouseMove);
+      ctn.addEventListener('mousemove', handleMouseMove as any);
     }
 
     return () => {
@@ -132,7 +133,7 @@ export default function Iridescence({ color = [1, 1, 1], speed = 1.0, amplitude 
       }
       window.removeEventListener('resize', resize);
       if (mouseReact) {
-        ctn.removeEventListener('mousemove', handleMouseMove);
+        ctn.removeEventListener('mousemove', handleMouseMove as any);
       }
       if (ctn.contains(gl.canvas)) {
         ctn.removeChild(gl.canvas);

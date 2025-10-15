@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion'
+
 import { useState, useEffect } from 'react'
 import Hero from './components/Hero'
 import About from './components/About'
-import Skills from './components/Skills'
+
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Navigation from './components/Navigation'
@@ -23,13 +23,13 @@ function App() {
       <div className="fixed inset-0 w-full h-full z-0 pointer-events-none">
         {webglSupported ? (
           <Iridescence
-            color={[0.8, 0.0, 0.0]}
+            color={[0.65, 0.85, 1]}
             mouseReact={true}
             amplitude={0.15}
             speed={1.5}
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-red-900 via-red-800 to-red-700" />
+          <div className="w-full h-full bg-gradient-to-br from-sky-200 via-sky-300 to-blue-300" />
         )}
       </div>
       
@@ -39,7 +39,7 @@ function App() {
         <main>
           <Hero />
           <About />
-          <Skills />
+
           <Projects />
           <Contact />
         </main>

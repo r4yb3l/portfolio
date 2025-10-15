@@ -26,6 +26,7 @@
       "python": "Python"
     }
   },
+
   "skills": {
     "title": "Skills",
     "frontend": "Frontend",
@@ -58,6 +59,27 @@
       "title": "Weather Dashboard",
       "description": "Weather dashboard with interactive visualizations"
     },
+    "entries": {
+      "snapnfund": {
+        "description": "SnapnFund Development: SnapnFund empowers shoppers to turn everyday purchases into donations by scanning receipts and directing funds to partner nonprofits. I led the full-stack delivery across the Flutter mobile app, the React web experience, and Firebase + ASP.NET services, owning architecture, state management, and release automation. Worked within a SCRUM team to integrate OCR, secure payment workflows, and responsive UI refinements that kept the donor flow fast and reliable."
+      },
+      "dealerslash": {
+        "description": "DealerSlash Marketplace: A vehicle buying and selling platform modernized from a legacy Java Spring API into a scalable ASP.NET Core backend. I drove the cloud migration to Google Cloud services and crafted a Flutter mobile experience with bespoke UI components, real-time inventory flows, and polished animations that made browsing and reserving vehicles feel premium."
+      },
+      "automedic": {
+        "description": "AutoMedic Mobile: Built the Flutter app for AutoMedic, a franchise network of mechanic shops that handles preventative maintenance and emergency repairs. The mobile experience delivers live malfunction alerts, appointment scheduling, and QuickBooks-backed invoicing on top of Google Cloud infrastructure and ASP.NET APIs. Implemented advanced Google Maps capabilities for shop discovery, routing, and service reminders, highlighting deep expertise in mobile architecture and Dart."
+      }
+    },
+    "timeline": {
+      "prodev": {
+        "name": "ProDev Solutions LLC",
+        "period": "September 2021 to June 2023"
+      },
+      "ntsprint": {
+        "name": "NTSprint",
+        "period": "March 2023 to June 2023"
+      }
+    },
     "technologies": {
       "react": "React",
       "nodejs": "Node.js",
@@ -72,7 +94,9 @@
     },
     "actions": {
       "github": "GitHub",
-      "liveDemo": "Live Demo"
+      "liveDemo": "Live Demo",
+      "visitSite": "Visit Site",
+      "notAvailable": "Currently unavailable"
     }
   },
   "contact": {
