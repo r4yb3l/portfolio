@@ -2,6 +2,9 @@ import { useState, type ChangeEvent, type FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useTranslation } from 'react-i18next'
+import emailIcon from '../assets/icons/email.svg'
+import phoneIcon from '../assets/icons/phone.svg'
+import locationIcon from '../assets/icons/location.svg'
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -73,9 +76,9 @@ const Contact = () => {
 
               <div className="space-y-6">
                 {[
-                  { icon: '/src/assets/icons/email.svg', label: t('contact.info.email'), value: 'raybel.developer@gmail.com', invert: true },
-                  { icon: '/src/assets/icons/phone.svg', label: t('contact.info.phone'), value: '+505 8839 0152', invert: false },
-                  { icon: '/src/assets/icons/location.svg', label: t('contact.info.location'), value: 'Estelí, Nicaragua', invert: false },
+                  { icon: emailIcon, label: t('contact.info.email'), value: 'raybel.developer@gmail.com', invert: true },
+                  { icon: phoneIcon, label: t('contact.info.phone'), value: '+505 8839 0152', invert: false },
+                  { icon: locationIcon, label: t('contact.info.location'), value: 'Estelí, Nicaragua', invert: false },
                 ].map((contact, index) => (
                   <motion.div
                     key={contact.label}
