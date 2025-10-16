@@ -5,12 +5,12 @@ import Experience from './Experience'
 import prodevLogo from '../assets/logos/business/prodev.svg'
 import ntsprintLogo from '../assets/logos/business/ntsprint.svg'
 import netforemostLogo from '../assets/logos/business/netforemost.svg'
+import qaBitLogo from '../assets/logos/business/qa-bit.svg'
 import snapnfundImage from '../assets/images/snapnfund.png'
 import dealerslashImage from '../assets/images/dealerslash.png'
 import followAppImage from '../assets/images/followApp.png'
 import automedicImage from '../assets/images/automedic.png'
 import timeforemostImage from '../assets/images/timeforemost.png'
-import qaBitLogo from '../assets/logos/business/qa-bit.svg'
 import allInBikingImage from '../assets/images/allinbiking.png'
 import retarificadorImage from '../assets/images/retarificador.png'
 
@@ -35,7 +35,7 @@ const Projects = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto"></div>
         </motion.div>
 
-        <div className="flex items-center justify-center mb-12">
+        <div id="prodev" className="flex items-center justify-center mb-12">
           <div className="flex items-center gap-4 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
             <div className="w-14 h-14 rounded-full border border-white/40 bg-white flex items-center justify-center">
               <img
@@ -79,7 +79,7 @@ const Projects = () => {
         />
       </div>
 
-      <div className="flex justify-center px-4 mb-12">
+      <div id="ntsprint" className="flex justify-center px-4 mb-12">
         <div className="flex items-center gap-4 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
           <div className="w-14 h-14 rounded-full border border-white/40 bg-white flex items-center justify-center">
             <img
@@ -107,7 +107,7 @@ const Projects = () => {
         />
       </div>
 
-      <div className="flex justify-center px-4 mb-12">
+      <div id="netforemost" className="flex justify-center px-4 mb-12">
         <div className="flex items-center gap-4 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
           <div className="w-14 h-14 rounded-full border border-white/40 bg-white flex items-center justify-center">
             <img
@@ -135,7 +135,7 @@ const Projects = () => {
         />
       </div>
 
-      <div className="flex justify-center px-4 mb-12">
+      <div id="qabit" className="flex justify-center px-4 mb-12">
         <div className="flex items-center gap-4 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
           <div className="w-16 h-16 rounded-full border border-white/40 bg-white flex items-center justify-center">
             <img
