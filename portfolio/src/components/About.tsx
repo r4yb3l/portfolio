@@ -30,7 +30,7 @@ const About = () => {
   }
 
   return (
-    <section id="about" className="min-h-screen py-12 relative">
+    <section id="about" className="py-24 relative">
       {/* Container sin fondo - scrollea sobre el iridiscente */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
