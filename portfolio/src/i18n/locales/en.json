@@ -73,7 +73,7 @@
         "description": "TimeForemost: Participated in building an enterprise time tracking platform that grew from an internal tool into a full productivity monitoring and analytics service. Contributed to Flutter, NestJS, Google Cloud, and Stripe integrations, highlighting cross-platform delivery, backend orchestration, and payment processing expertise."
       },
       "automedic": {
-        "description": "AutoMedic Mobile: Built the Flutter app for AutoMedic, a franchise network of mechanic shops that handles preventative maintenance and emergency repairs. The mobile experience delivers live malfunction alerts, appointment scheduling, and QuickBooks-backed invoicing on top of Google Cloud infrastructure and ASP.NET APIs. Implemented advanced Google Maps capabilities for shop discovery, routing, and service reminders, highlighting deep expertise in mobile architecture and Dart."
+        "description": "AutoMedic Consulting: Served as an external consultant embedded with AutoMedic's development team, a franchise network of mechanic shops. My participation focused on integrating Google Maps for shop discovery and routing and wiring QuickBooks into their invoicing flows to automate billing. Partnered closely with the in-house engineers to land the integrations cleanly within the existing infrastructure."
       },
       "allInBiking": {
         "description": "All In Biking: Led the frontend for a cyclist-focused social network on Android and iOS, enabling riders to share moments, enter competitions, and connect with organizations. Directed the Flutter implementation backed by Firebase, Google Cloud, and Neo4J to deliver seamless realtime data and resilient social features."
