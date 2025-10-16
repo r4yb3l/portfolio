@@ -51,16 +51,20 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto pl-4 pr-0 sm:pl-6 lg:pl-8">
         <div className="flex justify-between items-center h-16">
-          <motion.div
+          <motion.button
             whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection('hero')}
             className="px-4 py-2 rounded-xl bg-black/20 backdrop-blur-md border border-white/10 shadow-lg"
+            aria-label="Ir al inicio"
+            type="button"
           >
-            <img 
-              src="/src/assets/logos/logo-alt.svg" 
-              alt="Raybel Hernandez Logo" 
+            <img
+              src="/src/assets/logos/logo-alt.svg"
+              alt="Raybel Hernandez Logo"
               className="w-8 h-8 object-contain"
             />
-          </motion.div>
+          </motion.button>
           
           <div className="hidden md:flex space-x-4 items-center">
             {['hero', 'about', 'skills', 'projects', 'contact'].map((item) => (
