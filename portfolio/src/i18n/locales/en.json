@@ -66,8 +66,20 @@
       "dealerslash": {
         "description": "DealerSlash Marketplace: A vehicle buying and selling platform modernized from a legacy Java Spring API into a scalable ASP.NET Core backend. I drove the cloud migration to Google Cloud services and crafted a Flutter mobile experience with bespoke UI components, real-time inventory flows, and polished animations that made browsing and reserving vehicles feel premium."
       },
+      "followApp": {
+        "description": "Follow App: A mobile platform that connects faith communities to share discipleship courses, multimedia resources, and live teachings. I led the Flutter architecture and integrated NestJS + Firebase services for streaming, notifications, and progress tracking. Delivered leader dashboards, multilingual support, and accessible interfaces that reflect each congregation's voice."
+      },
+      "timeforemost": {
+        "description": "TimeForemost: Participated in building an enterprise time tracking platform that grew from an internal tool into a full productivity monitoring and analytics service. Contributed to Flutter, NestJS, Google Cloud, and Stripe integrations, highlighting cross-platform delivery, backend orchestration, and payment processing expertise."
+      },
       "automedic": {
         "description": "AutoMedic Mobile: Built the Flutter app for AutoMedic, a franchise network of mechanic shops that handles preventative maintenance and emergency repairs. The mobile experience delivers live malfunction alerts, appointment scheduling, and QuickBooks-backed invoicing on top of Google Cloud infrastructure and ASP.NET APIs. Implemented advanced Google Maps capabilities for shop discovery, routing, and service reminders, highlighting deep expertise in mobile architecture and Dart."
+      },
+      "allInBiking": {
+        "description": "All In Biking: Led the frontend for a cyclist-focused social network on Android and iOS, enabling riders to share moments, enter competitions, and connect with organizations. Directed the Flutter implementation backed by Firebase, Google Cloud, and Neo4J to deliver seamless realtime data and resilient social features."
+      },
+      "retarificador": {
+        "description": "Retarificador Alpha Brokers: Contributed to the refactor and optimization of a legacy insurance re-quoting web platform. Applied software best practices and patterns to substantially boost performance and maintainability."
       }
     },
     "timeline": {
@@ -78,6 +90,14 @@
       "ntsprint": {
         "name": "NTSprint",
         "period": "March 2023 to June 2023"
+      },
+      "netforemost": {
+        "name": "NetForemost",
+        "period": "March 2024 to June 2024"
+      },
+      "qabit": {
+        "name": "Quality on Bit",
+        "period": "June 2024 to Present"
       }
     },
     "technologies": {

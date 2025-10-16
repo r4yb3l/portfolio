@@ -36,7 +36,7 @@ const Experience = ({ experience, image, link, inverted }: ExperienceProps) => {
         )}
       </div>
       <div className="w-full md:w-1/2 px-4">
-        <img src={image} alt="Experience" className="w-full h-auto rounded-lg" />
+        <img src={image} alt="Experience" className="w-full h-auto rounded-lg object-cover" />
       </div>
     </motion.div>
   )

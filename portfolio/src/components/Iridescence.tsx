@@ -47,7 +47,7 @@ void main() {
 }
 `;
 
-export default function Iridescence({ color = [0.4, 0.65, 1], speed = 1.0, amplitude = 0.1, mouseReact = true, ...rest }) {
+export default function Iridescence({ color = [0.8, 0.1, 0.1], speed = 1.0, amplitude = 0.1, mouseReact = true, ...rest }) {
   const ctnDom = useRef<HTMLDivElement | null>(null);
   const mousePos = useRef({ x: 0.5, y: 0.5 });
   const [isLoaded, setIsLoaded] = useState(false);
@@ -63,7 +63,7 @@ export default function Iridescence({ color = [0.4, 0.65, 1], speed = 1.0, ampli
     try {
       const renderer = new Renderer();
       const gl = renderer.gl;
-      gl.clearColor(0.9, 0.95, 1, 1);
+      gl.clearColor(0.5, 0.05, 0.05, 1);
       
       // Guardar referencias
       rendererRef.current = renderer;

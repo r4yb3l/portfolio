@@ -4,9 +4,15 @@ import { useTranslation } from 'react-i18next'
 import Experience from './Experience'
 import prodevLogo from '../assets/logos/business/prodev.svg'
 import ntsprintLogo from '../assets/logos/business/ntsprint.svg'
+import netforemostLogo from '../assets/logos/business/netforemost.svg'
 import snapnfundImage from '../assets/images/snapnfund.png'
 import dealerslashImage from '../assets/images/dealerslash.png'
+import followAppImage from '../assets/images/followApp.png'
 import automedicImage from '../assets/images/automedic.png'
+import timeforemostImage from '../assets/images/timeforemost.png'
+import qaBitLogo from '../assets/logos/business/qa-bit.svg'
+import allInBikingImage from '../assets/images/allinbiking.png'
+import retarificadorImage from '../assets/images/retarificador.png'
 
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -66,6 +72,13 @@ const Projects = () => {
         />
       </div>
 
+      <div className="flex justify-center px-4">
+        <Experience 
+          experience={t('projects.entries.followApp.description')}
+          image={followAppImage}
+        />
+      </div>
+
       <div className="flex justify-center px-4 mb-12">
         <div className="flex items-center gap-4 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
           <div className="w-14 h-14 rounded-full border border-white/40 bg-white flex items-center justify-center">
@@ -90,6 +103,72 @@ const Projects = () => {
         <Experience 
           experience={t('projects.entries.automedic.description')}
           image={automedicImage}
+          link="https://theautomedic.com/"
+        />
+      </div>
+
+      <div className="flex justify-center px-4 mb-12">
+        <div className="flex items-center gap-4 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
+          <div className="w-14 h-14 rounded-full border border-white/40 bg-white flex items-center justify-center">
+            <img
+              src={netforemostLogo}
+              alt="NetForemost logo"
+              className="w-10 h-10 object-contain rounded-full"
+            />
+          </div>
+          <div>
+            <h3 className="text-white text-xl font-semibold">
+              {t('projects.timeline.netforemost.name')}
+            </h3>
+            <p className="text-sm text-gray-300">
+              {t('projects.timeline.netforemost.period')}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center px-4">
+        <Experience 
+          experience={t('projects.entries.timeforemost.description')}
+          image={timeforemostImage}
+          link="https://timeforemost.com/"
+        />
+      </div>
+
+      <div className="flex justify-center px-4 mb-12">
+        <div className="flex items-center gap-4 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
+          <div className="w-16 h-16 rounded-full border border-white/40 bg-white flex items-center justify-center">
+            <img
+              src={qaBitLogo}
+              alt="Quality on Bit logo"
+              className="w-12 h-12 object-contain rounded-full"
+            />
+          </div>
+          <div>
+            <h3 className="text-white text-xl font-semibold">
+              {t('projects.timeline.qabit.name')}
+            </h3>
+            <p className="text-sm text-gray-300">
+              {t('projects.timeline.qabit.period')}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center px-4">
+        <Experience 
+          experience={t('projects.entries.allInBiking.description')}
+          image={allInBikingImage}
+          link="https://allinbiking.com/"
+        />
+      </div>
+
+      <div className="flex justify-center px-4">
+        <Experience 
+          experience={t('projects.entries.retarificador.description')}
+          image={retarificadorImage}
+          link="https://retarificador.alphabrokers.es/"
+          inverted
         />
       </div>
     </section>

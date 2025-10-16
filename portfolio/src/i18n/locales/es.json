@@ -66,8 +66,20 @@
       "dealerslash": {
         "description": "DealerSlash Marketplace: Plataforma de compra y venta de vehículos modernizada desde un API Java Spring heredado hacia un backend escalable en ASP.NET Core. Guié la migración a servicios de Google Cloud y diseñé una experiencia móvil en Flutter con componentes UI a medida, flujos de inventario en tiempo real y animaciones pulidas que hicieron que explorar y reservar vehículos se sintiera premium."
       },
+      "followApp": {
+        "description": "Follow App: Plataforma móvil que conecta comunidades religiosas para compartir cursos de discipulado, recursos multimedia y ponencias en vivo. Lideré la arquitectura en Flutter y la integración con un backend en NestJS + Firebase para streaming, notificaciones y seguimiento de avance. Implementé dashboards personalizados para líderes, soporte multidioma e interfaces accesibles que mantienen el tono de la congregación."
+      },
+      "timeforemost": {
+        "description": "TimeForemost: Participé en el desarrollo de un software empresarial de control de tiempos, escalando una herramienta interna hacia un servicio completo de monitoreo de productividad y analítica. Contribuí a la implementación de Flutter, NestJS, Google Cloud y Stripe, destacando experiencia en desarrollo multiplataforma, integración de backend y procesamiento de pagos."
+      },
       "automedic": {
         "description": "AutoMedic Mobile: Desarrollé la app móvil para AutoMedic, una franquicia de talleres mecánicos enfocada en mantenimiento preventivo y reparaciones de emergencia. La solución en Flutter ofrece alertas de fallas en tiempo real, agenda de citas y facturación integrada con QuickBooks, apoyada por servicios en Google Cloud y APIs en ASP.NET. Implementé funciones avanzadas de Google Maps para localizar sucursales, rutas y recordatorios de servicio, destacando mi dominio de arquitectura móvil y de Dart."
+      },
+      "allInBiking": {
+        "description": "All In Biking: Lideré el frontend de una red social para ciclistas en Android y iOS, donde los usuarios comparten experiencias, participan en competencias y se conectan con organizaciones. Dirigí la implementación en Flutter, apoyado en Firebase, Google Cloud y Neo4J para ofrecer datos en tiempo real y funcionalidades sociales robustas."
+      },
+      "retarificador": {
+        "description": "Retarificador Alpha Brokers: Contribuí al refactor y optimización de un proyecto web heredado para retarificar seguros. Aplicando buenas prácticas y patrones de software mejoramos significativamente la performance y la mantenibilidad del producto."
       }
     },
     "timeline": {
@@ -78,6 +90,14 @@
       "ntsprint": {
         "name": "NTSprint",
         "period": "marzo 2023 a junio de 2023"
+      },
+      "netforemost": {
+        "name": "NetForemost",
+        "period": "marzo 2024 a junio de 2024"
+      },
+      "qabit": {
+        "name": "Quality on Bit",
+        "period": "junio 2024 al presente"
       }
     },
     "technologies": {

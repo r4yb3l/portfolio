@@ -23,13 +23,13 @@ function App() {
       <div className="fixed inset-0 w-full h-full z-0 pointer-events-none">
         {webglSupported ? (
           <Iridescence
-            color={[0.65, 0.85, 1]}
+            color={[0.85, 0.1, 0.15]}
             mouseReact={true}
             amplitude={0.15}
             speed={1.5}
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-sky-200 via-sky-300 to-blue-300" />
+          <div className="w-full h-full bg-gradient-to-br from-rose-900 via-rose-800 to-amber-700" />
         )}
       </div>
       
