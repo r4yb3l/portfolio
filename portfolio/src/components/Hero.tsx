@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import heroLogo from '../assets/logos/logo-alt.svg'
 
 const Hero = () => {
   const ref = useRef(null)
@@ -35,7 +36,7 @@ const Hero = () => {
             className="inline-block transition-transform hover:scale-105 duration-300"
           >
             <img 
-              src="/src/assets/logos/logo-alt.svg" 
+              src={heroLogo} 
               alt="Raybel Hernández Logo" 
               className="w-48 h-48 md:w-52 md:h-52 mx-auto object-contain"
             />
