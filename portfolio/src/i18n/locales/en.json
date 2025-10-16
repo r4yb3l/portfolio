@@ -130,7 +130,8 @@
       "namePlaceholder": "Your name",
       "emailPlaceholder": "your@email.com",
       "messagePlaceholder": "Tell me about your project...",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "validationError": "Please fill out all fields with valid information."
     },
     "info": {
       "email": "Email",

@@ -1,3 +1,4 @@
+import { useState, type ChangeEvent, type FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useTranslation } from 'react-i18next'
@@ -8,6 +9,34 @@ const Contact = () => {
     threshold: 0.1
   })
   const { t } = useTranslation()
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [formError, setFormError] = useState<string | null>(null)
+
+  const handleChange =
+    (field: 'name' | 'email' | 'message') =>
+    (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setFormData((prev) => ({ ...prev, [field]: event.target.value }))
+    }
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    const trimmedName = formData.name.trim()
+    const trimmedEmail = formData.email.trim()
+    const trimmedMessage = formData.message.trim()
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+    if (!trimmedName || !emailRegex.test(trimmedEmail) || !trimmedMessage) {
+      setFormError(t('contact.form.validationError') ?? 'Por favor completa todos los campos correctamente.')
+      return
+    }
+
+    setFormError(null)
+    const subject = encodeURIComponent('Solicitud de servicios de software')
+    const body = encodeURIComponent(
+      `Nombre: ${trimmedName}\nEmail: ${trimmedEmail}\n\n${trimmedMessage}`
+    )
+    window.location.href = `mailto:raybel.developer@gmail.com?subject=${subject}&body=${body}`
+  }
 
   return (
     <section id="contact" className="min-h-screen py-20 relative">
@@ -73,7 +102,7 @@ const Contact = () => {
               <div className="hidden" />
             </div>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-white text-sm font-semibold mb-2">
                   {t('contact.form.name')}
@@ -82,6 +111,9 @@ const Contact = () => {
                   type="text"
                   className="w-full px-4 py-3 bg-black/30 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-orange-400 transition-colors"
                   placeholder={t('contact.form.namePlaceholder') ?? ''}
+                  value={formData.name}
+                  onChange={handleChange('name')}
+                  required
                 />
               </div>
                
@@ -93,6 +125,9 @@ const Contact = () => {
                   type="email"
                   className="w-full px-4 py-3 bg-black/30 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-orange-400 transition-colors"
                   placeholder={t('contact.form.emailPlaceholder') ?? ''}
+                  value={formData.email}
+                  onChange={handleChange('email')}
+                  required
                 />
               </div>
                
@@ -104,17 +139,24 @@ const Contact = () => {
                   rows={4}
                   className="w-full px-4 py-3 bg-black/30 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-orange-400 transition-colors resize-none"
                   placeholder={t('contact.form.messagePlaceholder') ?? ''}
+                  value={formData.message}
+                  onChange={handleChange('message')}
+                  required
                 />
               </div>
                
-              <motion.a
+              {formError && (
+                <p className="text-sm text-red-300">{formError}</p>
+              )}
+
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="mailto:raybel.developer@gmail.com?subject=Solicitud%20de%20servicios%20de%20software"
-                className="block text-center px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300"
+                type="submit"
+                className="w-full px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300"
               >
                 {t('contact.form.submit')}
-              </motion.a>
+              </motion.button>
             </form>
           </div>
         </motion.div>
