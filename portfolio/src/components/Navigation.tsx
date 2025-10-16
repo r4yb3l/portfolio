@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import LanguageSelector from './LanguageSelector'
+import navLogo from '../assets/logos/logo-alt.svg'
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -60,7 +61,7 @@ const Navigation = () => {
             type="button"
           >
             <img
-              src="/src/assets/logos/logo-alt.svg"
+              src={navLogo}
               alt="Raybel Hernandez Logo"
               className="w-8 h-8 object-contain"
             />
