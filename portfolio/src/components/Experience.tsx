@@ -13,7 +13,7 @@ const Experience = ({ experience, image, link, inverted }: ExperienceProps) => {
 
   return (
     <motion.div
-      className={`rounded-2xl border border-white/20 bg-gradient-to-br from-red-500/10 to-orange-500/10 backdrop-blur-sm p-8 mb-8 w-full md:w-[85vw] lg:w-[75vw] mx-auto flex flex-col md:flex-row ${inverted ? 'md:flex-row-reverse' : ''} md:items-center gap-8`}
+      className={`rounded-2xl border-2 border-white/20 bg-gradient-to-br from-blue-500/25 to-cyan-500/20 backdrop-blur-md p-8 mb-8 w-full md:w-[85vw] lg:w-[75vw] mx-auto flex flex-col md:flex-row ${inverted ? 'md:flex-row-reverse' : ''} md:items-center gap-8`}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -25,7 +25,7 @@ const Experience = ({ experience, image, link, inverted }: ExperienceProps) => {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-block bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition-colors"
+            className="mt-4 inline-block bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-2 rounded-full hover:from-blue-600 hover:to-cyan-600 transition-colors"
           >
             {t('projects.actions.visitSite')}
           </a>

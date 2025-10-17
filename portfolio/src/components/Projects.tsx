@@ -32,11 +32,11 @@ const Projects = () => {
           className="text-center mb-8"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">{t('projects.title')}</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto"></div>
         </motion.div>
 
         <div id="prodev" className="flex items-center justify-center mb-12">
-          <div className="flex items-center gap-4 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
+          <div className="flex items-center gap-4 bg-gradient-to-br from-blue-500/25 to-cyan-500/20 border-2 border-white/20 backdrop-blur-md rounded-2xl px-6 py-4">
             <div className="w-14 h-14 rounded-full border border-white/40 bg-white flex items-center justify-center">
               <img
                 src={prodevLogo}
@@ -80,7 +80,7 @@ const Projects = () => {
       </div>
 
       <div id="ntsprint" className="flex justify-center px-4 mb-12">
-        <div className="flex items-center gap-4 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
+        <div className="flex items-center gap-4 bg-gradient-to-br from-blue-500/25 to-cyan-500/20 border-2 border-white/20 backdrop-blur-md rounded-2xl px-6 py-4">
           <div className="w-14 h-14 rounded-full border border-white/40 bg-white flex items-center justify-center">
             <img
               src={ntsprintLogo}
@@ -108,7 +108,7 @@ const Projects = () => {
       </div>
 
       <div id="netforemost" className="flex justify-center px-4 mb-12">
-        <div className="flex items-center gap-4 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
+        <div className="flex items-center gap-4 bg-gradient-to-br from-blue-500/25 to-cyan-500/20 border-2 border-white/20 backdrop-blur-md rounded-2xl px-6 py-4">
           <div className="w-14 h-14 rounded-full border border-white/40 bg-white flex items-center justify-center">
             <img
               src={netforemostLogo}
@@ -136,7 +136,7 @@ const Projects = () => {
       </div>
 
       <div id="qabit" className="flex justify-center px-4 mb-12">
-        <div className="flex items-center gap-4 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
+        <div className="flex items-center gap-4 bg-gradient-to-br from-blue-500/25 to-cyan-500/20 border-2 border-white/20 backdrop-blur-md rounded-2xl px-6 py-4">
           <div className="w-16 h-16 rounded-full border border-white/40 bg-white flex items-center justify-center">
             <img
               src={qaBitLogo}

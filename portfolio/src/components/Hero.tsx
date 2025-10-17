@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import heroLogo from '../assets/logos/logo-alt.svg'
 
 const Hero = () => {
   const ref = useRef(null)
@@ -20,34 +19,15 @@ const Hero = () => {
       className="relative h-screen flex items-start justify-center overflow-hidden pt-16 md:pt-24"
     >
 
-      {/* Content */}
       <motion.div 
         style={{ opacity }}
         className="relative z-10 text-center text-white px-4"
       >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="mb-2"
-        >
-          <a 
-            href="#hero" 
-            className="inline-block transition-transform hover:scale-105 duration-300"
-          >
-            <img 
-              src={heroLogo} 
-              alt="Raybel Hernández Logo" 
-              className="w-48 h-48 md:w-52 md:h-52 mx-auto object-contain"
-            />
-          </a>
-        </motion.div>
-
         <motion.h1 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-red-200 bg-clip-text text-transparent font-mono tracking-normal leading-tight py-2"
+          className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent font-mono tracking-normal leading-tight pt-8 pb-2"
         >
           {t('hero.name')}
         </motion.h1>
@@ -59,7 +39,7 @@ const Hero = () => {
           className="text-xl md:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto"
         >
           {t('hero.title')} 
-          <span className="text-red-300">{t('hero.subtitle')}</span>
+          <span className="text-blue-300">{t('hero.subtitle')}</span>
         </motion.p>
 
         <motion.div
@@ -72,7 +52,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white font-semibold hover:scale-105 transition-transform duration-300"
+            className="px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full text-white font-semibold hover:scale-105 transition-transform duration-300"
           >
             {t('hero.cta.projects')}
           </motion.button>
@@ -87,7 +67,6 @@ const Hero = () => {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -9,7 +9,7 @@
   "hero": {
     "name": "Raybel Hernández",
     "title": "Full Stack Developer with strong frontend mobile and web expertise.",
-    "subtitle": "Passionate about F1's speed and precision in every line of code.",
+    "subtitle": "Passionate about delivering precise, high-performing digital experiences in every line of code.",
     "cta": {
       "projects": "View Projects",
       "contact": "Get in Touch"
@@ -19,7 +19,7 @@
     "title": "About Me",
     "subtitle": "Full Stack Developer",
     "description1": "Software engineer with 4+ years in web and mobile development. Strong command of React and TypeScript on the frontend (component architecture, state management with Redux/Context, and web performance), plus specialization in Flutter/Firebase for cross‑platform products.",
-    "description2": "I have led and contributed to projects like SnapnFund, All in Biking, and TimeForemost, integrating REST APIs, Stripe/QuickBooks, and Google Cloud. Focused on scalable solutions and smooth UX. An F1 fan for precision and speed—qualities I bring to code and teamwork.",
+    "description2": "I have led and contributed to projects like SnapnFund, All in Biking, and TimeForemost, integrating REST APIs, Stripe/QuickBooks, and Google Cloud. Focused on scalable solutions and smooth UX, bringing speed and precision to both code and collaboration.",
     "technologies": {
       "react": "React",
       "nodejs": "Node.js",

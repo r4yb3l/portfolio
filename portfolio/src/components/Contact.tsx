@@ -54,14 +54,14 @@ const Contact = () => {
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             {t('contact.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto"></div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="rounded-2xl border border-white/20 bg-gradient-to-br from-red-500/10 to-orange-500/10 backdrop-blur-sm p-6 md:p-10 shadow-2xl"
+          className="rounded-2xl border-2 border-white/20 bg-gradient-to-br from-blue-500/25 to-cyan-500/20 backdrop-blur-md p-6 md:p-10 shadow-2xl"
         >
           <div className="grid md:grid-cols-2 gap-10">
             <div className="space-y-8">
@@ -112,7 +112,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 bg-black/30 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-orange-400 transition-colors"
+                  className="w-full px-4 py-3 bg-black/30 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-blue-400 transition-colors"
                   placeholder={t('contact.form.namePlaceholder') ?? ''}
                   value={formData.name}
                   onChange={handleChange('name')}
@@ -126,7 +126,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 bg-black/30 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-orange-400 transition-colors"
+                  className="w-full px-4 py-3 bg-black/30 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-blue-400 transition-colors"
                   placeholder={t('contact.form.emailPlaceholder') ?? ''}
                   value={formData.email}
                   onChange={handleChange('email')}
@@ -140,7 +140,7 @@ const Contact = () => {
                 </label>
                 <textarea
                   rows={4}
-                  className="w-full px-4 py-3 bg-black/30 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-orange-400 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-black/30 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-blue-400 transition-colors resize-none"
                   placeholder={t('contact.form.messagePlaceholder') ?? ''}
                   value={formData.message}
                   onChange={handleChange('message')}
@@ -156,7 +156,7 @@ const Contact = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="w-full px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300"
+                className="w-full px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300"
               >
                 {t('contact.form.submit')}
               </motion.button>

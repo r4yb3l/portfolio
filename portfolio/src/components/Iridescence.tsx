@@ -1,8 +1,8 @@
-import { Renderer, Program, Mesh, Color, Triangle, Geometry } from 'ogl';
-import { useEffect, useRef, useState } from 'react';
-import type { MouseEvent } from 'react';
+import { Renderer, Program, Mesh, Color, Triangle, Geometry } from 'ogl'
+import { useEffect, useRef, useState } from 'react'
+import type { MouseEvent } from 'react'
 
-import './Iridescence.css';
+import './Iridescence.css'
 
 const vertexShader = `
 attribute vec2 uv;
@@ -14,7 +14,7 @@ void main() {
   vUv = uv;
   gl_Position = vec4(position, 0, 1);
 }
-`;
+`
 
 const fragmentShader = `
 precision highp float;
@@ -45,115 +45,110 @@ void main() {
   col = cos(col * cos(vec3(d, a, 2.5)) * 0.5 + 0.5) * uColor;
   gl_FragColor = vec4(col, 1.0);
 }
-`;
+`
 
-export default function Iridescence({ color = [0.8, 0.1, 0.1], speed = 1.0, amplitude = 0.1, mouseReact = true, ...rest }) {
-  const ctnDom = useRef<HTMLDivElement | null>(null);
-  const mousePos = useRef({ x: 0.5, y: 0.5 });
-  const [isLoaded, setIsLoaded] = useState(false);
-  const rendererRef = useRef<Renderer | null>(null);
-  const programRef = useRef<Program | null>(null);
-  const meshRef = useRef<Mesh<Geometry, Program> | null>(null);
-  const animateIdRef = useRef<number | null>(null);
+export default function Iridescence({ color = [0.18, 0.42, 0.85], speed = 1.0, amplitude = 0.1, mouseReact = true, ...rest }) {
+  const ctnDom = useRef<HTMLDivElement | null>(null)
+  const mousePos = useRef({ x: 0.5, y: 0.5 })
+  const [isLoaded, setIsLoaded] = useState(false)
+  const rendererRef = useRef<Renderer | null>(null)
+  const programRef = useRef<Program | null>(null)
+  const meshRef = useRef<Mesh<Geometry, Program> | null>(null)
+  const animateIdRef = useRef<number | null>(null)
 
   useEffect(() => {
-    if (!ctnDom.current) return;
-    const ctn = ctnDom.current;
-    
+    if (!ctnDom.current) return
+    const ctn = ctnDom.current
+
     try {
-      const renderer = new Renderer();
-      const gl = renderer.gl;
-      gl.clearColor(0.5, 0.05, 0.05, 1);
-      
-      // Guardar referencias
-      rendererRef.current = renderer;
+      const renderer = new Renderer()
+      const gl = renderer.gl
+      gl.clearColor(0.08, 0.16, 0.32, 1)
 
-    function resize() {
-      const scale = 1;
-      renderer.setSize(ctn.offsetWidth * scale, ctn.offsetHeight * scale);
-      if (programRef.current) {
-        programRef.current.uniforms.uResolution.value = new Color(
-          gl.canvas.width,
-          gl.canvas.height,
-          gl.canvas.width / gl.canvas.height
-        );
+      rendererRef.current = renderer
+
+      function resize() {
+        const scale = 1
+        renderer.setSize(ctn.offsetWidth * scale, ctn.offsetHeight * scale)
+        if (programRef.current) {
+          programRef.current.uniforms.uResolution.value = new Color(
+            gl.canvas.width,
+            gl.canvas.height,
+            gl.canvas.width / gl.canvas.height
+          )
+        }
       }
-    }
-    window.addEventListener('resize', resize, false);
-    resize();
+      window.addEventListener('resize', resize, false)
+      resize()
 
-    const geometry = new Triangle(gl);
-    const program = new Program(gl, {
-      vertex: vertexShader,
-      fragment: fragmentShader,
-      uniforms: {
-        uTime: { value: 0 },
-        uColor: { value: new Color(...color) },
-        uResolution: {
-          value: new Color(gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height)
-        },
-        uMouse: { value: new Float32Array([mousePos.current.x, mousePos.current.y]) },
-        uAmplitude: { value: amplitude },
-        uSpeed: { value: speed }
+      const geometry = new Triangle(gl)
+      const program = new Program(gl, {
+        vertex: vertexShader,
+        fragment: fragmentShader,
+        uniforms: {
+          uTime: { value: 0 },
+          uColor: { value: new Color(...color) },
+          uResolution: {
+            value: new Color(gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height)
+          },
+          uMouse: { value: new Float32Array([mousePos.current.x, mousePos.current.y]) },
+          uAmplitude: { value: amplitude },
+          uSpeed: { value: speed }
+        }
+      })
+
+      programRef.current = program
+
+      const mesh = new Mesh(gl, { geometry, program })
+      meshRef.current = mesh
+
+      function update(t: number) {
+        animateIdRef.current = requestAnimationFrame(update)
+        program.uniforms.uTime.value = t * 0.001
+        renderer.render({ scene: mesh })
       }
-    });
-    
-    // Guardar referencias
-    programRef.current = program;
+      animateIdRef.current = requestAnimationFrame(update)
+      ctn.appendChild(gl.canvas)
+      setIsLoaded(true)
 
-    const mesh = new Mesh(gl, { geometry, program });
-    meshRef.current = mesh;
-
-    function update(t: number) {
-      animateIdRef.current = requestAnimationFrame(update);
-      program.uniforms.uTime.value = t * 0.001;
-      renderer.render({ scene: mesh });
-    }
-    animateIdRef.current = requestAnimationFrame(update);
-    ctn.appendChild(gl.canvas);
-    setIsLoaded(true);
-
-    function handleMouseMove(e: MouseEvent) {
-      const rect = ctn.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width;
-      const y = 1.0 - (e.clientY - rect.top) / rect.height;
-      mousePos.current = { x, y };
-      if (programRef.current) {
-        programRef.current.uniforms.uMouse.value[0] = x;
-        programRef.current.uniforms.uMouse.value[1] = y;
+      function handleMouseMove(e: MouseEvent) {
+        const rect = ctn.getBoundingClientRect()
+        const x = (e.clientX - rect.left) / rect.width
+        const y = 1.0 - (e.clientY - rect.top) / rect.height
+        mousePos.current = { x, y }
+        if (programRef.current) {
+          programRef.current.uniforms.uMouse.value[0] = x
+          programRef.current.uniforms.uMouse.value[1] = y
+        }
       }
-    }
-    if (mouseReact) {
-      ctn.addEventListener('mousemove', handleMouseMove as any);
-    }
-
-    return () => {
-      if (animateIdRef.current) {
-        cancelAnimationFrame(animateIdRef.current);
-      }
-      window.removeEventListener('resize', resize);
       if (mouseReact) {
-        ctn.removeEventListener('mousemove', handleMouseMove as any);
+        ctn.addEventListener('mousemove', handleMouseMove as any)
       }
-      if (ctn.contains(gl.canvas)) {
-        ctn.removeChild(gl.canvas);
+
+      return () => {
+        if (animateIdRef.current) {
+          cancelAnimationFrame(animateIdRef.current)
+        }
+        window.removeEventListener('resize', resize)
+        if (mouseReact) {
+          ctn.removeEventListener('mousemove', handleMouseMove as any)
+        }
+        if (ctn.contains(gl.canvas)) {
+          ctn.removeChild(gl.canvas)
+        }
       }
-      // No perder el contexto WebGL para mantener el efecto
-      // gl.getExtension('WEBGL_lose_context')?.loseContext();
-    };
     } catch (error) {
-      console.error('Error initializing Iridescence:', error);
+      console.error('Error initializing Iridescence:', error)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [color, speed, amplitude, mouseReact]);
+  }, [color, speed, amplitude, mouseReact])
 
   return (
     <div ref={ctnDom} className="iridescence-container" {...rest}>
       {!isLoaded && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-red-900 via-red-800 to-red-700">
+        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-900 to-blue-800">
           <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
         </div>
       )}
     </div>
-  );
+  )
 }

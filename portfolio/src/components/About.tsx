@@ -31,7 +31,6 @@ const About = () => {
 
   return (
     <section id="about" className="py-24 relative">
-      {/* Container sin fondo - scrollea sobre el iridiscente */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -43,10 +42,10 @@ const About = () => {
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             {t('about.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto"></div>
         </motion.div>
 
-        <div className="rounded-2xl border border-white/20 bg-gradient-to-br from-red-500/10 to-orange-500/10 backdrop-blur-sm p-4 md:p-6 shadow-2xl">
+        <div className="rounded-2xl border-2 border-white/20 bg-gradient-to-br from-blue-500/25 to-cyan-500/20 backdrop-blur-md p-4 md:p-6 shadow-2xl">
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}

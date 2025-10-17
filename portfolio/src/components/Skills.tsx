@@ -15,11 +15,11 @@ const Skills = () => {
   const { t } = useTranslation()
 
   const tagGroups = [
-    { title: t('skills.frontend'), tags: t('skills.tags.frontend', { returnObjects: true }) as string[], color: 'from-red-500 to-orange-500' },
-    { title: t('skills.backend'), tags: t('skills.tags.backend', { returnObjects: true }) as string[], color: 'from-orange-500 to-yellow-500' },
-    { title: 'Mobile', tags: t('skills.tags.mobile', { returnObjects: true }) as string[], color: 'from-yellow-500 to-red-500' },
-    { title: t('skills.cloud'), tags: t('skills.tags.cloud', { returnObjects: true }) as string[], color: 'from-pink-500 to-red-500' },
-    { title: 'Tools', tags: t('skills.tags.tools', { returnObjects: true }) as string[], color: 'from-purple-500 to-pink-500' },
+    { title: t('skills.frontend'), tags: t('skills.tags.frontend', { returnObjects: true }) as string[], color: 'from-blue-500 to-cyan-500' },
+    { title: t('skills.backend'), tags: t('skills.tags.backend', { returnObjects: true }) as string[], color: 'from-indigo-500 to-blue-500' },
+    { title: 'Mobile', tags: t('skills.tags.mobile', { returnObjects: true }) as string[], color: 'from-sky-500 to-cyan-500' },
+    { title: t('skills.cloud'), tags: t('skills.tags.cloud', { returnObjects: true }) as string[], color: 'from-teal-500 to-cyan-500' },
+    { title: 'Tools', tags: t('skills.tags.tools', { returnObjects: true }) as string[], color: 'from-purple-500 to-indigo-500' },
   ]
   const icons = [frontendIcon, backendIcon, mobileIcon, cloudIcon, toolsIcon]
 
@@ -34,10 +34,10 @@ const Skills = () => {
           className="text-center mb-8"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">{t('skills.title')}</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto"></div>
         </motion.div>
 
-        <div className="rounded-2xl border border-white/20 bg-gradient-to-br from-red-500/10 to-orange-500/10 backdrop-blur-sm p-4 md:p-6 shadow-2xl">
+        <div className="rounded-2xl border-2 border-white/20 bg-gradient-to-br from-blue-500/25 to-cyan-500/20 backdrop-blur-md p-4 md:p-6 shadow-2xl">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6 items-start">
             {tagGroups.map((group, index) => (
               <motion.div

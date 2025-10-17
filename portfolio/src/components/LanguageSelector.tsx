@@ -18,10 +18,10 @@ const LanguageSelector = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => changeLanguage('es')}
-        className={`px-3 py-1 rounded-lg text-sm font-medium transition-all duration-300 ${
+        className={`px-4 py-1.5 rounded-xl text-sm font-semibold transition-all duration-300 border shadow-lg ${
           i18n.language === 'es'
-            ? 'bg-red-900/40 border border-red-500/50 text-white'
-            : 'bg-black/20 hover:bg-black/30 border border-white/10 hover:border-white/30 text-white/80 hover:text-white'
+            ? 'bg-white text-blue-600 border-blue-400/60'
+            : 'text-white/80 hover:text-white bg-black/20 hover:bg-black/30 border-white/10 hover:border-white/30'
         }`}
       >
         ES
@@ -30,10 +30,10 @@ const LanguageSelector = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => changeLanguage('en')}
-        className={`px-3 py-1 rounded-lg text-sm font-medium transition-all duration-300 ${
+        className={`px-4 py-1.5 rounded-xl text-sm font-semibold transition-all duration-300 border shadow-lg ${
           i18n.language === 'en'
-            ? 'bg-red-900/40 border border-red-500/50 text-white'
-            : 'bg-black/20 hover:bg-black/30 border border-white/10 hover:border-white/30 text-white/80 hover:text-white'
+            ? 'bg-white text-blue-600 border-blue-400/60'
+            : 'text-white/80 hover:text-white bg-black/20 hover:bg-black/30 border-white/10 hover:border-white/30'
         }`}
       >
         EN

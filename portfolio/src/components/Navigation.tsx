@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import LanguageSelector from './LanguageSelector'
-import navLogo from '../assets/logos/logo-alt.svg'
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -13,7 +12,6 @@ const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
       
-      // Detect active section
       const sections = ['hero', 'about', 'skills', 'projects', 'contact']
       const scrollPosition = window.scrollY + 100
       
@@ -60,11 +58,7 @@ const Navigation = () => {
             aria-label="Ir al inicio"
             type="button"
           >
-            <img
-              src={navLogo}
-              alt="Raybel Hernandez Logo"
-              className="w-8 h-8 object-contain"
-            />
+            <span className="block w-2 h-2 bg-white rounded-full mx-auto" />
           </motion.button>
           
           <div className="hidden md:flex space-x-4 items-center">
@@ -74,10 +68,10 @@ const Navigation = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item)}
-                className={`text-white/90 hover:text-white transition-all duration-300 capitalize px-4 py-2 rounded-xl backdrop-blur-md border shadow-lg hover:shadow-xl ${
+                className={`transition-all duration-300 capitalize px-4 py-2 rounded-xl backdrop-blur-md border shadow-lg hover:shadow-xl ${
                   activeSection === item
-                    ? 'bg-red-900/40 border-red-500/50 text-white'
-                    : 'bg-black/20 hover:bg-black/30 border-white/10 hover:border-white/30'
+                    ? 'bg-white text-blue-600 border-blue-400/60'
+                    : 'text-white/90 hover:text-white bg-black/20 hover:bg-black/30 border-white/10 hover:border-white/30'
                 }`}
               >
                 {t(`navigation.${item}`)}
@@ -85,8 +79,6 @@ const Navigation = () => {
             ))}
             <LanguageSelector />
           </div>
-
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <motion.button 
               whileHover={{ scale: 1.05 }}

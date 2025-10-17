@@ -19,21 +19,19 @@ function App() {
 
   return (
     <div className="relative">
-      {/* Fondo iridiscente de OGL */}
       <div className="fixed inset-0 w-full h-full z-0 pointer-events-none">
         {webglSupported ? (
           <Iridescence
-            color={[0.85, 0.1, 0.15]}
+            color={[0.18, 0.42, 0.85]}
             mouseReact={true}
             amplitude={0.15}
             speed={1.5}
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-rose-900 via-rose-800 to-amber-700" />
+          <div className="w-full h-full bg-gradient-to-br from-slate-900 via-indigo-900 to-blue-800" />
         )}
       </div>
-      
-      {/* Content that scrolls over the background */}
+
       <div className="relative z-10">
         <Navigation />
         <main>
