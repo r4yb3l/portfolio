@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tipografías personalizadas */
 @layer base {
   body {
     font-family: 'Inter', sans-serif;
@@ -25,7 +24,6 @@
   animation-delay: 4s;
 }
 
-/* Asegurar que el fondo iridiscente se mantenga fijo */
 .iridescence-container {
   position: fixed !important;
   top: 0 !important;
