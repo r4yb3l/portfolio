@@ -80,11 +80,20 @@
       },
       "retarificador": {
         "description": "Retarificador Alpha Brokers: Contributed to the refactor and optimization of a legacy insurance re-quoting web platform. Applied software best practices and patterns to substantially boost performance and maintainability."
+      },
+      "eduq": {
+        "description": "EduQ: Developed a mobile exercise-solving application built with Flutter, focused on preparing students for exams. The app provides an intuitive interface for solving practice exercises, progress tracking, and personalized study tools. Implemented scalable architecture, efficient state management, and a smooth user experience that facilitates continuous learning and practice."
+      },
+      "manitas": {
+        "description": "Manitas App: Currently developing a cross-platform application (web and mobile) to connect users with repair and handyman professionals in their local area. The platform enables searching, filtering, and contacting specialized technicians across various fields such as plumbing, electrical work, carpentry, and more. Implementing geolocation features to find nearby professionals, rating and review system, real-time chat, and appointment management. The mobile app is built with Flutter, while the web version will be developed with Next.js to deliver a smooth, scalable cross-platform experience."
+      },
+      "chrona": {
+        "description": "Chrona: Currently developing a comprehensive appointment management system for a wide diversity of businesses, with future features on the way. The system enables different types of businesses to efficiently manage their appointments, clients, and schedules. Implementing the web platform with Next.js for the frontend and NestJS for the backend, providing a robust and scalable architecture. The Flutter mobile app is in development to complement the cross-platform experience and offer users complete appointment management from any device."
       }
     },
     "timeline": {
       "prodev": {
-        "name": "ProDev Solutions LLC",
+        "name": "ProDev Solutions",
         "period": "September 2021 to June 2023"
       },
       "ntsprint": {
@@ -98,6 +107,10 @@
       "qabit": {
         "name": "Quality on Bit",
         "period": "June 2024 to Present"
+      },
+      "astrocode": {
+        "name": "AstroCode",
+        "period": "August 2025 to Present"
       }
     },
     "technologies": {

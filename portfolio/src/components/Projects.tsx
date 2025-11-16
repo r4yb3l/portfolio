@@ -6,6 +6,7 @@ import prodevLogo from '../assets/logos/business/prodev.svg'
 import ntsprintLogo from '../assets/logos/business/ntsprint.svg'
 import netforemostLogo from '../assets/logos/business/netforemost.svg'
 import qaBitLogo from '../assets/logos/business/qa-bit.svg'
+import astrocodeLogo from '../assets/logos/business/astrocode.svg'
 import snapnfundImage from '../assets/images/snapnfund.png'
 import dealerslashImage from '../assets/images/dealerslash.png'
 import followAppImage from '../assets/images/followApp.png'
@@ -13,6 +14,9 @@ import automedicImage from '../assets/images/automedic.png'
 import timeforemostImage from '../assets/images/timeforemost.png'
 import allInBikingImage from '../assets/images/allinbiking.png'
 import retarificadorImage from '../assets/images/retarificador.png'
+import eduqImage from '../assets/images/eduq.png'
+import manitasImage from '../assets/images/manitas.png'
+import chronaImage from '../assets/images/chrona.png'
 
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -168,6 +172,48 @@ const Projects = () => {
           experience={t('projects.entries.retarificador.description')}
           image={retarificadorImage}
           link="https://retarificador.alphabrokers.es/"
+          inverted
+        />
+      </div>
+
+      <div className="flex justify-center px-4">
+        <Experience 
+          experience={t('projects.entries.eduq.description')}
+          image={eduqImage}
+        />
+      </div>
+
+      <div id="astrocode" className="flex justify-center px-4 mb-12">
+        <div className="flex items-center gap-4 bg-gradient-to-br from-blue-500/25 to-cyan-500/20 border-2 border-white/20 backdrop-blur-md rounded-2xl px-6 py-4">
+          <div className="w-14 h-14 rounded-full border border-white/40 bg-white flex items-center justify-center">
+            <img
+              src={astrocodeLogo}
+              alt="AstroCode Labs logo"
+              className="w-10 h-10 object-contain rounded-full"
+            />
+          </div>
+          <div>
+            <h3 className="text-white text-xl font-semibold">
+              {t('projects.timeline.astrocode.name')}
+            </h3>
+            <p className="text-sm text-gray-300">
+              {t('projects.timeline.astrocode.period')}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center px-4">
+        <Experience 
+          experience={t('projects.entries.manitas.description')}
+          image={manitasImage}
+        />
+      </div>
+
+      <div className="flex justify-center px-4">
+        <Experience 
+          experience={t('projects.entries.chrona.description')}
+          image={chronaImage}
           inverted
         />
       </div>

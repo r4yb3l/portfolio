@@ -80,11 +80,20 @@
       },
       "retarificador": {
         "description": "Retarificador Alpha Brokers: Contribuí al refactor y optimización de un proyecto web heredado para retarificar seguros. Aplicando buenas prácticas y patrones de software mejoramos significativamente la performance y la mantenibilidad del producto."
+      },
+      "eduq": {
+        "description": "EduQ: Desarrollé una aplicación móvil de resolución de ejercicios implementada con Flutter, enfocada en la preparación de estudiantes para exámenes. La aplicación ofrece una interfaz intuitiva para resolver ejercicios prácticos, seguimiento de progreso y herramientas de estudio personalizadas. Implementé arquitectura escalable, gestión de estado eficiente y una experiencia de usuario fluida que facilita el aprendizaje y la práctica continua."
+      },
+      "manitas": {
+        "description": "Manitas App: Estoy desarrollando una aplicación multiplataforma (web y móvil) para conectar usuarios con profesionales de reparación y bricolaje en su área local. La plataforma permite buscar, filtrar y contactar técnicos especializados en diversas áreas como plomería, electricidad, carpintería y más. Estoy implementando funcionalidades de geolocalización para encontrar profesionales cercanos, sistema de calificaciones y reseñas, chat en tiempo real y gestión de citas. La aplicación móvil está construida con Flutter, mientras que la versión web se desarrollará con Next.js para ofrecer una experiencia multiplataforma fluida y escalable."
+      },
+      "chrona": {
+        "description": "Chrona: Estoy desarrollando un sistema integral para la gestión de citas en una amplia diversidad de negocios, con futuras funcionalidades en camino. El sistema permite a diferentes tipos de negocios gestionar sus citas, clientes y horarios de manera eficiente. Estoy implementando la plataforma web con Next.js para el frontend y NestJS para el backend, proporcionando una arquitectura robusta y escalable. La aplicación móvil en Flutter está en desarrollo para complementar la experiencia multiplataforma y ofrecer a los usuarios una gestión de citas completa desde cualquier dispositivo."
       }
     },
     "timeline": {
       "prodev": {
-        "name": "ProDev Solutions LLC",
+        "name": "ProDev Solutions",
         "period": "septiembre 2021 a junio de 2023"
       },
       "ntsprint": {
@@ -98,6 +107,10 @@
       "qabit": {
         "name": "Quality on Bit",
         "period": "junio 2024 al presente"
+      },
+      "astrocode": {
+        "name": "AstroCode",
+        "period": "agosto 2025 al presente"
       }
     },
     "technologies": {

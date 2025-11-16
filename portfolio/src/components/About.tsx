@@ -6,6 +6,7 @@ import prodevLogo from '../assets/logos/business/prodev.svg'
 import ntsprintLogo from '../assets/logos/business/ntsprint.svg'
 import netforemostLogo from '../assets/logos/business/netforemost.svg'
 import qaBitLogo from '../assets/logos/business/qa-bit.svg'
+import astrocodeLogo from '../assets/logos/business/astrocode.svg'
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -20,6 +21,7 @@ const About = () => {
     { logo: ntsprintLogo, alt: 'NTSprint logo', name: t('projects.timeline.ntsprint.name'), target: 'ntsprint' },
     { logo: netforemostLogo, alt: 'NetForemost logo', name: t('projects.timeline.netforemost.name'), target: 'netforemost' },
     { logo: qaBitLogo, alt: 'Quality on Bit logo', name: t('projects.timeline.qabit.name'), target: 'qabit' },
+    { logo: astrocodeLogo, alt: 'AstroCode Labs logo', name: t('projects.timeline.astrocode.name'), target: 'astrocode' },
   ]
 
   const handleScroll = (target: string) => {
@@ -78,7 +80,7 @@ const About = () => {
                     className="w-56 h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72 mx-auto mb-4 rounded-full object-cover shadow-2xl ring-2 ring-white/20"
                   />
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full">
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 w-full">
                   {companies.map((company) => (
                     <button
                       key={company.name}

@@ -63,7 +63,7 @@ export default function Iridescence({ color = [0.18, 0.42, 0.85], speed = 1.0, a
     try {
       const renderer = new Renderer()
       const gl = renderer.gl
-      gl.clearColor(0.08, 0.16, 0.32, 1)
+      gl.clearColor(0.012, 0.029, 0.049, 1)
 
       rendererRef.current = renderer
 
@@ -145,7 +145,7 @@ export default function Iridescence({ color = [0.18, 0.42, 0.85], speed = 1.0, a
   return (
     <div ref={ctnDom} className="iridescence-container" {...rest}>
       {!isLoaded && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-900 to-blue-800">
+        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-700 to-blue-600">
           <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
         </div>
       )}
