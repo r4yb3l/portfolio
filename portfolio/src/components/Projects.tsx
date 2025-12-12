@@ -15,6 +15,10 @@ import timeforemostImage from '../assets/images/timeforemost.png'
 import allInBikingImage from '../assets/images/allinbiking.png'
 import retarificadorImage from '../assets/images/retarificador.png'
 import eduqImage from '../assets/images/eduq.png'
+import groceryImage from '../assets/images/grocery.png'
+import gestionComunidadImage from '../assets/images/gestion-de-comunidad.png'
+import kitTokenImage from '../assets/images/kit-de-token.png'
+import gestorRRHHImage from '../assets/images/gestor-de-rrhh.png'
 import manitasImage from '../assets/images/manitas.png'
 import chronaImage from '../assets/images/chrona.png'
 
@@ -180,6 +184,36 @@ const Projects = () => {
         <Experience 
           experience={t('projects.entries.eduq.description')}
           image={eduqImage}
+        />
+      </div>
+
+      <div className="flex justify-center px-4">
+        <Experience 
+          experience={t('projects.entries.groceryChefPro.description')}
+          image={groceryImage}
+          inverted
+        />
+      </div>
+
+      <div className="flex justify-center px-4">
+        <Experience 
+          experience={t('projects.entries.gestionKitDigital.description')}
+          image={gestionComunidadImage}
+        />
+      </div>
+
+      <div className="flex justify-center px-4">
+        <Experience 
+          experience={t('projects.entries.kitTokenComunidad.description')}
+          image={kitTokenImage}
+          inverted
+        />
+      </div>
+
+      <div className="flex justify-center px-4">
+        <Experience 
+          experience={t('projects.entries.gestorRRHH.description')}
+          image={gestorRRHHImage}
         />
       </div>
 

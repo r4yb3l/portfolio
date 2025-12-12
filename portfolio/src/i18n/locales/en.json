@@ -89,24 +89,36 @@
       },
       "chrona": {
         "description": "Chrona: Currently developing a comprehensive appointment management system for a wide diversity of businesses, with future features on the way. The system enables different types of businesses to efficiently manage their appointments, clients, and schedules. Implementing the web platform with Next.js for the frontend and NestJS for the backend, providing a robust and scalable architecture. The Flutter mobile app is in development to complement the cross-platform experience and offer users complete appointment management from any device."
+      },
+      "groceryChefPro": {
+        "description": "Grocery Chef Pro: Development of an application focused on food tracking and AI-assisted shopping lists. The application allows users to manage their eating habits, create smart shopping lists, and receive personalized recommendations based on their preferences and nutritional needs."
+      },
+      "gestionKitDigital": {
+        "description": "Kit Digital Request Management Platform: Participation in the Frontend development of the platform. Developed the mobile frontend (Flutter) for managing dynamic forms and their dependency graphs, and the BackOffice (React) for agent management, performance analytics, and the document and news library."
+      },
+      "kitTokenComunidad": {
+        "description": "Community Token Management Platform: Built the frontend (React, previously Angular) in the app for the complete wallet flow, service transfers between club members, account management, and PIN security validation."
+      },
+      "gestorRRHH": {
+        "description": "HR Management Platform: Implementation in the application of the personal panel interface (React, previously Angular) and the mobile application (Flutter) for employee access to work data, policies, and communications. Includes the development of interfaces for tenant configuration and complex access management."
       }
     },
     "timeline": {
       "prodev": {
         "name": "ProDev Solutions",
-        "period": "September 2021 to June 2023"
+        "period": "September 2019 to June 2023"
       },
       "ntsprint": {
         "name": "NTSprint",
-        "period": "March 2023 to June 2023"
+        "period": "March 2021 to June 2021"
       },
       "netforemost": {
         "name": "NetForemost",
-        "period": "March 2024 to June 2024"
+        "period": "March 2022 to June 2022"
       },
       "qabit": {
         "name": "Quality on Bit",
-        "period": "June 2024 to Present"
+        "period": "June 2022 to Present"
       },
       "astrocode": {
         "name": "AstroCode",

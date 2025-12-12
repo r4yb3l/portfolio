@@ -89,24 +89,36 @@
       },
       "chrona": {
         "description": "Chrona: Estoy desarrollando un sistema integral para la gestión de citas en una amplia diversidad de negocios, con futuras funcionalidades en camino. El sistema permite a diferentes tipos de negocios gestionar sus citas, clientes y horarios de manera eficiente. Estoy implementando la plataforma web con Next.js para el frontend y NestJS para el backend, proporcionando una arquitectura robusta y escalable. La aplicación móvil en Flutter está en desarrollo para complementar la experiencia multiplataforma y ofrecer a los usuarios una gestión de citas completa desde cualquier dispositivo."
+      },
+      "groceryChefPro": {
+        "description": "Grocery Chef Pro: Desarrollo de una aplicación enfocada al seguimiento de alimentación y listas de compras asistidas por inteligencia artificial. La aplicación permite a los usuarios gestionar sus hábitos alimenticios, crear listas de compras inteligentes y recibir recomendaciones personalizadas basadas en sus preferencias y necesidades nutricionales."
+      },
+      "gestionKitDigital": {
+        "description": "Plataforma Gestión de Solicitudes Kit Digital: Participación en el desarrollo Frontend de la plataforma. Desarrollé el frontend móvil (Flutter) para la gestión de formularios dinámicos y sus grafos de dependencia, y el BackOffice (React) para gestión de agentes, analítica de rendimiento y la biblioteca de documentos y noticias."
+      },
+      "kitTokenComunidad": {
+        "description": "Plataforma de Gestión de Tókenes en Comunidad: Construcción del frontend (React, anteriormente Angular) en la app para el flujo completo del monedero, transferencias de servicios entre socios del club, la gestión de cuentas y la validación con PIN de seguridad."
+      },
+      "gestorRRHH": {
+        "description": "Plataforma de Gestión de RRHH: Implementación en la aplicación de la interfaz de panel personal (React, anteriormente Angular) y la aplicación móvil (Flutter) para el acceso de los empleados a datos laborales, políticas y comunicados. Incluye el desarrollo de interfaces para la configuración de tenants y la gestión de accesos complejos."
       }
     },
     "timeline": {
       "prodev": {
         "name": "ProDev Solutions",
-        "period": "septiembre 2021 a junio de 2023"
+        "period": "septiembre 2019 a junio de 2023"
       },
       "ntsprint": {
         "name": "NTSprint",
-        "period": "marzo 2023 a junio de 2023"
+        "period": "marzo 2021 a junio de 2021"
       },
       "netforemost": {
         "name": "NetForemost",
-        "period": "marzo 2024 a junio de 2024"
+        "period": "marzo 2022 a junio de 2022"
       },
       "qabit": {
         "name": "Quality on Bit",
-        "period": "junio 2024 al presente"
+        "period": "junio 2022 al presente"
       },
       "astrocode": {
         "name": "AstroCode",
