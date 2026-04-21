@@ -1,0 +1,36 @@
+# Claude Code
+.claude/
+.agents/
+skills-lock.json
+
+# macOS
+.DS_Store
+
+# Build outputs
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Editor
+.idea/
+.vscode/
+
+# Logs
+logs
+*.log
+
+# Project
+portfolio/node_modules/
+portfolio/dist/
+
+# Logs
+logs
+*.log
+
+# Build outputs
+dist/
+dist-ssr/
+
+# Local config
+*.local
