@@ -18,7 +18,7 @@
   "about": {
     "title": "Me presento",
     "subtitle": "Desarrollador Full Stack",
-    "description1": "Ingeniero de software con 4+ años en desarrollo web y móvil. Sólido dominio de React y TypeScript en frontend (arquitectura de componentes, gestión de estado con Redux/Context y performance web) y especialización en Flutter/Firebase para productos multiplataforma.",
+    "description1": "Ingeniero de software con 6+ años en desarrollo web y móvil. Sólido dominio de React y TypeScript en frontend (arquitectura de componentes, gestión de estado con Redux/Context y performance web) y especialización en Flutter/Firebase para productos multiplataforma.",
     "description2": "He liderado y contribuido en proyectos como SnapnFund, All in Biking y TimeForemost, integrando APIs REST, Stripe/QuickBooks y Google Cloud. Enfoque en soluciones escalables y experiencias fluidas, trasladando esas cualidades de velocidad y precisión al código y al trabajo en equipo.",
     "technologies": {
       "react": "React",
@@ -141,7 +141,7 @@
       "github": "GitHub",
       "liveDemo": "Live Demo",
       "visitSite": "Visitar sitio",
-      "notAvailable": "Actualmente no disponible"
+      "notAvailable": "Proyecto privado, URL no disponible"
     }
   },
   "contact": {

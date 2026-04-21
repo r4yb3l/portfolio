@@ -3,18 +3,19 @@ import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import LanguageSelector from './LanguageSelector'
 
-const Navigation = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
+interface NavigationProps {
+  scrolled: boolean
+}
+
+const Navigation = ({ scrolled }: NavigationProps) => {
   const [activeSection, setActiveSection] = useState('hero')
   const { t } = useTranslation()
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-      
       const sections = ['hero', 'about', 'skills', 'projects', 'contact']
       const scrollPosition = window.scrollY + 100
-      
+
       for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {
@@ -37,41 +38,43 @@ const Navigation = () => {
     }
   }
 
+  const navItems = ['hero', 'about', 'skills', 'projects', 'contact']
+
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-transparent backdrop-blur-xl border-b border-white/20 shadow-lg shadow-black/5' 
+      className={`fixed top-0 left-0 right-0 z-50 h-12 flex items-center transition-all duration-500 ${
+        scrolled
+          ? 'apple-nav-glass'
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto pl-4 pr-0 sm:pl-6 lg:pl-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="max-w-5xl mx-auto px-6 w-full">
+        <div className="flex justify-between items-center h-full">
           <motion.button
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ opacity: 0.7 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('hero')}
-            className="px-4 py-2 rounded-xl bg-black/20 backdrop-blur-md border border-white/10 shadow-lg"
+            className="w-6 h-6 flex items-center justify-center"
             aria-label="Ir al inicio"
             type="button"
           >
-            <span className="block w-2 h-2 bg-white rounded-full mx-auto" />
+            <span className="block w-2.5 h-2.5 bg-white rounded-full" />
           </motion.button>
-          
-          <div className="hidden md:flex space-x-4 items-center">
-            {['hero', 'about', 'skills', 'projects', 'contact'].map((item) => (
+
+          <div className="hidden md:flex space-x-8 items-center">
+            {navItems.map((item) => (
               <motion.button
                 key={item}
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ opacity: 0.7 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item)}
-                className={`transition-all duration-300 capitalize px-4 py-2 rounded-xl backdrop-blur-md border shadow-lg hover:shadow-xl ${
+                className={`text-xs font-normal tracking-tight transition-opacity duration-300 ${
                   activeSection === item
-                    ? 'bg-white text-blue-600 border-blue-400/60'
-                    : 'text-white/90 hover:text-white bg-black/20 hover:bg-black/30 border-white/10 hover:border-white/30'
+                    ? 'text-white'
+                    : 'text-white/70 hover:text-white'
                 }`}
               >
                 {t(`navigation.${item}`)}
@@ -79,16 +82,15 @@ const Navigation = () => {
             ))}
             <LanguageSelector />
           </div>
+
           <div className="md:hidden">
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="text-white px-3 py-2 rounded-xl bg-black/20 backdrop-blur-md border border-white/10 shadow-lg"
+            <button
+              className="text-white/70 hover:text-white transition-colors p-1"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
-            </motion.button>
+            </button>
           </div>
         </div>
       </div>

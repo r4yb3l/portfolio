@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -6,43 +5,43 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Navigation from './components/Navigation'
-import Iridescence from './components/Iridescence'
 
 function App() {
-  const [webglSupported, setWebglSupported] = useState(true)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const canvas = document.createElement('canvas')
-    const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl')
-    setWebglSupported(!!gl)
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
-    <div className="relative">
-      <div className="fixed inset-0 w-full h-full z-0 pointer-events-none">
-        {webglSupported ? (
-          <Iridescence
-            color={[0.18, 0.42, 0.85]}
-            mouseReact={true}
-            amplitude={0.15}
-            speed={1.5}
-          />
-        ) : (
-          <div className="w-full h-full bg-gradient-to-br from-slate-900 via-indigo-900 to-blue-800" />
-        )}
-      </div>
+    <div className="bg-apple-black min-h-screen">
+      <Navigation scrolled={scrolled} />
 
-      <div className="relative z-10">
-        <Navigation />
-        <main>
+      <main>
+        <section id="hero" className="bg-apple-black">
           <Hero />
-          <About />
-          <Skills />
+        </section>
 
+        <section id="about" className="bg-apple-gray">
+          <About />
+        </section>
+
+        <section id="skills" className="bg-apple-black">
+          <Skills />
+        </section>
+
+        <section id="projects" className="bg-apple-gray">
           <Projects />
+        </section>
+
+        <section id="contact" className="bg-apple-black">
           <Contact />
-        </main>
-      </div>
+        </section>
+      </main>
     </div>
   )
 }

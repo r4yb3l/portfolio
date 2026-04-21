@@ -18,7 +18,7 @@
   "about": {
     "title": "About Me",
     "subtitle": "Full Stack Developer",
-    "description1": "Software engineer with 4+ years in web and mobile development. Strong command of React and TypeScript on the frontend (component architecture, state management with Redux/Context, and web performance), plus specialization in Flutter/Firebase for cross‑platform products.",
+    "description1": "Software engineer with 6+ years in web and mobile development. Strong command of React and TypeScript on the frontend (component architecture, state management with Redux/Context, and web performance), plus specialization in Flutter/Firebase for cross‑platform products.",
     "description2": "I have led and contributed to projects like SnapnFund, All in Biking, and TimeForemost, integrating REST APIs, Stripe/QuickBooks, and Google Cloud. Focused on scalable solutions and smooth UX, bringing speed and precision to both code and collaboration.",
     "technologies": {
       "react": "React",
@@ -141,7 +141,7 @@
       "github": "GitHub",
       "liveDemo": "Live Demo",
       "visitSite": "Visit Site",
-      "notAvailable": "Currently unavailable"
+      "notAvailable": "Private project, URL not available"
     }
   },
   "contact": {
