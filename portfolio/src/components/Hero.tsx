@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import Prism from '../../components/reactbits/Prism'
+import Prism from './reactbits/Prism'
 
 const Hero = () => {
   const ref = useRef(null)
