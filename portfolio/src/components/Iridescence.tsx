@@ -56,8 +56,10 @@ export default function Iridescence({ color = [0.18, 0.42, 0.85], speed = 1.0, a
   const meshRef = useRef<Mesh<Geometry, Program> | null>(null)
   const animateIdRef = useRef<number | null>(null)
 
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+
   useEffect(() => {
-    if (!ctnDom.current) return
+    if (!ctnDom.current || isMobile) return
     const ctn = ctnDom.current
 
     try {
@@ -140,13 +142,13 @@ export default function Iridescence({ color = [0.18, 0.42, 0.85], speed = 1.0, a
     } catch (error) {
       console.error('Error initializing Iridescence:', error)
     }
-  }, [color, speed, amplitude, mouseReact])
+  }, [color, speed, amplitude, mouseReact, isMobile])
 
   return (
     <div ref={ctnDom} className="iridescence-container" {...rest}>
-      {!isLoaded && (
+      {(!isLoaded || isMobile) && (
         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-900 to-blue-800">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
+          {!isMobile && <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>}
         </div>
       )}
     </div>

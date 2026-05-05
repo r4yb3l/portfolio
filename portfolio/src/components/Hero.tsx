@@ -25,6 +25,7 @@ const Hero = () => {
           scale={3}
           animationType="3drotate"
           timeScale={0.3}
+          suspendWhenOffscreen={true}
         />
       </div>
 

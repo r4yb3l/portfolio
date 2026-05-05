@@ -45,6 +45,8 @@ const About = () => {
             <img
               src={profileImg}
               alt="Foto de perfil de Raybel"
+              loading="lazy"
+              decoding="async"
               className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover apple-card-shadow"
             />
           </motion.div>

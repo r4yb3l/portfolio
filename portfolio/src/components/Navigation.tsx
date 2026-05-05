@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import LanguageSelector from './LanguageSelector'
 
@@ -10,25 +10,36 @@ interface NavigationProps {
 const Navigation = ({ scrolled }: NavigationProps) => {
   const [activeSection, setActiveSection] = useState('hero')
   const { t } = useTranslation()
+  const sectionElementsRef = useRef<Map<string, IntersectionObserverEntry>>(new Map())
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['hero', 'about', 'skills', 'projects', 'contact']
-      const scrollPosition = window.scrollY + 100
-
-      for (const section of sections) {
-        const element = document.getElementById(section)
-        if (element) {
-          const { offsetTop, offsetHeight } = element
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section)
-            break
-          }
+    const sections = ['hero', 'about', 'skills', 'projects', 'contact']
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          sectionElementsRef.current.set(entry.target.id, entry)
         }
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+        let topVisible = ''
+        let topRatio = 0
+        sectionElementsRef.current.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio > topRatio) {
+            topRatio = entry.intersectionRatio
+            topVisible = entry.target.id
+          }
+        })
+        if (topVisible) {
+          setActiveSection(topVisible)
+        }
+      },
+      { rootMargin: '-20% 0px -60% 0px', threshold: 0.1 }
+    )
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id)
+      if (el) observer.observe(el)
+    })
+
+    return () => observer.disconnect()
   }, [])
 
   const scrollToSection = (sectionId: string) => {

@@ -47,6 +47,8 @@ const Experience = ({ experience, image, link, inverted, inDevelopment }: Experi
         <img
           src={image}
           alt="Project screenshot"
+          loading="lazy"
+          decoding="async"
           className="w-full h-auto rounded-lg"
         />
       </div>
