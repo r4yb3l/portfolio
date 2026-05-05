@@ -179,7 +179,8 @@ const Prism = ({
           wob = mat2(c0, c1, c2, c0);
         }
 
-        for (int i = 0; i < uMaxSteps; i++) {
+        for (int i = 0; i < 100; i++) {
+          if (i >= uMaxSteps) break;
           p = vec3(f, z);
           p.xz = p.xz * wob;
           p = uRot * p;
