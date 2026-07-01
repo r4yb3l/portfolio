@@ -46,7 +46,8 @@ const Skills = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
-              className="p-8 rounded-lg bg-white/5 border border-white/10"
+              whileHover={{ y: -4 }}
+              className="p-8 rounded-lg bg-white/5 border border-white/10 transition-colors duration-300 hover:bg-white/[0.08] hover:border-white/25"
             >
               <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                 <img

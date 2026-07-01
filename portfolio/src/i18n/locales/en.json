@@ -4,12 +4,13 @@
     "about": "About Me",
     "skills": "Skills",
     "projects": "Projects",
+    "opensource": "Open Source",
     "contact": "Contact"
   },
   "hero": {
     "name": "Raybel Hernández",
-    "title": "Full Stack Developer with strong frontend mobile and web expertise.",
-    "subtitle": "Passionate about delivering precise, high-performing digital experiences in every line of code.",
+    "title": "Senior Software Engineer",
+    "subtitle": "Product engineer with end-to-end ownership — from an initial direction to a shipped product.",
     "cta": {
       "projects": "View Projects",
       "contact": "Get in Touch"
@@ -17,9 +18,9 @@
   },
   "about": {
     "title": "About Me",
-    "subtitle": "Full Stack Developer",
-    "description1": "Software engineer with 6+ years in web and mobile development. Strong command of React and TypeScript on the frontend (component architecture, state management with Redux/Context, and web performance), plus specialization in Flutter/Firebase for cross‑platform products.",
-    "description2": "I have led and contributed to projects like SnapnFund, All in Biking, and TimeForemost, integrating REST APIs, Stripe/QuickBooks, and Google Cloud. Focused on scalable solutions and smooth UX, bringing speed and precision to both code and collaboration.",
+    "subtitle": "Senior Software Engineer",
+    "description1": "Senior software engineer with 6+ years in web and mobile development — a product engineer with end-to-end ownership. Give me an initial direction and the authority to run with it, and I define the scope, decide the architecture, and implement changes on the fly, all the way to a shipped product. Strong command of React and TypeScript on the frontend (component architecture, state management with Redux/Context, and web performance), plus specialization in Flutter/Firebase for cross‑platform products.",
+    "description2": "I've owned products like SnapnFund, All in Biking, and TimeForemost end to end — shaping scope, integrating REST APIs, Stripe/QuickBooks, and Google Cloud, and shipping scalable solutions with smooth UX. I bring that same speed and precision to both code and collaboration.",
     "technologies": {
       "react": "React",
       "nodejs": "Node.js",
@@ -38,11 +39,11 @@
     "designDesc": "Figma, Adobe XD",
     "cloudDesc": "AWS, Vercel, Netlify",
     "tags": {
-      "frontend": ["React", "TypeScript", "Redux", "Next.js", "Vite"],
-      "backend": ["Node.js", "ASP.NET Core", "NestJS", "REST APIs"],
-      "mobile": ["Flutter", "React Native", "Firebase"],
-      "cloud": ["Google Cloud", "AWS", "Stripe", "QuickBooks"],
-      "tools": ["Git", "GitHub", "SCRUM", "Figma"]
+      "frontend": ["React.js", "Next.js", "Angular", "TypeScript", "JavaScript", "Responsive UI", "Design Systems"],
+      "backend": ["Node.js", "NestJS", "ASP.NET Core", "C#", "REST/GraphQL APIs"],
+      "mobile": ["Flutter", "Flutter Web", "Dart", "Cross-platform architecture", "Complex state management"],
+      "cloud": ["Firebase", "Google Cloud Platform (GCP)", "AWS", "Neo4j", "SQL/NoSQL"],
+      "tools": ["Git", "CI/CD", "GitHub Actions", "Docker", "Stripe", "QuickBooks", "OCR", "AI/LLM data extraction"]
     }
   },
   "projects": {
@@ -71,9 +72,6 @@
       },
       "timeforemost": {
         "description": "TimeForemost: Participated in building an enterprise time tracking platform that grew from an internal tool into a full productivity monitoring and analytics service. Contributed to Flutter, NestJS, Google Cloud, and Stripe integrations, highlighting cross-platform delivery, backend orchestration, and payment processing expertise."
-      },
-      "automedic": {
-        "description": "AutoMedic Consulting: Served as an external consultant embedded with AutoMedic's development team, a franchise network of mechanic shops. My participation focused on integrating Google Maps for shop discovery and routing and wiring QuickBooks into their invoicing flows to automate billing. Partnered closely with the in-house engineers to land the integrations cleanly within the existing infrastructure."
       },
       "allInBiking": {
         "description": "All In Biking: Led the frontend for a cyclist-focused social network on Android and iOS, enabling riders to share moments, enter competitions, and connect with organizations. Directed the Flutter implementation backed by Firebase, Google Cloud, and Neo4J to deliver seamless realtime data and resilient social features."
@@ -105,23 +103,27 @@
     },
     "timeline": {
       "prodev": {
-        "name": "ProDev Solutions",
+        "name": "ProDev Solutions LLC",
+        "title": "Senior Full Stack Developer",
+        "location": "Tampa",
         "period": "September 2019 to June 2023"
-      },
-      "ntsprint": {
-        "name": "NTSprint",
-        "period": "March 2021 to June 2021"
       },
       "netforemost": {
         "name": "NetForemost",
+        "title": "Software Developer",
+        "location": "Panama City (Remote)",
         "period": "March 2022 to June 2022"
       },
       "qabit": {
-        "name": "Quality on Bit",
+        "name": "QA-BIT",
+        "title": "Senior Software Developer / Mobile Architect",
+        "location": "Estonia",
         "period": "June 2022 to Present"
       },
       "astrocode": {
         "name": "AstroCode",
+        "title": "Senior Full Stack Developer",
+        "location": "Freelance",
         "period": "August 2025 to Present"
       }
     },
@@ -141,8 +143,33 @@
       "github": "GitHub",
       "liveDemo": "Live Demo",
       "visitSite": "Visit Site",
-      "notAvailable": "Private project, URL not available"
+      "notAvailable": "Private project, URL not available",
+      "inDevelopment": "In development"
     }
+  },
+  "openSource": {
+    "eyebrow": "Open Source",
+    "name": "hollow",
+    "tagline": "Pixel-perfect skeleton loaders for Flutter",
+    "problemLabel": "The problem",
+    "problem": "Hand-built skeleton loaders drift out of sync with the real UI. Every layout change means editing the placeholders twice — and they still never match.",
+    "solutionLabel": "The solution",
+    "solution": "hollow captures the real RenderObject tree of your widgets through Dart AST analysis and a CLI, then generates the placeholders automatically so they always match the actual layout.",
+    "demoAlt": "Animated demo of hollow generating skeleton loaders that match a real Flutter screen",
+    "usageLabel": "Usage",
+    "featuresLabel": "Features",
+    "features": {
+      "shimmer": "Globally synchronized shimmer",
+      "cli": "One-command CLI (dart run hollow:build)",
+      "darkMode": "Dark mode support",
+      "adaptive": "Percentage-based adaptive layouts",
+      "radius": "Independent border radius per corner"
+    },
+    "cta": {
+      "github": "View on GitHub",
+      "pubdev": "View on pub.dev"
+    },
+    "license": "MIT License"
   },
   "contact": {
     "title": "Contact",
