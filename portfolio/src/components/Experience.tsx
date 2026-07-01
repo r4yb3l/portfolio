@@ -7,25 +7,29 @@ interface ExperienceProps {
   link?: string
   inverted?: boolean
   inDevelopment?: boolean
+  index?: number
 }
 
-const Experience = ({ experience, image, link, inverted, inDevelopment }: ExperienceProps) => {
+const Experience = ({ experience, image, link, inverted, inDevelopment, index = 0 }: ExperienceProps) => {
   const { t } = useTranslation()
 
   return (
-    <motion.div
-      className={`flex flex-col ${inverted ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 md:gap-12 items-center`}
+    <motion.article
+      className={`flex flex-col ${inverted ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 md:gap-10 items-center rounded-2xl bg-apple-surface border border-apple-line p-6 md:p-8 apple-shadow-sm transition-shadow duration-300 hover:apple-shadow-lg`}
       initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, delay: (index % 2) * 0.12 }}
+      whileHover={{ y: -6 }}
     >
       <div className="w-full md:w-1/2">
         <p className="text-apple-dark text-base apple-body-text leading-relaxed mb-4">
           {experience}
         </p>
         {inDevelopment ? (
-          <span className="text-sm font-medium text-apple-blue">
-            En desarrollo
+          <span className="inline-flex items-center gap-2 text-sm font-medium text-apple-blue">
+            <span className="w-1.5 h-1.5 rounded-full bg-apple-blue" />
+            {t('projects.actions.inDevelopment')}
           </span>
         ) : link ? (
           <a
@@ -38,7 +42,7 @@ const Experience = ({ experience, image, link, inverted, inDevelopment }: Experi
             <span className="text-xs">→</span>
           </a>
         ) : (
-          <span className="text-sm text-apple-dark/40 italic">
+          <span className="text-sm text-apple-gray italic">
             {t('projects.actions.notAvailable')}
           </span>
         )}
@@ -49,10 +53,10 @@ const Experience = ({ experience, image, link, inverted, inDevelopment }: Experi
           alt="Project screenshot"
           loading="lazy"
           decoding="async"
-          className="w-full h-auto rounded-lg"
+          className="w-full h-auto rounded-xl"
         />
       </div>
-    </motion.div>
+    </motion.article>
   )
 }
 

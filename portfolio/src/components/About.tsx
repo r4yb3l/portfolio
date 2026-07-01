@@ -3,7 +3,6 @@ import { useInView } from 'react-intersection-observer'
 import { useTranslation } from 'react-i18next'
 import profileImg from '../assets/profile.jpeg'
 import prodevLogo from '../assets/logos/business/prodev.svg'
-import ntsprintLogo from '../assets/logos/business/ntsprint.svg'
 import netforemostLogo from '../assets/logos/business/netforemost.svg'
 import qaBitLogo from '../assets/logos/business/qa-bit.svg'
 import astrocodeLogo from '../assets/logos/business/astrocode.svg'
@@ -18,9 +17,8 @@ const About = () => {
 
   const companies = [
     { logo: prodevLogo, alt: 'ProDev Solutions LLC logo', name: t('projects.timeline.prodev.name'), target: 'prodev' },
-    { logo: ntsprintLogo, alt: 'NTSprint logo', name: t('projects.timeline.ntsprint.name'), target: 'ntsprint' },
     { logo: netforemostLogo, alt: 'NetForemost logo', name: t('projects.timeline.netforemost.name'), target: 'netforemost' },
-    { logo: qaBitLogo, alt: 'Quality on Bit logo', name: t('projects.timeline.qabit.name'), target: 'qabit' },
+    { logo: qaBitLogo, alt: 'QA-BIT logo', name: t('projects.timeline.qabit.name'), target: 'qabit' },
     { logo: astrocodeLogo, alt: 'AstroCode Labs logo', name: t('projects.timeline.astrocode.name'), target: 'astrocode' },
   ]
 
@@ -73,7 +71,7 @@ const About = () => {
                   key={company.name}
                   type="button"
                   onClick={() => handleScroll(company.target)}
-                  className="flex items-center gap-2 bg-white/70 rounded-lg px-4 py-3 transition-all duration-300 hover:bg-white/90 border border-black/5"
+                  className="flex items-center gap-2 bg-white/70 rounded-lg px-4 py-3 border border-apple-line transition-all duration-300 hover:bg-white hover:-translate-y-0.5 hover:apple-shadow-sm"
                 >
                   <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
                     <img src={company.logo} alt={company.alt} className="w-6 h-6 object-contain" />

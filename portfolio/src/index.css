@@ -16,6 +16,11 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
+
+  :focus-visible {
+    outline: 2px solid #0071e3;
+    outline-offset: 3px;
+  }
 }
 
 @layer utilities {
@@ -47,8 +52,20 @@
     color: #1d1d1f;
   }
 
+  .text-apple-gray {
+    color: #6e6e73;
+  }
+
   .text-apple-white {
     color: #ffffff;
+  }
+
+  .bg-apple-surface {
+    background-color: #fbfbfd;
+  }
+
+  .border-apple-line {
+    border-color: #d2d2d7;
   }
 
   .apple-nav-glass {
@@ -59,6 +76,14 @@
 
   .apple-card-shadow {
     box-shadow: rgba(0, 0, 0, 0.22) 3px 5px 30px 0px;
+  }
+
+  .apple-shadow-sm {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+
+  .apple-shadow-lg {
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14), 0 4px 10px rgba(0, 0, 0, 0.08);
   }
 
   .apple-pill {
@@ -100,4 +125,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

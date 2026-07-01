@@ -76,7 +76,7 @@ const Contact = () => {
               {[
                 { icon: emailIcon, label: t('contact.info.email'), value: 'raybel.developer@gmail.com' },
                 { icon: phoneIcon, label: t('contact.info.phone'), value: '+505 8839 0152' },
-                { icon: locationIcon, label: t('contact.info.location'), value: 'San Jose, Costa Rica' },
+                { icon: locationIcon, label: t('contact.info.location'), value: 'Estelí, Nicaragua' },
               ].map((contact, index) => (
                 <motion.div
                   key={contact.label}
@@ -110,7 +110,7 @@ const Contact = () => {
               </label>
               <input
                 type="text"
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/30 text-sm focus:outline-none focus:border-apple-blue transition-colors apple-body-text"
+                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 text-sm focus:border-apple-blue transition-colors apple-body-text"
                 placeholder={t('contact.form.namePlaceholder') ?? ''}
                 value={formData.name}
                 onChange={handleChange('name')}
@@ -124,7 +124,7 @@ const Contact = () => {
               </label>
               <input
                 type="email"
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/30 text-sm focus:outline-none focus:border-apple-blue transition-colors apple-body-text"
+                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 text-sm focus:border-apple-blue transition-colors apple-body-text"
                 placeholder={t('contact.form.emailPlaceholder') ?? ''}
                 value={formData.email}
                 onChange={handleChange('email')}
@@ -138,7 +138,7 @@ const Contact = () => {
               </label>
               <textarea
                 rows={4}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/30 text-sm focus:outline-none focus:border-apple-blue transition-colors resize-none apple-body-text"
+                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 text-sm focus:border-apple-blue transition-colors resize-none apple-body-text"
                 placeholder={t('contact.form.messagePlaceholder') ?? ''}
                 value={formData.message}
                 onChange={handleChange('message')}
