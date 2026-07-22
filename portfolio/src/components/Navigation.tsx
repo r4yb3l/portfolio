@@ -10,28 +10,19 @@ interface NavigationProps {
 const Navigation = ({ scrolled }: NavigationProps) => {
   const [activeSection, setActiveSection] = useState('hero')
   const { t } = useTranslation()
-  const sectionElementsRef = useRef<Map<string, IntersectionObserverEntry>>(new Map())
+  const intersectingRef = useRef<Map<string, boolean>>(new Map())
 
   useEffect(() => {
     const sections = ['hero', 'about', 'skills', 'projects', 'opensource', 'contact']
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          sectionElementsRef.current.set(entry.target.id, entry)
+          intersectingRef.current.set(entry.target.id, entry.isIntersecting)
         }
-        let topVisible = ''
-        let topRatio = 0
-        sectionElementsRef.current.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > topRatio) {
-            topRatio = entry.intersectionRatio
-            topVisible = entry.target.id
-          }
-        })
-        if (topVisible) {
-          setActiveSection(topVisible)
-        }
+        const active = sections.find((id) => intersectingRef.current.get(id))
+        if (active) setActiveSection(active)
       },
-      { rootMargin: '-20% 0px -60% 0px', threshold: 0.1 }
+      { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
     )
 
     sections.forEach((id) => {
@@ -79,16 +70,22 @@ const Navigation = ({ scrolled }: NavigationProps) => {
             {navItems.map((item) => (
               <motion.button
                 key={item}
-                whileHover={{ opacity: 0.7 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item)}
-                className={`text-xs font-normal tracking-tight transition-opacity duration-300 ${
+                className={`relative text-xs tracking-tight transition-colors duration-300 ${
                   activeSection === item
-                    ? 'text-white'
-                    : 'text-white/70 hover:text-white'
+                    ? 'text-white font-medium'
+                    : 'text-white/50 font-normal hover:text-white/80'
                 }`}
               >
                 {t(`navigation.${item}`)}
+                {activeSection === item && (
+                  <motion.span
+                    layoutId="nav-active-underline"
+                    className="absolute -bottom-1.5 left-0 right-0 h-0.5 rounded-full bg-apple-blue"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
               </motion.button>
             ))}
             <LanguageSelector />
