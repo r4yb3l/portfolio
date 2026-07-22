@@ -19,6 +19,7 @@ import kitTokenImage from '../assets/images/kit-de-token.png'
 import gestorRRHHImage from '../assets/images/gestor-de-rrhh.png'
 import manitasImage from '../assets/images/manitas.png'
 import chronaImage from '../assets/images/chrona.png'
+import mergejobImage from '../assets/images/mergejob.png'
 
 const CompanyHeader = ({
   logo,
@@ -83,18 +84,21 @@ const Projects = () => {
       <div className="space-y-16 max-w-5xl mx-auto px-4">
         <Experience
           index={0}
+          title={t('projects.entries.snapnfund.title')}
           experience={t('projects.entries.snapnfund.description')}
           image={snapnfundImage}
           link="https://snapnfund.com/home"
         />
         <Experience
           index={1}
+          title={t('projects.entries.dealerslash.title')}
           experience={t('projects.entries.dealerslash.description')}
           image={dealerslashImage}
           inverted
         />
         <Experience
           index={0}
+          title={t('projects.entries.followApp.title')}
           experience={t('projects.entries.followApp.description')}
           image={followAppImage}
           link="https://apps.apple.com/us/app/followapp-by-cts/id6751299522"
@@ -111,6 +115,7 @@ const Projects = () => {
         </div>
         <Experience
           index={0}
+          title={t('projects.entries.timeforemost.title')}
           experience={t('projects.entries.timeforemost.description')}
           image={timeforemostImage}
           link="https://timeforemost.com/"
@@ -127,45 +132,60 @@ const Projects = () => {
         </div>
         <Experience
           index={0}
+          title={t('projects.entries.mergejob.title')}
+          experience={t('projects.entries.mergejob.description')}
+          image={mergejobImage}
+          link="https://mergejob.io"
+        />
+        <Experience
+          index={1}
+          title={t('projects.entries.allInBiking.title')}
           experience={t('projects.entries.allInBiking.description')}
           image={allInBikingImage}
           link="https://allinbiking.com/"
+          inverted
         />
         <Experience
-          index={1}
+          index={0}
+          title={t('projects.entries.retarificador.title')}
           experience={t('projects.entries.retarificador.description')}
           image={retarificadorImage}
           link="https://retarificador.alphabrokers.es/"
-          inverted
         />
         <Experience
-          index={0}
+          index={1}
+          title={t('projects.entries.eduq.title')}
           experience={t('projects.entries.eduq.description')}
           image={eduqImage}
           link="https://play.google.com/store/apps/details?id=com.qabit.eduq"
+          inverted
         />
         <Experience
-          index={1}
+          index={0}
+          title={t('projects.entries.groceryChefPro.title')}
           experience={t('projects.entries.groceryChefPro.description')}
           image={groceryImage}
           inDevelopment
-          inverted
-        />
-        <Experience
-          index={0}
-          experience={t('projects.entries.gestionKitDigital.description')}
-          image={gestionComunidadImage}
         />
         <Experience
           index={1}
-          experience={t('projects.entries.kitTokenComunidad.description')}
-          image={kitTokenImage}
+          title={t('projects.entries.gestionKitDigital.title')}
+          experience={t('projects.entries.gestionKitDigital.description')}
+          image={gestionComunidadImage}
           inverted
         />
         <Experience
           index={0}
+          title={t('projects.entries.kitTokenComunidad.title')}
+          experience={t('projects.entries.kitTokenComunidad.description')}
+          image={kitTokenImage}
+        />
+        <Experience
+          index={1}
+          title={t('projects.entries.gestorRRHH.title')}
           experience={t('projects.entries.gestorRRHH.description')}
           image={gestorRRHHImage}
+          inverted
         />
 
         <div id="astrocode">
@@ -179,12 +199,14 @@ const Projects = () => {
         </div>
         <Experience
           index={0}
+          title={t('projects.entries.manitas.title')}
           experience={t('projects.entries.manitas.description')}
           image={manitasImage}
           inDevelopment
         />
         <Experience
           index={1}
+          title={t('projects.entries.chrona.title')}
           experience={t('projects.entries.chrona.description')}
           image={chronaImage}
           inDevelopment

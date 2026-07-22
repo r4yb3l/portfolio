@@ -10,7 +10,7 @@
   "hero": {
     "name": "Raybel Hernández",
     "title": "Ingeniero de Software Senior",
-    "subtitle": "Product engineer con ownership end-to-end — de una dirección inicial a un producto lanzado.",
+    "subtitle": "Full-stack product engineer con ownership end-to-end — de una dirección inicial a un producto lanzado.",
     "cta": {
       "projects": "Ver Proyectos",
       "contact": "Contactar"
@@ -19,8 +19,8 @@
   "about": {
     "title": "Me presento",
     "subtitle": "Ingeniero de Software Senior",
-    "description1": "Ingeniero de software senior con 6+ años en desarrollo web y móvil — un product engineer con ownership end-to-end. Dame una dirección inicial y la autoridad para ejecutarla: defino el alcance, decido la arquitectura e implemento cambios sobre la marcha, hasta un producto lanzado. Sólido dominio de React y TypeScript en frontend (arquitectura de componentes, gestión de estado con Redux/Context y performance web) y especialización en Flutter/Firebase para productos multiplataforma.",
-    "description2": "He llevado productos como SnapnFund, All in Biking y TimeForemost de punta a punta — definiendo el alcance, integrando APIs REST, Stripe/QuickBooks y Google Cloud, y entregando soluciones escalables con una UX fluida. Traslado esa misma velocidad y precisión al código y al trabajo en equipo.",
+    "description1": "Ingeniero de software senior con 6+ años entre web y móvil — un builder full-stack con mentalidad de producto y ownership end-to-end. Dame una dirección inicial y la autoridad para ejecutarla: defino el alcance, decido la arquitectura e implemento cambios sobre la marcha, hasta un producto lanzado. Trabajo todo el stack: React/Next.js y TypeScript en frontend; Node.js/NestJS, ASP.NET Core y PostgreSQL en backend; móvil multiplataforma con Flutter; y features potenciadas por IA (LLMs, embeddings, búsqueda vectorial) sobre infra cloud como Supabase, Firebase, GCP y Cloudflare Workers.",
+    "description2": "He llevado productos de punta a punta — desde SnapnFund y All in Biking hasta Mergejob, un job board con IA que puntúa ofertas por fit semántico usando embeddings y pgvector. En el camino he diseñado esquemas de base de datos y APIs seguras, integrado Stripe/QuickBooks y Google Cloud, y entregado sistemas escalables con una UX fluida. Traslado esa misma velocidad y precisión al código y al trabajo en equipo.",
     "technologies": {
       "react": "React",
       "nodejs": "Node.js",
@@ -40,10 +40,10 @@
     "cloudDesc": "AWS, Vercel, Netlify",
     "tags": {
       "frontend": ["React.js", "Next.js", "Angular", "TypeScript", "JavaScript", "UI responsiva", "Design Systems"],
-      "backend": ["Node.js", "NestJS", "ASP.NET Core", "C#", "REST/GraphQL APIs"],
+      "backend": ["Node.js", "NestJS", "ASP.NET Core", "C#", "REST/GraphQL APIs", "PostgreSQL"],
       "mobile": ["Flutter", "Flutter Web", "Dart", "Arquitectura multiplataforma", "Gestión de estado compleja"],
-      "cloud": ["Firebase", "Google Cloud Platform (GCP)", "AWS", "Neo4j", "SQL/NoSQL"],
-      "tools": ["Git", "CI/CD", "GitHub Actions", "Docker", "Stripe", "QuickBooks", "OCR", "Extracción de datos con IA/LLM"]
+      "cloud": ["Supabase", "Firebase", "Google Cloud Platform (GCP)", "Cloudflare Workers", "AWS", "PostgreSQL / pgvector", "Neo4j"],
+      "tools": ["Git", "CI/CD", "GitHub Actions", "Docker", "Stripe", "LLMs y embeddings", "Búsqueda vectorial", "OCR"]
     }
   },
   "projects": {
@@ -61,44 +61,61 @@
       "description": "Dashboard meteorológico con visualizaciones interactivas"
     },
     "entries": {
+      "mergejob": {
+        "title": "Mergejob",
+        "description": "Un job board con IA que puntúa cada oferta según el fit semántico con el CV del candidato en lugar de por recencia. Diseñé y construí la plataforma de punta a punta sobre una arquitectura distribuida — Next.js en el frontend, edge functions en Supabase/Postgres y Cloudflare Workers como gateway de LLM. El pipeline de matching parsea el CV con un LLM, genera embeddings, recupera candidatos con pgvector y hace reranking con un LLM. Implementé un modelo de monetización por créditos con paywall a nivel de campo (RLS de Postgres + funciones SECURITY DEFINER), pagos con Stripe, feed en tiempo real con fallback de polling y backups automáticos con restauración por usuario."
+      },
       "snapnfund": {
-        "description": "SnapnFund Development: SnapnFund permite que los compradores conviertan sus compras diarias en donaciones escaneando recibos y dirigiendo fondos a organizaciones sin fines de lucro aliadas. Lideré la entrega full stack entre la app móvil en Flutter, la experiencia web en React y los servicios en Firebase + ASP.NET, encargándome de la arquitectura, gestión de estado y automatización de despliegues. Colaboré en un equipo SCRUM para integrar OCR, flujos de pago seguros y ajustes de UI responsiva que mantuvieron el flujo de donaciones rápido y confiable."
+        "title": "SnapnFund",
+        "description": "SnapnFund permite que los compradores conviertan sus compras diarias en donaciones escaneando recibos y dirigiendo fondos a organizaciones sin fines de lucro aliadas. Lideré la entrega full stack entre la app móvil en Flutter, la experiencia web en React y los servicios en Firebase + ASP.NET, encargándome de la arquitectura, gestión de estado y automatización de despliegues. Colaboré en un equipo SCRUM para integrar OCR, flujos de pago seguros y ajustes de UI responsiva que mantuvieron el flujo de donaciones rápido y confiable."
       },
       "dealerslash": {
-        "description": "DealerSlash Marketplace: Plataforma de compra y venta de vehículos modernizada desde un API Java Spring heredado hacia un backend escalable en ASP.NET Core. Guié la migración a servicios de Google Cloud y diseñé una experiencia móvil en Flutter con componentes UI a medida, flujos de inventario en tiempo real y animaciones pulidas que hicieron que explorar y reservar vehículos se sintiera premium."
+        "title": "DealerSlash",
+        "description": "Plataforma de compra y venta de vehículos modernizada desde un API Java Spring heredado hacia un backend escalable en ASP.NET Core. Guié la migración a servicios de Google Cloud y diseñé una experiencia móvil en Flutter con componentes UI a medida, flujos de inventario en tiempo real y animaciones pulidas que hicieron que explorar y reservar vehículos se sintiera premium."
       },
       "followApp": {
-        "description": "Follow App: Plataforma móvil que conecta comunidades religiosas para compartir cursos de discipulado, recursos multimedia y ponencias en vivo. Lideré la arquitectura en Flutter y la integración con un backend en NestJS + Firebase para streaming, notificaciones y seguimiento de avance. Implementé dashboards personalizados para líderes, soporte multidioma e interfaces accesibles que mantienen el tono de la congregación."
+        "title": "Follow App",
+        "description": "Plataforma móvil que conecta comunidades religiosas para compartir cursos de discipulado, recursos multimedia y ponencias en vivo. Lideré la arquitectura en Flutter y la integración con un backend en NestJS + Firebase para streaming, notificaciones y seguimiento de avance. Implementé dashboards personalizados para líderes, soporte multidioma e interfaces accesibles que mantienen el tono de la congregación."
       },
       "timeforemost": {
-        "description": "TimeForemost: Participé en el desarrollo de un software empresarial de control de tiempos, escalando una herramienta interna hacia un servicio completo de monitoreo de productividad y analítica. Contribuí a la implementación de Flutter, NestJS, Google Cloud y Stripe, destacando experiencia en desarrollo multiplataforma, integración de backend y procesamiento de pagos."
+        "title": "TimeForemost",
+        "description": "Participé en el desarrollo de un software empresarial de control de tiempos, escalando una herramienta interna hacia un servicio completo de monitoreo de productividad y analítica. Contribuí a la implementación de Flutter, NestJS, Google Cloud y Stripe, destacando experiencia en desarrollo multiplataforma, integración de backend y procesamiento de pagos."
       },
       "allInBiking": {
-        "description": "All In Biking: Lideré el frontend de una red social para ciclistas en Android y iOS, donde los usuarios comparten experiencias, participan en competencias y se conectan con organizaciones. Dirigí la implementación en Flutter, apoyado en Firebase, Google Cloud y Neo4J para ofrecer datos en tiempo real y funcionalidades sociales robustas."
+        "title": "All In Biking",
+        "description": "Lideré el frontend de una red social para ciclistas en Android y iOS, donde los usuarios comparten experiencias, participan en competencias y se conectan con organizaciones. Dirigí la implementación en Flutter, apoyado en Firebase, Google Cloud y Neo4J para ofrecer datos en tiempo real y funcionalidades sociales robustas."
       },
       "retarificador": {
-        "description": "Retarificador Alpha Brokers: Contribuí al refactor y optimización de un proyecto web heredado para retarificar seguros. Aplicando buenas prácticas y patrones de software mejoramos significativamente la performance y la mantenibilidad del producto."
+        "title": "Retarificador Alpha Brokers",
+        "description": "Contribuí al refactor y optimización de un proyecto web heredado para retarificar seguros. Aplicando buenas prácticas y patrones de software mejoramos significativamente la performance y la mantenibilidad del producto."
       },
       "eduq": {
-        "description": "EduQ: Desarrollé una aplicación móvil de resolución de ejercicios implementada con Flutter, enfocada en la preparación de estudiantes para exámenes. La aplicación ofrece una interfaz intuitiva para resolver ejercicios prácticos, seguimiento de progreso y herramientas de estudio personalizadas. Implementé arquitectura escalable, gestión de estado eficiente y una experiencia de usuario fluida que facilita el aprendizaje y la práctica continua."
+        "title": "EduQ",
+        "description": "Desarrollé una aplicación móvil de resolución de ejercicios implementada con Flutter, enfocada en la preparación de estudiantes para exámenes. La aplicación ofrece una interfaz intuitiva para resolver ejercicios prácticos, seguimiento de progreso y herramientas de estudio personalizadas. Implementé arquitectura escalable, gestión de estado eficiente y una experiencia de usuario fluida que facilita el aprendizaje y la práctica continua."
       },
       "manitas": {
-        "description": "Manitas App: Estoy desarrollando una aplicación multiplataforma (web y móvil) para conectar usuarios con profesionales de reparación y bricolaje en su área local. La plataforma permite buscar, filtrar y contactar técnicos especializados en diversas áreas como plomería, electricidad, carpintería y más. Estoy implementando funcionalidades de geolocalización para encontrar profesionales cercanos, sistema de calificaciones y reseñas, chat en tiempo real y gestión de citas. La aplicación móvil está construida con Flutter, mientras que la versión web se desarrollará con Next.js para ofrecer una experiencia multiplataforma fluida y escalable."
+        "title": "Manitas",
+        "description": "Estoy desarrollando una aplicación multiplataforma (web y móvil) para conectar usuarios con profesionales de reparación y bricolaje en su área local. La plataforma permite buscar, filtrar y contactar técnicos especializados en diversas áreas como plomería, electricidad, carpintería y más. Estoy implementando funcionalidades de geolocalización para encontrar profesionales cercanos, sistema de calificaciones y reseñas, chat en tiempo real y gestión de citas. La aplicación móvil está construida con Flutter, mientras que la versión web se desarrollará con Next.js para ofrecer una experiencia multiplataforma fluida y escalable."
       },
       "chrona": {
-        "description": "Chrona: Estoy desarrollando un sistema integral para la gestión de citas en una amplia diversidad de negocios, con futuras funcionalidades en camino. El sistema permite a diferentes tipos de negocios gestionar sus citas, clientes y horarios de manera eficiente. Estoy implementando la plataforma web con Next.js para el frontend y NestJS para el backend, proporcionando una arquitectura robusta y escalable. La aplicación móvil en Flutter está en desarrollo para complementar la experiencia multiplataforma y ofrecer a los usuarios una gestión de citas completa desde cualquier dispositivo."
+        "title": "Chrona",
+        "description": "Estoy desarrollando un sistema integral para la gestión de citas en una amplia diversidad de negocios, con futuras funcionalidades en camino. El sistema permite a diferentes tipos de negocios gestionar sus citas, clientes y horarios de manera eficiente. Estoy implementando la plataforma web con Next.js para el frontend y NestJS para el backend, proporcionando una arquitectura robusta y escalable. La aplicación móvil en Flutter está en desarrollo para complementar la experiencia multiplataforma y ofrecer a los usuarios una gestión de citas completa desde cualquier dispositivo."
       },
       "groceryChefPro": {
-        "description": "Grocery Chef Pro: Desarrollo de una aplicación enfocada al seguimiento de alimentación y listas de compras asistidas por inteligencia artificial. La aplicación permite a los usuarios gestionar sus hábitos alimenticios, crear listas de compras inteligentes y recibir recomendaciones personalizadas basadas en sus preferencias y necesidades nutricionales."
+        "title": "Grocery Chef Pro",
+        "description": "Desarrollo de una aplicación enfocada al seguimiento de alimentación y listas de compras asistidas por inteligencia artificial. La aplicación permite a los usuarios gestionar sus hábitos alimenticios, crear listas de compras inteligentes y recibir recomendaciones personalizadas basadas en sus preferencias y necesidades nutricionales."
       },
       "gestionKitDigital": {
-        "description": "Plataforma Gestión de Solicitudes Kit Digital: Participación en el desarrollo Frontend de la plataforma. Desarrollé el frontend móvil (Flutter) para la gestión de formularios dinámicos y sus grafos de dependencia, y el BackOffice (React) para gestión de agentes, analítica de rendimiento y la biblioteca de documentos y noticias."
+        "title": "Kit Digital",
+        "description": "Participación en el desarrollo Frontend de la plataforma. Desarrollé el frontend móvil (Flutter) para la gestión de formularios dinámicos y sus grafos de dependencia, y el BackOffice (React) para gestión de agentes, analítica de rendimiento y la biblioteca de documentos y noticias."
       },
       "kitTokenComunidad": {
-        "description": "Plataforma de Gestión de Tókenes en Comunidad: Construcción del frontend (React, anteriormente Angular) en la app para el flujo completo del monedero, transferencias de servicios entre socios del club, la gestión de cuentas y la validación con PIN de seguridad."
+        "title": "Gestión de Tókenes en Comunidad",
+        "description": "Construcción del frontend (React, anteriormente Angular) en la app para el flujo completo del monedero, transferencias de servicios entre socios del club, la gestión de cuentas y la validación con PIN de seguridad."
       },
       "gestorRRHH": {
-        "description": "Plataforma de Gestión de RRHH: Implementación en la aplicación de la interfaz de panel personal (React, anteriormente Angular) y la aplicación móvil (Flutter) para el acceso de los empleados a datos laborales, políticas y comunicados. Incluye el desarrollo de interfaces para la configuración de tenants y la gestión de accesos complejos."
+        "title": "Gestión de RRHH",
+        "description": "Implementación en la aplicación de la interfaz de panel personal (React, anteriormente Angular) y la aplicación móvil (Flutter) para el acceso de los empleados a datos laborales, políticas y comunicados. Incluye el desarrollo de interfaces para la configuración de tenants y la gestión de accesos complejos."
       }
     },
     "timeline": {

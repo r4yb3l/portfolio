@@ -10,7 +10,7 @@
   "hero": {
     "name": "Raybel Hernández",
     "title": "Senior Software Engineer",
-    "subtitle": "Product engineer with end-to-end ownership — from an initial direction to a shipped product.",
+    "subtitle": "Full-stack product engineer with end-to-end ownership — from an initial direction to a shipped product.",
     "cta": {
       "projects": "View Projects",
       "contact": "Get in Touch"
@@ -19,8 +19,8 @@
   "about": {
     "title": "About Me",
     "subtitle": "Senior Software Engineer",
-    "description1": "Senior software engineer with 6+ years in web and mobile development — a product engineer with end-to-end ownership. Give me an initial direction and the authority to run with it, and I define the scope, decide the architecture, and implement changes on the fly, all the way to a shipped product. Strong command of React and TypeScript on the frontend (component architecture, state management with Redux/Context, and web performance), plus specialization in Flutter/Firebase for cross‑platform products.",
-    "description2": "I've owned products like SnapnFund, All in Biking, and TimeForemost end to end — shaping scope, integrating REST APIs, Stripe/QuickBooks, and Google Cloud, and shipping scalable solutions with smooth UX. I bring that same speed and precision to both code and collaboration.",
+    "description1": "Senior software engineer with 6+ years across web and mobile — a full-stack, product-minded builder with end-to-end ownership. Give me an initial direction and the authority to run with it, and I define the scope, decide the architecture, and implement changes on the fly, all the way to a shipped product. I work the whole stack: React/Next.js and TypeScript on the frontend; Node.js/NestJS, ASP.NET Core and PostgreSQL on the backend; cross-platform mobile with Flutter; and AI-powered features (LLMs, embeddings, vector search) on cloud infra like Supabase, Firebase, GCP and Cloudflare Workers.",
+    "description2": "I've owned products end to end — from SnapnFund and All in Biking to Mergejob, an AI-powered job board that scores listings by semantic fit using embeddings and pgvector. Along the way I've designed database schemas and secure APIs, integrated Stripe/QuickBooks and Google Cloud, and shipped scalable systems with smooth UX. I bring that same speed and precision to both code and collaboration.",
     "technologies": {
       "react": "React",
       "nodejs": "Node.js",
@@ -40,10 +40,10 @@
     "cloudDesc": "AWS, Vercel, Netlify",
     "tags": {
       "frontend": ["React.js", "Next.js", "Angular", "TypeScript", "JavaScript", "Responsive UI", "Design Systems"],
-      "backend": ["Node.js", "NestJS", "ASP.NET Core", "C#", "REST/GraphQL APIs"],
+      "backend": ["Node.js", "NestJS", "ASP.NET Core", "C#", "REST/GraphQL APIs", "PostgreSQL"],
       "mobile": ["Flutter", "Flutter Web", "Dart", "Cross-platform architecture", "Complex state management"],
-      "cloud": ["Firebase", "Google Cloud Platform (GCP)", "AWS", "Neo4j", "SQL/NoSQL"],
-      "tools": ["Git", "CI/CD", "GitHub Actions", "Docker", "Stripe", "QuickBooks", "OCR", "AI/LLM data extraction"]
+      "cloud": ["Supabase", "Firebase", "Google Cloud Platform (GCP)", "Cloudflare Workers", "AWS", "PostgreSQL / pgvector", "Neo4j"],
+      "tools": ["Git", "CI/CD", "GitHub Actions", "Docker", "Stripe", "LLMs & embeddings", "Vector search", "OCR"]
     }
   },
   "projects": {
@@ -61,44 +61,61 @@
       "description": "Weather dashboard with interactive visualizations"
     },
     "entries": {
+      "mergejob": {
+        "title": "Mergejob",
+        "description": "An AI-powered job board that scores every listing by semantic fit with a candidate's CV instead of by recency. I designed and built the platform end to end on a distributed architecture — Next.js on the frontend, Supabase/Postgres edge functions, and Cloudflare Workers as an LLM gateway. The matching pipeline parses the CV with an LLM, generates embeddings, retrieves candidates with pgvector, and reranks with an LLM. I implemented a credit-based monetization model with field-level paywalling (Postgres RLS + SECURITY DEFINER functions), Stripe payments, a realtime feed with polling fallback, and automated backups with per-user restore."
+      },
       "snapnfund": {
-        "description": "SnapnFund Development: SnapnFund empowers shoppers to turn everyday purchases into donations by scanning receipts and directing funds to partner nonprofits. I led the full-stack delivery across the Flutter mobile app, the React web experience, and Firebase + ASP.NET services, owning architecture, state management, and release automation. Worked within a SCRUM team to integrate OCR, secure payment workflows, and responsive UI refinements that kept the donor flow fast and reliable."
+        "title": "SnapnFund",
+        "description": "SnapnFund empowers shoppers to turn everyday purchases into donations by scanning receipts and directing funds to partner nonprofits. I led the full-stack delivery across the Flutter mobile app, the React web experience, and Firebase + ASP.NET services, owning architecture, state management, and release automation. Worked within a SCRUM team to integrate OCR, secure payment workflows, and responsive UI refinements that kept the donor flow fast and reliable."
       },
       "dealerslash": {
-        "description": "DealerSlash Marketplace: A vehicle buying and selling platform modernized from a legacy Java Spring API into a scalable ASP.NET Core backend. I drove the cloud migration to Google Cloud services and crafted a Flutter mobile experience with bespoke UI components, real-time inventory flows, and polished animations that made browsing and reserving vehicles feel premium."
+        "title": "DealerSlash",
+        "description": "A vehicle buying and selling platform modernized from a legacy Java Spring API into a scalable ASP.NET Core backend. I drove the cloud migration to Google Cloud services and crafted a Flutter mobile experience with bespoke UI components, real-time inventory flows, and polished animations that made browsing and reserving vehicles feel premium."
       },
       "followApp": {
-        "description": "Follow App: A mobile platform that connects faith communities to share discipleship courses, multimedia resources, and live teachings. I led the Flutter architecture and integrated NestJS + Firebase services for streaming, notifications, and progress tracking. Delivered leader dashboards, multilingual support, and accessible interfaces that reflect each congregation's voice."
+        "title": "Follow App",
+        "description": "A mobile platform that connects faith communities to share discipleship courses, multimedia resources, and live teachings. I led the Flutter architecture and integrated NestJS + Firebase services for streaming, notifications, and progress tracking. Delivered leader dashboards, multilingual support, and accessible interfaces that reflect each congregation's voice."
       },
       "timeforemost": {
-        "description": "TimeForemost: Participated in building an enterprise time tracking platform that grew from an internal tool into a full productivity monitoring and analytics service. Contributed to Flutter, NestJS, Google Cloud, and Stripe integrations, highlighting cross-platform delivery, backend orchestration, and payment processing expertise."
+        "title": "TimeForemost",
+        "description": "Participated in building an enterprise time tracking platform that grew from an internal tool into a full productivity monitoring and analytics service. Contributed to Flutter, NestJS, Google Cloud, and Stripe integrations, highlighting cross-platform delivery, backend orchestration, and payment processing expertise."
       },
       "allInBiking": {
-        "description": "All In Biking: Led the frontend for a cyclist-focused social network on Android and iOS, enabling riders to share moments, enter competitions, and connect with organizations. Directed the Flutter implementation backed by Firebase, Google Cloud, and Neo4J to deliver seamless realtime data and resilient social features."
+        "title": "All In Biking",
+        "description": "Led the frontend for a cyclist-focused social network on Android and iOS, enabling riders to share moments, enter competitions, and connect with organizations. Directed the Flutter implementation backed by Firebase, Google Cloud, and Neo4J to deliver seamless realtime data and resilient social features."
       },
       "retarificador": {
-        "description": "Retarificador Alpha Brokers: Contributed to the refactor and optimization of a legacy insurance re-quoting web platform. Applied software best practices and patterns to substantially boost performance and maintainability."
+        "title": "Retarificador Alpha Brokers",
+        "description": "Contributed to the refactor and optimization of a legacy insurance re-quoting web platform. Applied software best practices and patterns to substantially boost performance and maintainability."
       },
       "eduq": {
-        "description": "EduQ: Developed a mobile exercise-solving application built with Flutter, focused on preparing students for exams. The app provides an intuitive interface for solving practice exercises, progress tracking, and personalized study tools. Implemented scalable architecture, efficient state management, and a smooth user experience that facilitates continuous learning and practice."
+        "title": "EduQ",
+        "description": "Developed a mobile exercise-solving application built with Flutter, focused on preparing students for exams. The app provides an intuitive interface for solving practice exercises, progress tracking, and personalized study tools. Implemented scalable architecture, efficient state management, and a smooth user experience that facilitates continuous learning and practice."
       },
       "manitas": {
-        "description": "Manitas App: Currently developing a cross-platform application (web and mobile) to connect users with repair and handyman professionals in their local area. The platform enables searching, filtering, and contacting specialized technicians across various fields such as plumbing, electrical work, carpentry, and more. Implementing geolocation features to find nearby professionals, rating and review system, real-time chat, and appointment management. The mobile app is built with Flutter, while the web version will be developed with Next.js to deliver a smooth, scalable cross-platform experience."
+        "title": "Manitas",
+        "description": "Currently developing a cross-platform application (web and mobile) to connect users with repair and handyman professionals in their local area. The platform enables searching, filtering, and contacting specialized technicians across various fields such as plumbing, electrical work, carpentry, and more. Implementing geolocation features to find nearby professionals, rating and review system, real-time chat, and appointment management. The mobile app is built with Flutter, while the web version will be developed with Next.js to deliver a smooth, scalable cross-platform experience."
       },
       "chrona": {
-        "description": "Chrona: Currently developing a comprehensive appointment management system for a wide diversity of businesses, with future features on the way. The system enables different types of businesses to efficiently manage their appointments, clients, and schedules. Implementing the web platform with Next.js for the frontend and NestJS for the backend, providing a robust and scalable architecture. The Flutter mobile app is in development to complement the cross-platform experience and offer users complete appointment management from any device."
+        "title": "Chrona",
+        "description": "Currently developing a comprehensive appointment management system for a wide diversity of businesses, with future features on the way. The system enables different types of businesses to efficiently manage their appointments, clients, and schedules. Implementing the web platform with Next.js for the frontend and NestJS for the backend, providing a robust and scalable architecture. The Flutter mobile app is in development to complement the cross-platform experience and offer users complete appointment management from any device."
       },
       "groceryChefPro": {
-        "description": "Grocery Chef Pro: Development of an application focused on food tracking and AI-assisted shopping lists. The application allows users to manage their eating habits, create smart shopping lists, and receive personalized recommendations based on their preferences and nutritional needs."
+        "title": "Grocery Chef Pro",
+        "description": "Development of an application focused on food tracking and AI-assisted shopping lists. The application allows users to manage their eating habits, create smart shopping lists, and receive personalized recommendations based on their preferences and nutritional needs."
       },
       "gestionKitDigital": {
-        "description": "Kit Digital Request Management Platform: Participation in the Frontend development of the platform. Developed the mobile frontend (Flutter) for managing dynamic forms and their dependency graphs, and the BackOffice (React) for agent management, performance analytics, and the document and news library."
+        "title": "Kit Digital",
+        "description": "Participation in the Frontend development of the platform. Developed the mobile frontend (Flutter) for managing dynamic forms and their dependency graphs, and the BackOffice (React) for agent management, performance analytics, and the document and news library."
       },
       "kitTokenComunidad": {
-        "description": "Community Token Management Platform: Built the frontend (React, previously Angular) in the app for the complete wallet flow, service transfers between club members, account management, and PIN security validation."
+        "title": "Community Token Management",
+        "description": "Built the frontend (React, previously Angular) in the app for the complete wallet flow, service transfers between club members, account management, and PIN security validation."
       },
       "gestorRRHH": {
-        "description": "HR Management Platform: Implementation in the application of the personal panel interface (React, previously Angular) and the mobile application (Flutter) for employee access to work data, policies, and communications. Includes the development of interfaces for tenant configuration and complex access management."
+        "title": "HR Management",
+        "description": "Implementation in the application of the personal panel interface (React, previously Angular) and the mobile application (Flutter) for employee access to work data, policies, and communications. Includes the development of interfaces for tenant configuration and complex access management."
       }
     },
     "timeline": {

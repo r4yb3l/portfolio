@@ -4,13 +4,14 @@ import { useTranslation } from 'react-i18next'
 interface ExperienceProps {
   experience: string
   image: string
+  title?: string
   link?: string
   inverted?: boolean
   inDevelopment?: boolean
   index?: number
 }
 
-const Experience = ({ experience, image, link, inverted, inDevelopment, index = 0 }: ExperienceProps) => {
+const Experience = ({ experience, image, title, link, inverted, inDevelopment, index = 0 }: ExperienceProps) => {
   const { t } = useTranslation()
 
   return (
@@ -23,6 +24,11 @@ const Experience = ({ experience, image, link, inverted, inDevelopment, index = 
       whileHover={{ y: -6 }}
     >
       <div className="w-full md:w-1/2">
+        {title && (
+          <h3 className="text-2xl md:text-3xl font-semibold text-apple-dark font-apple-display apple-headline-normal mb-3">
+            {title}
+          </h3>
+        )}
         <p className="text-apple-dark text-base apple-body-text leading-relaxed mb-4">
           {experience}
         </p>

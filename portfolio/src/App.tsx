@@ -37,27 +37,35 @@ function App() {
           <Hero />
         </section>
 
-        <Suspense fallback={<div className="h-24" />}>
-          <section id="about" className="bg-apple-gray">
+        <section id="about" className="bg-apple-gray">
+          <Suspense fallback={<div className="h-24" />}>
             <About />
-          </section>
+          </Suspense>
+        </section>
 
-          <section id="skills" className="bg-apple-black">
+        <section id="skills" className="bg-apple-black">
+          <Suspense fallback={<div className="h-24" />}>
             <Skills />
-          </section>
+          </Suspense>
+        </section>
 
-          <section id="projects" className="bg-apple-gray">
+        <section id="projects" className="bg-apple-gray">
+          <Suspense fallback={<div className="h-24" />}>
             <Projects />
-          </section>
+          </Suspense>
+        </section>
 
-          <section id="opensource" className="bg-apple-gray">
+        <section id="opensource" className="bg-apple-gray">
+          <Suspense fallback={<div className="h-24" />}>
             <HollowCaseStudy />
-          </section>
+          </Suspense>
+        </section>
 
-          <section id="contact" className="bg-apple-black">
+        <section id="contact" className="bg-apple-black">
+          <Suspense fallback={<div className="h-24" />}>
             <Contact />
-          </section>
-        </Suspense>
+          </Suspense>
+        </section>
       </main>
     </div>
     </MotionConfig>
