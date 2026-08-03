@@ -65,7 +65,7 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-6xl font-semibold text-apple-dark apple-headline-tight font-apple-display">
+          <h2 className="text-4xl md:text-6xl font-normal text-apple-dark apple-headline-tight font-apple-display">
             {t('projects.title')}
           </h2>
         </motion.div>

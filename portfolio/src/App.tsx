@@ -2,6 +2,7 @@ import { useState, useEffect, lazy, Suspense } from 'react'
 import { MotionConfig } from 'framer-motion'
 import Hero from './components/Hero'
 import Navigation from './components/Navigation'
+import { ThemeProvider } from './theme'
 
 const About = lazy(() => import('./components/About'))
 const Skills = lazy(() => import('./components/Skills'))
@@ -28,6 +29,7 @@ function App() {
   }, [])
 
   return (
+    <ThemeProvider>
     <MotionConfig reducedMotion="user">
     <div className="bg-apple-black min-h-screen">
       <Navigation scrolled={scrolled} />
@@ -69,6 +71,7 @@ function App() {
       </main>
     </div>
     </MotionConfig>
+    </ThemeProvider>
   )
 }
 

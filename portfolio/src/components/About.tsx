@@ -55,13 +55,13 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="md:col-span-3 space-y-6 text-center md:text-left"
           >
-            <h3 className="text-2xl font-semibold text-apple-dark font-apple-display apple-headline-normal">
+            <h3 className="text-2xl font-normal text-apple-dark font-apple-display apple-headline-normal">
               {t('about.subtitle')}
             </h3>
-            <p className="text-base text-apple-dark/80 apple-body-text leading-relaxed">
+            <p className="text-base text-muted apple-body-text leading-relaxed">
               {t('about.description1')}
             </p>
-            <p className="text-base text-apple-dark/80 apple-body-text leading-relaxed">
+            <p className="text-base text-muted apple-body-text leading-relaxed">
               {t('about.description2')}
             </p>
 
@@ -71,12 +71,12 @@ const About = () => {
                   key={company.name}
                   type="button"
                   onClick={() => handleScroll(company.target)}
-                  className="flex items-center gap-2 bg-white/70 rounded-lg px-4 py-3 border border-apple-line transition-all duration-300 hover:bg-white hover:-translate-y-0.5 hover:apple-shadow-sm"
+                  className="flex items-center gap-2 bg-apple-surface rounded-lg px-4 py-3 border border-apple-line transition-all duration-300 hover:bg-surface-3 hover:-translate-y-0.5 hover:border-hairline-strong"
                 >
-                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
                     <img src={company.logo} alt={company.alt} className="w-6 h-6 object-contain" />
                   </div>
-                  <span className="text-sm text-apple-dark/90 font-normal">
+                  <span className="text-sm text-muted font-normal">
                     {company.name}
                   </span>
                 </button>

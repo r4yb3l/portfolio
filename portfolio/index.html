@@ -4,13 +4,25 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/assets/logos/logo-alt.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#f7f7f4" />
     <title>Raybel Hernández — Senior Software Engineer</title>
     <meta name="author" content="Raybel Hernández" />
     <meta name="description" content="Raybel Hernández — Senior Software Engineer and product engineer with end-to-end ownership. 6+ years building web and mobile products with React, TypeScript, and Flutter, from an initial direction to a shipped product." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Raybel Hernández — Senior Software Engineer" />
     <meta property="og:description" content="Product engineer with end-to-end ownership. 6+ years building web and mobile products with React, TypeScript, and Flutter." />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme')
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+          var theme = stored || (prefersDark ? 'dark' : 'light')
+          document.documentElement.setAttribute('data-theme', theme)
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light')
+        }
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

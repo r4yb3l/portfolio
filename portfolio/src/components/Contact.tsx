@@ -51,7 +51,7 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-semibold text-white apple-headline-tight font-apple-display">
+          <h2 className="text-4xl md:text-6xl font-normal text-apple-dark apple-headline-tight font-apple-display">
             {t('contact.title')}
           </h2>
         </motion.div>
@@ -64,10 +64,10 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-semibold text-white mb-4 font-apple-display apple-headline-normal">
+              <h3 className="text-2xl font-normal text-apple-dark mb-4 font-apple-display apple-headline-normal">
                 {t('contact.subtitle')}
               </h3>
-              <p className="text-white/70 apple-body-text leading-relaxed">
+              <p className="text-subtle apple-body-text leading-relaxed">
                 {t('contact.description')}
               </p>
             </div>
@@ -85,12 +85,12 @@ const Contact = () => {
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                   className="flex items-center gap-4"
                 >
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-                    <img src={contact.icon} alt="" className="w-5 h-5 object-contain" />
+                  <div className="w-10 h-10 rounded-full bg-surface-2 border border-hairline flex items-center justify-center">
+                    <img src={contact.icon} alt="" className="w-5 h-5 object-contain icon-adaptive-white" />
                   </div>
                   <div>
-                    <p className="text-white/50 text-xs">{contact.label}</p>
-                    <p className="text-white text-sm font-normal">{contact.value}</p>
+                    <p className="text-subtle text-xs">{contact.label}</p>
+                    <p className="text-apple-dark text-sm font-normal">{contact.value}</p>
                   </div>
                 </motion.div>
               ))}
@@ -105,12 +105,12 @@ const Contact = () => {
             onSubmit={handleSubmit}
           >
             <div>
-              <label className="block text-white text-xs font-semibold mb-2 tracking-tight">
+              <label className="block text-apple-dark text-xs font-semibold mb-2 tracking-tight">
                 {t('contact.form.name')}
               </label>
               <input
                 type="text"
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 text-sm focus:border-apple-blue transition-colors apple-body-text"
+                className="w-full px-4 py-3 bg-apple-surface border border-apple-line rounded-lg text-apple-dark placeholder:text-[var(--ink-subtle)] text-sm focus:border-apple-blue transition-colors apple-body-text"
                 placeholder={t('contact.form.namePlaceholder') ?? ''}
                 value={formData.name}
                 onChange={handleChange('name')}
@@ -119,12 +119,12 @@ const Contact = () => {
             </div>
 
             <div>
-              <label className="block text-white text-xs font-semibold mb-2 tracking-tight">
+              <label className="block text-apple-dark text-xs font-semibold mb-2 tracking-tight">
                 {t('contact.form.email')}
               </label>
               <input
                 type="email"
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 text-sm focus:border-apple-blue transition-colors apple-body-text"
+                className="w-full px-4 py-3 bg-apple-surface border border-apple-line rounded-lg text-apple-dark placeholder:text-[var(--ink-subtle)] text-sm focus:border-apple-blue transition-colors apple-body-text"
                 placeholder={t('contact.form.emailPlaceholder') ?? ''}
                 value={formData.email}
                 onChange={handleChange('email')}
@@ -133,12 +133,12 @@ const Contact = () => {
             </div>
 
             <div>
-              <label className="block text-white text-xs font-semibold mb-2 tracking-tight">
+              <label className="block text-apple-dark text-xs font-semibold mb-2 tracking-tight">
                 {t('contact.form.message')}
               </label>
               <textarea
                 rows={4}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 text-sm focus:border-apple-blue transition-colors resize-none apple-body-text"
+                className="w-full px-4 py-3 bg-apple-surface border border-apple-line rounded-lg text-apple-dark placeholder:text-[var(--ink-subtle)] text-sm focus:border-apple-blue transition-colors resize-none apple-body-text"
                 placeholder={t('contact.form.messagePlaceholder') ?? ''}
                 value={formData.message}
                 onChange={handleChange('message')}

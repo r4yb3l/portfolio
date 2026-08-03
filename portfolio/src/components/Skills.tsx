@@ -33,7 +33,7 @@ const Skills = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-semibold text-white apple-headline-tight font-apple-display">
+          <h2 className="text-4xl md:text-6xl font-normal text-apple-dark apple-headline-tight font-apple-display">
             {t('skills.title')}
           </h2>
         </motion.div>
@@ -47,23 +47,23 @@ const Skills = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
               whileHover={{ y: -4 }}
-              className="p-8 rounded-lg bg-white/5 border border-white/10 transition-colors duration-300 hover:bg-white/[0.08] hover:border-white/25"
+              className="p-8 rounded-lg bg-surface-2 border border-hairline transition-colors duration-300 hover:bg-surface-3 hover:border-hairline-strong"
             >
               <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                 <img
                   src={icons[index]}
                   alt={group.title}
-                  className="w-full h-full object-contain invert"
+                  className="w-full h-full object-contain icon-adaptive"
                 />
               </div>
-              <h3 className="font-semibold text-white text-center mb-5 text-base font-apple-display">
+              <h3 className="font-semibold text-apple-dark text-center mb-5 text-base font-apple-display">
                 {group.title}
               </h3>
               <ul className="space-y-2 text-center">
                 {group.tags.map((tag) => (
                   <li
                     key={tag}
-                    className="text-sm text-white/70 apple-body-text"
+                    className="text-sm text-subtle apple-body-text"
                   >
                     {tag}
                   </li>

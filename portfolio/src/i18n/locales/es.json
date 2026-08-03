@@ -42,7 +42,7 @@
       "frontend": ["React.js", "Next.js", "Angular", "TypeScript", "JavaScript", "UI responsiva", "Design Systems"],
       "backend": ["Node.js", "NestJS", "ASP.NET Core", "C#", "REST/GraphQL APIs", "PostgreSQL"],
       "mobile": ["Flutter", "Flutter Web", "Dart", "Arquitectura multiplataforma", "Gestión de estado compleja"],
-      "cloud": ["Supabase", "Firebase", "Google Cloud Platform (GCP)", "Cloudflare Workers", "AWS", "PostgreSQL / pgvector", "Neo4j"],
+      "cloud": ["Supabase", "Firebase", "Google Cloud Platform (GCP)", "Cloudflare Workers", "PostgreSQL / pgvector", "Neo4j"],
       "tools": ["Git", "CI/CD", "GitHub Actions", "Docker", "Stripe", "LLMs y embeddings", "Búsqueda vectorial", "OCR"]
     }
   },

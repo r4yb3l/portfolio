@@ -25,7 +25,7 @@ const Experience = ({ experience, image, title, link, inverted, inDevelopment, i
     >
       <div className="w-full md:w-1/2">
         {title && (
-          <h3 className="text-2xl md:text-3xl font-semibold text-apple-dark font-apple-display apple-headline-normal mb-3">
+          <h3 className="text-2xl md:text-3xl font-normal text-apple-dark font-apple-display apple-headline-normal mb-3">
             {title}
           </h3>
         )}

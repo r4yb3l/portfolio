@@ -34,14 +34,14 @@ const CheckIcon = () => (
 )
 
 const CodeBlock = () => (
-  <div className="rounded-xl bg-[#1d1d1f] border border-white/10 overflow-hidden apple-shadow-sm">
-    <div className="flex items-center gap-1.5 px-4 py-3 border-b border-white/10">
+  <div className="rounded-xl bg-[#0f1011] border border-[#23252a] overflow-hidden">
+    <div className="flex items-center gap-1.5 px-4 py-3 border-b border-[#23252a]">
       <span className="w-3 h-3 rounded-full bg-[#ff5f57]" />
       <span className="w-3 h-3 rounded-full bg-[#febc2e]" />
       <span className="w-3 h-3 rounded-full bg-[#28c840]" />
     </div>
     <div className="p-4 md:p-5 overflow-x-auto">
-      <pre className="font-mono text-sm leading-relaxed text-white/90">
+      <pre className="font-code text-sm leading-relaxed text-white/90">
         <code>
           <span className="text-[#d2a8ff]">Skeleton</span>
           <span className="text-white/50">(</span>
@@ -63,7 +63,7 @@ const CodeBlock = () => (
           <span className="text-white/50">))</span>
         </code>
       </pre>
-      <pre className="font-mono text-sm leading-relaxed mt-4">
+      <pre className="font-code text-sm leading-relaxed mt-4">
         <code>
           <span className="text-[#7ee787] select-none">$ </span>
           <span className="text-white/90">dart run hollow:build </span>
@@ -95,7 +95,7 @@ const HollowCaseStudy = () => {
               {t('openSource.eyebrow')}
             </p>
             <div className="flex flex-col sm:flex-row sm:items-end sm:gap-4">
-              <h2 className="text-4xl md:text-6xl font-semibold text-apple-dark apple-headline-tight font-apple-display">
+              <h2 className="text-4xl md:text-6xl font-normal text-apple-dark apple-headline-tight font-apple-display">
                 {t('openSource.name')}
               </h2>
               <p className="text-lg md:text-xl text-apple-gray apple-body-text mt-2 sm:mt-0 sm:pb-1">
@@ -107,11 +107,11 @@ const HollowCaseStudy = () => {
                 href={PUBDEV_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-full bg-[#0071e3]/10 text-apple-blue border border-[#0071e3]/20 px-3 py-1 text-xs font-medium"
+                className="inline-flex items-center gap-1.5 rounded-full bg-surface-3 text-apple-blue border border-hairline px-3 py-1 text-xs font-medium"
               >
                 pub.dev · {PUB_VERSION}
               </a>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-[#1d1d1f]/5 text-apple-gray border border-apple-line px-3 py-1 text-xs font-medium">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-3 text-apple-gray border border-hairline px-3 py-1 text-xs font-medium">
                 {t('openSource.license')}
               </span>
             </div>
@@ -183,7 +183,7 @@ const HollowCaseStudy = () => {
               href={REPO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#1d1d1f] text-white text-base font-normal rounded-lg apple-pill transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-apple-surface text-apple-dark text-base font-normal rounded-lg apple-pill border border-apple-line transition-all duration-300"
             >
               {t('openSource.cta.github')}
               <span className="text-xs">→</span>
