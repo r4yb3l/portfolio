@@ -4,7 +4,6 @@
     "about": "Acerca de",
     "skills": "Habilidades",
     "projects": "Proyectos",
-    "experience": "Experiencia",
     "opensource": "Código Abierto",
     "contact": "Contacto"
   },
@@ -33,12 +32,7 @@
     "title": "Habilidades",
     "frontend": "Frontend",
     "backend": "Backend",
-    "design": "Design",
     "cloud": "Cloud",
-    "frontendDesc": "React, Vue, Angular",
-    "backendDesc": "Node.js, Python, PHP",
-    "designDesc": "Figma, Adobe XD",
-    "cloudDesc": "AWS, Vercel, Netlify",
     "tags": {
       "frontend": ["React.js", "Next.js", "Angular", "TypeScript", "JavaScript", "UI responsiva", "Design Systems"],
       "backend": ["Node.js", "NestJS", "ASP.NET Core", "C#", "REST/GraphQL APIs", "PostgreSQL"],
@@ -50,20 +44,6 @@
   "projects": {
     "title": "Proyectos",
     "flagship": "Flagship",
-    "selectedWork": "Trabajo Destacado",
-    "moreWork": "Más Trabajo",
-    "ecommerce": {
-      "title": "E-commerce Platform",
-      "description": "Plataforma completa de e-commerce con React, Node.js y MongoDB"
-    },
-    "taskManager": {
-      "title": "Task Management App",
-      "description": "Aplicación de gestión de tareas con drag & drop y tiempo real"
-    },
-    "weatherDashboard": {
-      "title": "Weather Dashboard",
-      "description": "Dashboard meteorológico con visualizaciones interactivas"
-    },
     "entries": {
       "mergejob": {
         "title": "Mergejob",
@@ -213,5 +193,10 @@
       "phone": "Teléfono",
       "location": "Ubicación"
     }
+  },
+  "footer": {
+    "connect": "Conectemos",
+    "cv": "Descargar CV",
+    "rights": "Todos los derechos reservados."
   }
 }
