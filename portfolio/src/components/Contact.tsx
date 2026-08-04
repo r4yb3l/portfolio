@@ -51,7 +51,7 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-normal text-apple-dark apple-headline-tight font-apple-display">
+          <h2 className="text-4xl md:text-6xl font-semibold text-apple-dark apple-headline-tight font-apple-display">
             {t('contact.title')}
           </h2>
         </motion.div>
@@ -64,7 +64,7 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-normal text-apple-dark mb-4 font-apple-display apple-headline-normal">
+              <h3 className="text-2xl font-medium text-apple-dark mb-4 font-apple-display apple-headline-normal">
                 {t('contact.subtitle')}
               </h3>
               <p className="text-subtle apple-body-text leading-relaxed">

@@ -95,7 +95,7 @@ const HollowCaseStudy = () => {
               {t('openSource.eyebrow')}
             </p>
             <div className="flex flex-col sm:flex-row sm:items-end sm:gap-4">
-              <h2 className="text-4xl md:text-6xl font-normal text-apple-dark apple-headline-tight font-apple-display">
+              <h2 className="text-4xl md:text-6xl font-semibold text-apple-dark apple-headline-tight font-apple-display">
                 {t('openSource.name')}
               </h2>
               <p className="text-lg md:text-xl text-apple-gray apple-body-text mt-2 sm:mt-0 sm:pb-1">

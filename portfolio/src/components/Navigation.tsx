@@ -38,7 +38,7 @@ const Navigation = ({ scrolled }: NavigationProps) => {
   const intersectingRef = useRef<Map<string, boolean>>(new Map())
 
   useEffect(() => {
-    const sections = ['hero', 'about', 'skills', 'projects', 'opensource', 'contact']
+    const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'opensource', 'contact']
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -65,7 +65,7 @@ const Navigation = ({ scrolled }: NavigationProps) => {
     }
   }
 
-  const navItems = ['hero', 'about', 'skills', 'projects', 'opensource', 'contact']
+  const navItems = ['hero', 'about', 'skills', 'projects', 'experience', 'opensource', 'contact']
 
   return (
     <motion.nav

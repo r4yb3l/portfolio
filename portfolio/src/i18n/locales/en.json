@@ -4,6 +4,7 @@
     "about": "About Me",
     "skills": "Skills",
     "projects": "Projects",
+    "experience": "Experience",
     "opensource": "Open Source",
     "contact": "Contact"
   },
@@ -48,6 +49,9 @@
   },
   "projects": {
     "title": "Projects",
+    "flagship": "Flagship",
+    "selectedWork": "Selected Work",
+    "moreWork": "More Work",
     "ecommerce": {
       "title": "E-commerce Platform",
       "description": "Complete e-commerce platform with React, Node.js and MongoDB"

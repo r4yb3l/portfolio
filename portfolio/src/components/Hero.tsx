@@ -1,7 +1,55 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import DotGrid from './DotGrid'
+
+const prefersReducedMotion = () =>
+  typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+const TypingText = ({ text, className, startDelay = 400, speed = 45 }: {
+  text: string
+  className?: string
+  startDelay?: number
+  speed?: number
+}) => {
+  const [shown, setShown] = useState(0)
+
+  useEffect(() => {
+    if (prefersReducedMotion()) {
+      setShown(text.length)
+      return
+    }
+    setShown(0)
+    let i = 0
+    let interval: ReturnType<typeof setInterval>
+    const start = setTimeout(() => {
+      interval = setInterval(() => {
+        i += 1
+        setShown(i)
+        if (i >= text.length) clearInterval(interval)
+      }, speed)
+    }, startDelay)
+    return () => {
+      clearTimeout(start)
+      clearInterval(interval)
+    }
+  }, [text, speed, startDelay])
+
+  const done = shown >= text.length
+
+  return (
+    <span className={className}>
+      <span className="sr-only">{text}</span>
+      <span aria-hidden="true">{text.slice(0, shown)}</span>
+      <motion.span
+        aria-hidden="true"
+        animate={{ opacity: done ? [1, 0, 1] : 1 }}
+        transition={done ? { duration: 1.1, repeat: Infinity, ease: 'linear' } : undefined}
+        className="inline-block w-[2px] h-[1em] -mb-[0.12em] ml-1 rounded-sm bg-apple-blue align-baseline"
+      />
+    </span>
+  )
+}
 
 const Hero = () => {
   const ref = useRef(null)
@@ -23,7 +71,7 @@ const Hero = () => {
         <div
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] rounded-full pointer-events-none"
           style={{
-            background: 'radial-gradient(circle, rgba(245,78,0,0.13) 0%, rgba(245,78,0,0.05) 35%, transparent 68%)',
+            background: 'radial-gradient(circle, rgba(124,58,237,0.16) 0%, rgba(219,39,119,0.06) 40%, transparent 70%)',
           }}
         />
       </div>
@@ -36,7 +84,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-5xl md:text-7xl font-normal mb-6 apple-headline-tight tracking-tight font-apple-display"
+          className="text-5xl md:text-7xl font-semibold mb-6 apple-headline-tight tracking-tight font-apple-display"
         >
           {t('hero.name')}
         </motion.h1>
@@ -47,7 +95,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl md:text-2xl mb-10 text-muted apple-body-text max-w-xl mx-auto"
         >
-          {t('hero.title')}
+          <TypingText key={t('hero.title')} text={t('hero.title')} />
         </motion.p>
 
         <motion.p
@@ -69,7 +117,7 @@ const Hero = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-3 bg-apple-blue rounded-lg text-white font-normal text-base apple-pill transition-all duration-300"
+            className="px-8 py-3 bg-primary-gradient rounded-lg text-white font-medium text-base apple-pill transition-all duration-300 shadow-lg shadow-[#7c3aed]/20"
           >
             {t('hero.cta.projects')}
           </motion.button>

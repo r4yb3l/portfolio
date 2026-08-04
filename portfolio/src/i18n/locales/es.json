@@ -4,6 +4,7 @@
     "about": "Acerca de",
     "skills": "Habilidades",
     "projects": "Proyectos",
+    "experience": "Experiencia",
     "opensource": "Código Abierto",
     "contact": "Contacto"
   },
@@ -48,6 +49,9 @@
   },
   "projects": {
     "title": "Proyectos",
+    "flagship": "Flagship",
+    "selectedWork": "Trabajo Destacado",
+    "moreWork": "Más Trabajo",
     "ecommerce": {
       "title": "E-commerce Platform",
       "description": "Plataforma completa de e-commerce con React, Node.js y MongoDB"

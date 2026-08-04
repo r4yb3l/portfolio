@@ -55,7 +55,7 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="md:col-span-3 space-y-6 text-center md:text-left"
           >
-            <h3 className="text-2xl font-normal text-apple-dark font-apple-display apple-headline-normal">
+            <h3 className="text-2xl font-medium text-apple-dark font-apple-display apple-headline-normal">
               {t('about.subtitle')}
             </h3>
             <p className="text-base text-muted apple-body-text leading-relaxed">

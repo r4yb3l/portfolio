@@ -7,6 +7,7 @@ import { ThemeProvider } from './theme'
 const About = lazy(() => import('./components/About'))
 const Skills = lazy(() => import('./components/Skills'))
 const Projects = lazy(() => import('./components/Projects'))
+const ExperienceTimeline = lazy(() => import('./components/ExperienceTimeline'))
 const HollowCaseStudy = lazy(() => import('./components/HollowCaseStudy'))
 const Contact = lazy(() => import('./components/Contact'))
 
@@ -54,6 +55,12 @@ function App() {
         <section id="projects" className="bg-apple-gray">
           <Suspense fallback={<div className="h-24" />}>
             <Projects />
+          </Suspense>
+        </section>
+
+        <section id="experience" className="bg-apple-black">
+          <Suspense fallback={<div className="h-24" />}>
+            <ExperienceTimeline />
           </Suspense>
         </section>
 

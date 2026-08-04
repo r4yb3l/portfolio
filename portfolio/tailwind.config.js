@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter Variable', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['DM Sans Variable', 'DM Sans', 'system-ui', 'sans-serif'],
+        display: ['Space Grotesk Variable', 'Space Grotesk', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'ui-monospace', 'SF Mono', 'Menlo', 'monospace'],
       },
     },
