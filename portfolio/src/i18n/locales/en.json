@@ -165,7 +165,9 @@
       "liveDemo": "Live Demo",
       "visitSite": "Visit Site",
       "notAvailable": "Private project, URL not available",
-      "inDevelopment": "In development"
+      "inDevelopment": "In development",
+      "readMore": "Read more",
+      "readLess": "Read less"
     }
   },
   "openSource": {
