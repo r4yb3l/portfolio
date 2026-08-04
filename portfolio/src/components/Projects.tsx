@@ -37,6 +37,22 @@ interface Company {
 
 const companies: Company[] = [
   {
+    key: 'prodev',
+    logo: prodevLogo,
+    projects: [
+      { key: 'snapnfund', image: snapnfundImage, link: 'https://snapnfund.com/home', stack: ['Flutter', 'React', 'Firebase', 'ASP.NET', 'OCR'] },
+      { key: 'dealerslash', image: dealerslashImage, stack: ['ASP.NET Core', 'Flutter', 'Google Cloud'] },
+      { key: 'followApp', image: followAppImage, link: 'https://apps.apple.com/us/app/followapp-by-cts/id6751299522', stack: ['Flutter', 'NestJS', 'Firebase'] },
+    ],
+  },
+  {
+    key: 'netforemost',
+    logo: netforemostLogo,
+    projects: [
+      { key: 'timeforemost', image: timeforemostImage, link: 'https://timeforemost.com/', stack: ['Flutter', 'NestJS', 'GCP', 'Stripe'] },
+    ],
+  },
+  {
     key: 'qabit',
     logo: qaBitLogo,
     projects: [
@@ -55,22 +71,6 @@ const companies: Company[] = [
     projects: [
       { key: 'manitas', image: manitasImage, inDevelopment: true, stack: ['Flutter', 'Next.js', 'Geolocation'] },
       { key: 'chrona', image: chronaImage, inDevelopment: true, stack: ['Next.js', 'NestJS', 'Flutter'] },
-    ],
-  },
-  {
-    key: 'prodev',
-    logo: prodevLogo,
-    projects: [
-      { key: 'snapnfund', image: snapnfundImage, link: 'https://snapnfund.com/home', stack: ['Flutter', 'React', 'Firebase', 'ASP.NET', 'OCR'] },
-      { key: 'dealerslash', image: dealerslashImage, stack: ['ASP.NET Core', 'Flutter', 'Google Cloud'] },
-      { key: 'followApp', image: followAppImage, link: 'https://apps.apple.com/us/app/followapp-by-cts/id6751299522', stack: ['Flutter', 'NestJS', 'Firebase'] },
-    ],
-  },
-  {
-    key: 'netforemost',
-    logo: netforemostLogo,
-    projects: [
-      { key: 'timeforemost', image: timeforemostImage, link: 'https://timeforemost.com/', stack: ['Flutter', 'NestJS', 'GCP', 'Stripe'] },
     ],
   },
 ]

@@ -2,6 +2,7 @@ import { useState, useEffect, lazy, Suspense } from 'react'
 import { MotionConfig } from 'framer-motion'
 import Hero from './components/Hero'
 import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 import { ThemeProvider } from './theme'
 
 const About = lazy(() => import('./components/About'))
@@ -69,6 +70,8 @@ function App() {
           </Suspense>
         </section>
       </main>
+
+      <Footer />
     </div>
     </MotionConfig>
     </ThemeProvider>
