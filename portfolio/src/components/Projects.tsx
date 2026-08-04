@@ -1,7 +1,11 @@
-import type { ReactNode } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useTranslation } from 'react-i18next'
+import prodevLogo from '../assets/logos/business/prodev.svg'
+import netforemostLogo from '../assets/logos/business/netforemost.svg'
+import qaBitLogo from '../assets/logos/business/qa-bit.svg'
+import astrocodeLogo from '../assets/logos/business/astrocode.svg'
 import snapnfundImage from '../assets/images/snapnfund.png'
 import dealerslashImage from '../assets/images/dealerslash.png'
 import followAppImage from '../assets/images/followApp.png'
@@ -25,23 +29,50 @@ interface Project {
   stack: string[]
 }
 
-const selected: Project[] = [
-  { key: 'snapnfund', image: snapnfundImage, link: 'https://snapnfund.com/home', stack: ['Flutter', 'React', 'Firebase', 'ASP.NET', 'OCR'] },
-  { key: 'dealerslash', image: dealerslashImage, stack: ['ASP.NET Core', 'Flutter', 'Google Cloud'] },
-  { key: 'followApp', image: followAppImage, link: 'https://apps.apple.com/us/app/followapp-by-cts/id6751299522', stack: ['Flutter', 'NestJS', 'Firebase'] },
-  { key: 'allInBiking', image: allInBikingImage, link: 'https://allinbiking.com/', stack: ['Flutter', 'Firebase', 'Neo4j'] },
-]
+interface Company {
+  key: string
+  logo: string
+  projects: Project[]
+}
 
-const more: Project[] = [
-  { key: 'timeforemost', image: timeforemostImage, link: 'https://timeforemost.com/', stack: ['Flutter', 'NestJS', 'GCP', 'Stripe'] },
-  { key: 'retarificador', image: retarificadorImage, link: 'https://retarificador.alphabrokers.es/', stack: ['Web', 'Refactor', 'Performance'] },
-  { key: 'eduq', image: eduqImage, link: 'https://play.google.com/store/apps/details?id=com.qabit.eduq', stack: ['Flutter'] },
-  { key: 'groceryChefPro', image: groceryImage, inDevelopment: true, stack: ['AI', 'Mobile'] },
-  { key: 'gestionKitDigital', image: gestionComunidadImage, stack: ['Flutter', 'React'] },
-  { key: 'kitTokenComunidad', image: kitTokenImage, stack: ['React', 'Angular'] },
-  { key: 'gestorRRHH', image: gestorRRHHImage, stack: ['React', 'Flutter'] },
-  { key: 'manitas', image: manitasImage, inDevelopment: true, stack: ['Flutter', 'Next.js', 'Geolocation'] },
-  { key: 'chrona', image: chronaImage, inDevelopment: true, stack: ['Next.js', 'NestJS', 'Flutter'] },
+const companies: Company[] = [
+  {
+    key: 'qabit',
+    logo: qaBitLogo,
+    projects: [
+      { key: 'allInBiking', image: allInBikingImage, link: 'https://allinbiking.com/', stack: ['Flutter', 'Firebase', 'Neo4j'] },
+      { key: 'retarificador', image: retarificadorImage, link: 'https://retarificador.alphabrokers.es/', stack: ['Web', 'Refactor', 'Performance'] },
+      { key: 'eduq', image: eduqImage, link: 'https://play.google.com/store/apps/details?id=com.qabit.eduq', stack: ['Flutter'] },
+      { key: 'groceryChefPro', image: groceryImage, inDevelopment: true, stack: ['AI', 'Mobile'] },
+      { key: 'gestionKitDigital', image: gestionComunidadImage, stack: ['Flutter', 'React'] },
+      { key: 'kitTokenComunidad', image: kitTokenImage, stack: ['React', 'Angular'] },
+      { key: 'gestorRRHH', image: gestorRRHHImage, stack: ['React', 'Flutter'] },
+    ],
+  },
+  {
+    key: 'astrocode',
+    logo: astrocodeLogo,
+    projects: [
+      { key: 'manitas', image: manitasImage, inDevelopment: true, stack: ['Flutter', 'Next.js', 'Geolocation'] },
+      { key: 'chrona', image: chronaImage, inDevelopment: true, stack: ['Next.js', 'NestJS', 'Flutter'] },
+    ],
+  },
+  {
+    key: 'prodev',
+    logo: prodevLogo,
+    projects: [
+      { key: 'snapnfund', image: snapnfundImage, link: 'https://snapnfund.com/home', stack: ['Flutter', 'React', 'Firebase', 'ASP.NET', 'OCR'] },
+      { key: 'dealerslash', image: dealerslashImage, stack: ['ASP.NET Core', 'Flutter', 'Google Cloud'] },
+      { key: 'followApp', image: followAppImage, link: 'https://apps.apple.com/us/app/followapp-by-cts/id6751299522', stack: ['Flutter', 'NestJS', 'Firebase'] },
+    ],
+  },
+  {
+    key: 'netforemost',
+    logo: netforemostLogo,
+    projects: [
+      { key: 'timeforemost', image: timeforemostImage, link: 'https://timeforemost.com/', stack: ['Flutter', 'NestJS', 'GCP', 'Stripe'] },
+    ],
+  },
 ]
 
 const pipeline = ['CV', 'LLM parse', 'Embed', 'pgvector', 'LLM rerank', 'Match']
@@ -56,6 +87,41 @@ const StackChips = ({ items }: { items: string[] }) => (
     ))}
   </ul>
 )
+
+const ExpandableText = ({ text }: { text: string }) => {
+  const { t } = useTranslation()
+  const [expanded, setExpanded] = useState(false)
+  const [truncated, setTruncated] = useState(false)
+  const ref = useRef<HTMLParagraphElement>(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const check = () => {
+      if (!expanded) setTruncated(el.scrollHeight > el.clientHeight + 1)
+    }
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [text, expanded])
+
+  return (
+    <div className="mb-4 flex-1">
+      <p ref={ref} className={`text-sm text-muted apple-body-text leading-relaxed ${expanded ? '' : 'line-clamp-3'}`}>
+        {text}
+      </p>
+      {(truncated || expanded) && (
+        <button
+          type="button"
+          onClick={() => setExpanded((v) => !v)}
+          className="mt-1.5 text-xs font-medium text-apple-blue hover:underline"
+        >
+          {expanded ? t('projects.actions.readLess') : t('projects.actions.readMore')}
+        </button>
+      )}
+    </div>
+  )
+}
 
 const CardLink = ({ link, inDevelopment }: { link?: string; inDevelopment?: boolean }) => {
   const { t } = useTranslation()
@@ -78,22 +144,14 @@ const CardLink = ({ link, inDevelopment }: { link?: string; inDevelopment?: bool
   return <span className="text-sm text-subtle italic">{t('projects.actions.notAvailable')}</span>
 }
 
-const reveal = (i = 0) => ({
-  initial: { opacity: 0, y: 24 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, amount: 0.2 },
-  transition: { duration: 0.5, delay: (i % 3) * 0.08 },
-})
-
-const SectionLabel = ({ children }: { children: ReactNode }) => (
-  <p className="text-xs font-semibold uppercase tracking-widest text-apple-blue mb-6">{children}</p>
-)
-
 const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
   const { t } = useTranslation()
   return (
     <motion.article
-      {...reveal(index)}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
       className="group flex flex-col rounded-2xl bg-apple-surface border border-apple-line overflow-hidden transition-colors duration-300 hover:border-hairline-strong"
     >
       <div className="overflow-hidden border-b border-apple-line">
@@ -102,42 +160,19 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           alt=""
           loading="lazy"
           decoding="async"
-          className="w-full h-48 object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+          className="w-full h-44 object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </div>
       <div className="flex flex-col flex-1 p-6">
-        <h3 className="text-xl font-medium text-apple-dark font-apple-display apple-headline-normal mb-2">
+        <h3 className="text-lg font-medium text-apple-dark font-apple-display apple-headline-normal mb-2">
           {t(`projects.entries.${project.key}.title`)}
         </h3>
-        <p className="text-sm text-muted apple-body-text leading-relaxed mb-4 line-clamp-3 flex-1">
-          {t(`projects.entries.${project.key}.description`)}
-        </p>
+        <ExpandableText text={t(`projects.entries.${project.key}.description`)} />
         <div className="mb-4">
           <StackChips items={project.stack} />
         </div>
         <CardLink link={project.link} inDevelopment={project.inDevelopment} />
       </div>
-    </motion.article>
-  )
-}
-
-const CompactCard = ({ project, index }: { project: Project; index: number }) => {
-  const { t } = useTranslation()
-  return (
-    <motion.article
-      {...reveal(index)}
-      className="flex flex-col rounded-xl bg-apple-surface border border-apple-line p-5 transition-colors duration-300 hover:border-hairline-strong"
-    >
-      <h3 className="text-base font-medium text-apple-dark font-apple-display mb-2">
-        {t(`projects.entries.${project.key}.title`)}
-      </h3>
-      <p className="text-sm text-subtle apple-body-text leading-relaxed mb-4 line-clamp-2 flex-1">
-        {t(`projects.entries.${project.key}.description`)}
-      </p>
-      <div className="mb-3">
-        <StackChips items={project.stack.slice(0, 3)} />
-      </div>
-      <CardLink link={project.link} inDevelopment={project.inDevelopment} />
     </motion.article>
   )
 }
@@ -196,6 +231,32 @@ const Flagship = () => {
   )
 }
 
+const CompanyGroup = ({ company }: { company: Company }) => {
+  const { t } = useTranslation()
+  return (
+    <div id={company.key} className="scroll-mt-24">
+      <div className="flex items-center gap-4 mb-8">
+        <div className="w-14 h-14 rounded-xl bg-white border border-apple-line flex items-center justify-center shrink-0">
+          <img src={company.logo} alt={t(`projects.timeline.${company.key}.name`)} className="w-8 h-8 object-contain" />
+        </div>
+        <div>
+          <h3 className="text-lg md:text-xl font-medium text-apple-dark font-apple-display">
+            {t(`projects.timeline.${company.key}.name`)}
+            <span className="text-subtle font-normal"> · {t(`projects.timeline.${company.key}.location`)}</span>
+          </h3>
+          <p className="text-sm text-muted apple-body-text">{t(`projects.timeline.${company.key}.title`)}</p>
+          <p className="text-xs font-mono text-subtle mt-0.5">{t(`projects.timeline.${company.key}.period`)}</p>
+        </div>
+      </div>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {company.projects.map((p, i) => (
+          <ProjectCard key={p.key} project={p} index={i} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 const Projects = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
   const { t } = useTranslation()
@@ -215,22 +276,10 @@ const Projects = () => {
 
         <Flagship />
 
-        <div className="mt-20">
-          <SectionLabel>{t('projects.selectedWork')}</SectionLabel>
-          <div className="grid md:grid-cols-2 gap-6">
-            {selected.map((p, i) => (
-              <ProjectCard key={p.key} project={p} index={i} />
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-20">
-          <SectionLabel>{t('projects.moreWork')}</SectionLabel>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {more.map((p, i) => (
-              <CompactCard key={p.key} project={p} index={i} />
-            ))}
-          </div>
+        <div className="mt-20 space-y-20">
+          {companies.map((company) => (
+            <CompanyGroup key={company.key} company={company} />
+          ))}
         </div>
       </div>
     </section>
