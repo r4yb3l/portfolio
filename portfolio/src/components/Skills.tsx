@@ -8,63 +8,49 @@ import cloudIcon from '../assets/cloud.svg'
 import toolsIcon from '../assets/tools.svg'
 
 const Skills = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  })
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
   const { t } = useTranslation()
 
-  const tagGroups = [
-    { title: t('skills.frontend'), tags: t('skills.tags.frontend', { returnObjects: true }) as string[] },
-    { title: t('skills.backend'), tags: t('skills.tags.backend', { returnObjects: true }) as string[] },
-    { title: 'Mobile', tags: t('skills.tags.mobile', { returnObjects: true }) as string[] },
-    { title: t('skills.cloud'), tags: t('skills.tags.cloud', { returnObjects: true }) as string[] },
-    { title: 'Tools', tags: t('skills.tags.tools', { returnObjects: true }) as string[] },
+  const groups = [
+    { title: t('skills.frontend'), icon: frontendIcon, tags: t('skills.tags.frontend', { returnObjects: true }) as string[] },
+    { title: t('skills.backend'), icon: backendIcon, tags: t('skills.tags.backend', { returnObjects: true }) as string[] },
+    { title: 'Mobile', icon: mobileIcon, tags: t('skills.tags.mobile', { returnObjects: true }) as string[] },
+    { title: t('skills.cloud'), icon: cloudIcon, tags: t('skills.tags.cloud', { returnObjects: true }) as string[] },
+    { title: 'Tools', icon: toolsIcon, tags: t('skills.tags.tools', { returnObjects: true }) as string[] },
   ]
-  const icons = [frontendIcon, backendIcon, mobileIcon, cloudIcon, toolsIcon]
 
   return (
     <section className="apple-section-padding">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <motion.h2
           ref={ref}
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-4xl md:text-6xl font-semibold text-apple-dark apple-headline-tight font-apple-display text-center mb-14"
         >
-          <h2 className="text-4xl md:text-6xl font-semibold text-white apple-headline-tight font-apple-display">
-            {t('skills.title')}
-          </h2>
-        </motion.div>
+          {t('skills.title')}
+        </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-          {tagGroups.map((group, index) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {groups.map((group, index) => (
             <motion.div
               key={group.title}
-              ref={index === 0 ? ref : undefined}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
-              whileHover={{ y: -4 }}
-              className="p-8 rounded-lg bg-white/5 border border-white/10 transition-colors duration-300 hover:bg-white/[0.08] hover:border-white/25"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
+              className="rounded-2xl bg-apple-surface border border-apple-line p-6 transition-colors duration-300 hover:border-hairline-strong"
             >
-              <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                <img
-                  src={icons[index]}
-                  alt={group.title}
-                  className="w-full h-full object-contain invert"
-                />
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-11 h-11 rounded-lg bg-surface-3 border border-hairline flex items-center justify-center shrink-0">
+                  <img src={group.icon} alt="" className="w-6 h-6 object-contain icon-adaptive" />
+                </div>
+                <h3 className="text-lg font-medium text-apple-dark font-apple-display">{group.title}</h3>
               </div>
-              <h3 className="font-semibold text-white text-center mb-5 text-base font-apple-display">
-                {group.title}
-              </h3>
-              <ul className="space-y-2 text-center">
+              <ul className="flex flex-wrap gap-2">
                 {group.tags.map((tag) => (
-                  <li
-                    key={tag}
-                    className="text-sm text-white/70 apple-body-text"
-                  >
+                  <li key={tag} className="text-xs font-mono text-subtle bg-surface-3 border border-hairline rounded-md px-2.5 py-1.5">
                     {tag}
                   </li>
                 ))}

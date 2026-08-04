@@ -4,6 +4,7 @@
     "about": "About Me",
     "skills": "Skills",
     "projects": "Projects",
+    "experience": "Experience",
     "opensource": "Open Source",
     "contact": "Contact"
   },
@@ -42,12 +43,15 @@
       "frontend": ["React.js", "Next.js", "Angular", "TypeScript", "JavaScript", "Responsive UI", "Design Systems"],
       "backend": ["Node.js", "NestJS", "ASP.NET Core", "C#", "REST/GraphQL APIs", "PostgreSQL"],
       "mobile": ["Flutter", "Flutter Web", "Dart", "Cross-platform architecture", "Complex state management"],
-      "cloud": ["Supabase", "Firebase", "Google Cloud Platform (GCP)", "Cloudflare Workers", "AWS", "PostgreSQL / pgvector", "Neo4j"],
+      "cloud": ["Supabase", "Firebase", "Google Cloud Platform (GCP)", "Cloudflare Workers", "PostgreSQL / pgvector", "Neo4j"],
       "tools": ["Git", "CI/CD", "GitHub Actions", "Docker", "Stripe", "LLMs & embeddings", "Vector search", "OCR"]
     }
   },
   "projects": {
     "title": "Projects",
+    "flagship": "Flagship",
+    "selectedWork": "Selected Work",
+    "moreWork": "More Work",
     "ecommerce": {
       "title": "E-commerce Platform",
       "description": "Complete e-commerce platform with React, Node.js and MongoDB"

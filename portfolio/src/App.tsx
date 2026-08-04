@@ -2,10 +2,12 @@ import { useState, useEffect, lazy, Suspense } from 'react'
 import { MotionConfig } from 'framer-motion'
 import Hero from './components/Hero'
 import Navigation from './components/Navigation'
+import { ThemeProvider } from './theme'
 
 const About = lazy(() => import('./components/About'))
 const Skills = lazy(() => import('./components/Skills'))
 const Projects = lazy(() => import('./components/Projects'))
+const ExperienceTimeline = lazy(() => import('./components/ExperienceTimeline'))
 const HollowCaseStudy = lazy(() => import('./components/HollowCaseStudy'))
 const Contact = lazy(() => import('./components/Contact'))
 
@@ -28,6 +30,7 @@ function App() {
   }, [])
 
   return (
+    <ThemeProvider>
     <MotionConfig reducedMotion="user">
     <div className="bg-apple-black min-h-screen">
       <Navigation scrolled={scrolled} />
@@ -55,6 +58,12 @@ function App() {
           </Suspense>
         </section>
 
+        <section id="experience" className="bg-apple-black">
+          <Suspense fallback={<div className="h-24" />}>
+            <ExperienceTimeline />
+          </Suspense>
+        </section>
+
         <section id="opensource" className="bg-apple-gray">
           <Suspense fallback={<div className="h-24" />}>
             <HollowCaseStudy />
@@ -69,6 +78,7 @@ function App() {
       </main>
     </div>
     </MotionConfig>
+    </ThemeProvider>
   )
 }
 
