@@ -45,6 +45,10 @@
     "title": "Proyectos",
     "flagship": "Flagship",
     "entries": {
+      "wetrust": {
+        "title": "WeTrust",
+        "description": "Una recepcionista de voz con IA bilingüe (inglés/español) para negocios locales que contesta cada llamada entrante, agenda, reprograma y cancela citas directamente en el calendario real del negocio, y transfiere a una persona en el momento en que hace falta. Diseñé y construí la plataforma multi-tenant de punta a punta: un agente de voz de flujo conversacional en Retell generado desde la configuración de cada negocio, un backend en Fastify/TypeScript con un motor de agenda por rangos y adaptadores de calendario (Google, Microsoft, nativo), un portal de autogestión y una consola interna en Next.js, y telefonía Twilio con SMS A2P 10DLC de confirmación y recordatorios en todo el ciclo de vida de la cita. Rematado con cobro prepago vía Stripe y una metodología de verificación con tests de paridad de flujo byte a byte y pruebas en llamadas reales."
+      },
       "mergejob": {
         "title": "Mergejob",
         "description": "Un job board con IA que puntúa cada oferta según el fit semántico con el CV del candidato en lugar de por recencia. Diseñé y construí la plataforma de punta a punta sobre una arquitectura distribuida — Next.js en el frontend, edge functions en Supabase/Postgres y Cloudflare Workers como gateway de LLM. El pipeline de matching parsea el CV con un LLM, genera embeddings, recupera candidatos con pgvector y hace reranking con un LLM. Implementé un modelo de monetización por créditos con paywall a nivel de campo (RLS de Postgres + funciones SECURITY DEFINER), pagos con Stripe, feed en tiempo real con fallback de polling y backups automáticos con restauración por usuario."
@@ -174,6 +178,32 @@
     },
     "license": "Licencia MIT"
   },
+    "tokendial": {
+      "eyebrow": "Open Source",
+      "name": "Tokendial",
+      "tagline": "Diales de consumo para asistentes de programación con IA, nativos en macOS y Windows",
+      "license": "MIT · gratis",
+      "problemLabel": "El problema",
+      "problem": "Programas con Claude Code, Codex, Cursor y Copilot a la vez, y la única forma de enterarte de que se te acabó la cuota es cuando una herramienta deja de responder. Cada proveedor mide distinto y ninguno avisa antes.",
+      "solutionLabel": "La solución",
+      "solution": "Un dial por herramienta en el borde de la pantalla, leyendo la sesión que cada una ya guarda en el equipo. Avisa antes de que se reinicie una ventana, dice cuándo un agente lleva rato esperando tu respuesta, y el resto del tiempo no estorba.",
+      "featuresLabel": "Qué hace",
+      "features": {
+        "dial": "Un dock de diales en cualquier borde de la pantalla, que se expande al acercar el cursor y nunca roba el foco",
+        "readOnly": "Solo lectura por diseño: lee las credenciales donde cada herramienta las guarda y no escribe nada",
+        "twoNatives": "Dos apps nativas, Swift/AppKit y C#/WPF, construidas desde una única especificación JSON compartida",
+        "install": "Instala las herramientas que te faltan con Homebrew, winget o npm, enseñando el comando exacto antes de ejecutarlo",
+        "alerts": "Alertas en los umbrales que elijas, antes de que se reinicie una ventana y cuando se agota un límite",
+        "languages": "Nueve proveedores, seis idiomas, de derecha a izquierda incluido"
+      },
+      "shotAlt": "La ventana de ajustes de Tokendial, con un dial y su consumo por cada proveedor",
+      "specLabel": "Una especificación, dos plataformas",
+      "specNote": "Las dos apps leen el mismo archivo. Un proveedor añadido aquí aparece en macOS y en Windows a la vez, y las suites de pruebas de ambos lados leen estos specs y no copias.",
+      "cta": {
+        "github": "Ver en GitHub",
+        "site": "Visitar tokendial"
+      }
+    },
   "contact": {
     "title": "Contacto",
     "subtitle": "¡Hablemos!",
