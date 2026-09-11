@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useTranslation } from 'react-i18next'
@@ -13,6 +12,7 @@ import timeforemostImage from '../assets/images/timeforemost.png'
 import allInBikingImage from '../assets/images/allinbiking.png'
 import retarificadorImage from '../assets/images/retarificador.png'
 import eduqImage from '../assets/images/eduq.png'
+import wetrustImage from '../assets/images/wetrust.png'
 import groceryImage from '../assets/images/grocery.png'
 import gestionComunidadImage from '../assets/images/gestion-de-comunidad.png'
 import kitTokenImage from '../assets/images/kit-de-token.png'
@@ -63,6 +63,7 @@ const companies: Company[] = [
       { key: 'gestionKitDigital', image: gestionComunidadImage, stack: ['Flutter', 'React'] },
       { key: 'kitTokenComunidad', image: kitTokenImage, stack: ['React', 'Angular'] },
       { key: 'gestorRRHH', image: gestorRRHHImage, stack: ['React', 'Flutter'] },
+      { key: 'wetrust', image: wetrustImage, link: 'https://wetrustsystems.com/', stack: ['Voice AI', 'Fastify', 'Next.js', 'PostgreSQL', 'Twilio', 'Stripe'] },
     ],
   },
   {
@@ -88,41 +89,6 @@ const StackChips = ({ items }: { items: string[] }) => (
   </ul>
 )
 
-const ExpandableText = ({ text }: { text: string }) => {
-  const { t } = useTranslation()
-  const [expanded, setExpanded] = useState(false)
-  const [truncated, setTruncated] = useState(false)
-  const ref = useRef<HTMLParagraphElement>(null)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const check = () => {
-      if (!expanded) setTruncated(el.scrollHeight > el.clientHeight + 1)
-    }
-    check()
-    window.addEventListener('resize', check)
-    return () => window.removeEventListener('resize', check)
-  }, [text, expanded])
-
-  return (
-    <div className="mb-4 flex-1">
-      <p ref={ref} className={`text-sm text-muted apple-body-text leading-relaxed ${expanded ? '' : 'line-clamp-3'}`}>
-        {text}
-      </p>
-      {(truncated || expanded) && (
-        <button
-          type="button"
-          onClick={() => setExpanded((v) => !v)}
-          className="mt-1.5 text-xs font-medium text-apple-blue hover:underline"
-        >
-          {expanded ? t('projects.actions.readLess') : t('projects.actions.readMore')}
-        </button>
-      )}
-    </div>
-  )
-}
-
 const CardLink = ({ link, inDevelopment }: { link?: string; inDevelopment?: boolean }) => {
   const { t } = useTranslation()
   if (inDevelopment) {
@@ -144,34 +110,41 @@ const CardLink = ({ link, inDevelopment }: { link?: string; inDevelopment?: bool
   return <span className="text-sm text-subtle italic">{t('projects.actions.notAvailable')}</span>
 }
 
-const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
+const ProjectRow = ({ project, index }: { project: Project; index: number }) => {
   const { t } = useTranslation()
+  const reverse = index % 2 === 1
   return (
     <motion.article
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
-      className="group flex flex-col rounded-2xl bg-apple-surface border border-apple-line overflow-hidden transition-colors duration-300 hover:border-hairline-strong"
+      transition={{ duration: 0.55 }}
+      className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center"
     >
-      <div className="overflow-hidden border-b border-apple-line">
+      <div className={reverse ? 'lg:order-2' : ''}>
+        <h3 className="text-2xl md:text-3xl font-medium text-apple-dark font-apple-display apple-headline-normal mb-4">
+          {t(`projects.entries.${project.key}.title`)}
+        </h3>
+        <p className="text-base text-muted apple-body-text leading-relaxed mb-6">
+          {t(`projects.entries.${project.key}.description`)}
+        </p>
+        <div className="mb-6">
+          <StackChips items={project.stack} />
+        </div>
+        <CardLink link={project.link} inDevelopment={project.inDevelopment} />
+      </div>
+      <div
+        className={`group overflow-hidden rounded-2xl border border-apple-line bg-surface-3 apple-shadow-lg ${
+          reverse ? 'lg:order-1' : ''
+        }`}
+      >
         <img
           src={project.image}
           alt=""
           loading="lazy"
           decoding="async"
-          className="w-full h-44 object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+          className="w-full h-64 lg:h-[26rem] object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
         />
-      </div>
-      <div className="flex flex-col flex-1 p-6">
-        <h3 className="text-lg font-medium text-apple-dark font-apple-display apple-headline-normal mb-2">
-          {t(`projects.entries.${project.key}.title`)}
-        </h3>
-        <ExpandableText text={t(`projects.entries.${project.key}.description`)} />
-        <div className="mb-4">
-          <StackChips items={project.stack} />
-        </div>
-        <CardLink link={project.link} inDevelopment={project.inDevelopment} />
       </div>
     </motion.article>
   )
@@ -248,9 +221,9 @@ const CompanyGroup = ({ company }: { company: Company }) => {
           <p className="text-xs font-mono text-subtle mt-0.5">{t(`projects.timeline.${company.key}.period`)}</p>
         </div>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="space-y-16 lg:space-y-24">
         {company.projects.map((p, i) => (
-          <ProjectCard key={p.key} project={p} index={i} />
+          <ProjectRow key={p.key} project={p} index={i} />
         ))}
       </div>
     </div>

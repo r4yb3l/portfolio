@@ -9,6 +9,7 @@ const About = lazy(() => import('./components/About'))
 const Skills = lazy(() => import('./components/Skills'))
 const Projects = lazy(() => import('./components/Projects'))
 const HollowCaseStudy = lazy(() => import('./components/HollowCaseStudy'))
+const TokendialCaseStudy = lazy(() => import('./components/TokendialCaseStudy'))
 const Contact = lazy(() => import('./components/Contact'))
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
 
         <section id="opensource" className="bg-apple-gray">
           <Suspense fallback={<div className="h-24" />}>
+            <TokendialCaseStudy />
             <HollowCaseStudy />
           </Suspense>
         </section>

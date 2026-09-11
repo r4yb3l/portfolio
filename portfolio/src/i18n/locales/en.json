@@ -45,6 +45,10 @@
     "title": "Projects",
     "flagship": "Flagship",
     "entries": {
+      "wetrust": {
+        "title": "WeTrust",
+        "description": "A bilingual (English/Spanish) AI voice receptionist for local businesses that answers every inbound call, books, reschedules and cancels appointments straight into the business's real calendar, and hands off to a human the moment it matters. I designed and built the multi-tenant platform end to end: a Retell conversation-flow voice agent generated from each business's configuration, a Fastify/TypeScript backend with a range-based scheduling engine and calendar adapters (Google, Microsoft, native), a Next.js self-service client portal and internal console, and Twilio telephony with A2P 10DLC SMS confirmations and reminders across the whole appointment lifecycle. Rounded out with prepaid Stripe billing and a verification methodology of byte-for-byte flow-parity tests and live-call checks."
+      },
       "mergejob": {
         "title": "Mergejob",
         "description": "An AI-powered job board that scores every listing by semantic fit with a candidate's CV instead of by recency. I designed and built the platform end to end on a distributed architecture — Next.js on the frontend, Supabase/Postgres edge functions, and Cloudflare Workers as an LLM gateway. The matching pipeline parses the CV with an LLM, generates embeddings, retrieves candidates with pgvector, and reranks with an LLM. I implemented a credit-based monetization model with field-level paywalling (Postgres RLS + SECURITY DEFINER functions), Stripe payments, a realtime feed with polling fallback, and automated backups with per-user restore."
@@ -174,6 +178,32 @@
     },
     "license": "MIT License"
   },
+    "tokendial": {
+      "eyebrow": "Open Source",
+      "name": "Tokendial",
+      "tagline": "Usage dials for AI coding assistants, native on macOS and Windows",
+      "license": "MIT · free",
+      "problemLabel": "The problem",
+      "problem": "You build with Claude Code, Codex, Cursor and Copilot at once, and the only way to find out you are out of quota is when a tool stops answering. Each vendor meters differently, and none of them tells you before it happens.",
+      "solutionLabel": "The solution",
+      "solution": "A dial per tool at the edge of the screen, reading the session each tool already keeps on the machine. It warns before a window resets, tells you when an agent has been waiting on your answer, and stays out of the way the rest of the time.",
+      "featuresLabel": "What it does",
+      "features": {
+        "dial": "A dock of dials on any screen edge, expanding when the cursor reaches it and never stealing focus",
+        "readOnly": "Read-only by design: it reads credentials where each tool stores them and writes nothing back",
+        "twoNatives": "Two native apps, Swift/AppKit and C#/WPF, built from one shared JSON specification",
+        "install": "Installs the tools you are missing through Homebrew, winget or npm, showing the exact command before it runs",
+        "alerts": "Alerts at the thresholds you choose, before a window resets, and when a limit is spent",
+        "languages": "Nine providers, six languages, right-to-left included"
+      },
+      "shotAlt": "The Tokendial settings window, with a dial and its usage for each provider",
+      "specLabel": "One specification, two platforms",
+      "specNote": "Both apps read the same file. A provider added here appears on macOS and Windows at once, and the test suites on both sides read these specs rather than copies.",
+      "cta": {
+        "github": "View on GitHub",
+        "site": "Visit tokendial"
+      }
+    },
   "contact": {
     "title": "Contact",
     "subtitle": "Let's Talk!",
