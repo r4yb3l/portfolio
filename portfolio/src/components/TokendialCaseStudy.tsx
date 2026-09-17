@@ -4,7 +4,7 @@ import tokendialShot from '../assets/images/tokendial.png'
 
 const REPO_URL = 'https://github.com/r4yb3l/tokendial'
 const SITE_URL = 'https://tokendial.vercel.app'
-const RELEASE = 'v0.1.0'
+const RELEASE = 'v0.1.3'
 
 const container: Variants = {
   hidden: {},
@@ -33,7 +33,7 @@ const CheckIcon = () => (
   </svg>
 )
 
-/** One shared JSON specification, two native apps: the shape of the project in one picture. */
+/** One shared JSON specification, three native apps: the shape of the project in one picture. */
 const SpecDiagram = () => {
   const { t } = useTranslation()
   return (
@@ -57,7 +57,11 @@ const SpecDiagram = () => {
             <span className="text-white/50">, </span>
             <span className="text-[#79c0ff]">"windows"</span>
             <span className="text-white/50">: </span>
-            <span className="text-[#a5d6ff]">"dpapi"</span>
+            <span className="text-[#a5d6ff]">"file"</span>
+            <span className="text-white/50">, </span>
+            <span className="text-[#79c0ff]">"linux"</span>
+            <span className="text-white/50">: </span>
+            <span className="text-[#a5d6ff]">"file"</span>
             <span className="text-white/50"> {'}'},</span>
             {'\n  '}
             <span className="text-[#79c0ff]">"endpoints"</span>
@@ -70,6 +74,11 @@ const SpecDiagram = () => {
             <span className="text-[#79c0ff]">"macos"</span>
             <span className="text-white/50">: </span>
             <span className="text-[#a5d6ff]">"brew install --cask claude-code"</span>
+            <span className="text-white/50">, </span>
+            {'\n    '}
+            <span className="text-[#79c0ff]">"linux"</span>
+            <span className="text-white/50">: </span>
+            <span className="text-[#a5d6ff]">"curl -fsSL https://claude.ai/install.sh | bash"</span>
             <span className="text-white/50"> {'}'}</span>
             {'\n'}
             <span className="text-white/50">{'}'}</span>
@@ -84,7 +93,7 @@ const SpecDiagram = () => {
 const TokendialCaseStudy = () => {
   const { t } = useTranslation()
 
-  const features = ['dial', 'readOnly', 'twoNatives', 'install', 'alerts', 'languages'] as const
+  const features = ['dial', 'readOnly', 'natives', 'install', 'alerts', 'languages'] as const
 
   return (
     <section className="apple-section-padding">
@@ -115,7 +124,7 @@ const TokendialCaseStudy = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 rounded-full bg-surface-3 text-apple-blue border border-hairline px-3 py-1 text-xs font-medium"
               >
-                macOS · Windows · {RELEASE}
+                macOS · Windows · Linux · {RELEASE}
               </a>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-3 text-apple-gray border border-hairline px-3 py-1 text-xs font-medium">
                 {t('tokendial.license')}
