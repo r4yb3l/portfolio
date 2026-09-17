@@ -181,7 +181,7 @@
     "tokendial": {
       "eyebrow": "Open Source",
       "name": "Tokendial",
-      "tagline": "Usage dials for AI coding assistants, native on macOS and Windows",
+      "tagline": "Usage dials for AI coding assistants, native on macOS, Windows and Linux",
       "license": "MIT · free",
       "problemLabel": "The problem",
       "problem": "You build with Claude Code, Codex, Cursor and Copilot at once, and the only way to find out you are out of quota is when a tool stops answering. Each vendor meters differently, and none of them tells you before it happens.",
@@ -191,14 +191,14 @@
       "features": {
         "dial": "A dock of dials on any screen edge, expanding when the cursor reaches it and never stealing focus",
         "readOnly": "Read-only by design: it reads credentials where each tool stores them and writes nothing back",
-        "twoNatives": "Two native apps, Swift/AppKit and C#/WPF, built from one shared JSON specification",
+        "natives": "Three native apps, Swift/AppKit, C#/WPF and C#/Avalonia, built from one shared JSON specification",
         "install": "Installs the tools you are missing through Homebrew, winget or npm, showing the exact command before it runs",
         "alerts": "Alerts at the thresholds you choose, before a window resets, and when a limit is spent",
         "languages": "Nine providers, six languages, right-to-left included"
       },
       "shotAlt": "The Tokendial settings window, with a dial and its usage for each provider",
-      "specLabel": "One specification, two platforms",
-      "specNote": "Both apps read the same file. A provider added here appears on macOS and Windows at once, and the test suites on both sides read these specs rather than copies.",
+      "specLabel": "One specification, three platforms",
+      "specNote": "All three apps read the same file. A provider added here appears on macOS, Windows and Linux at once, and the test suites on every side read these specs rather than copies.",
       "cta": {
         "github": "View on GitHub",
         "site": "Visit tokendial"

@@ -181,7 +181,7 @@
     "tokendial": {
       "eyebrow": "Open Source",
       "name": "Tokendial",
-      "tagline": "Diales de consumo para asistentes de programación con IA, nativos en macOS y Windows",
+      "tagline": "Diales de consumo para asistentes de programación con IA, nativos en macOS, Windows y Linux",
       "license": "MIT · gratis",
       "problemLabel": "El problema",
       "problem": "Programas con Claude Code, Codex, Cursor y Copilot a la vez, y la única forma de enterarte de que se te acabó la cuota es cuando una herramienta deja de responder. Cada proveedor mide distinto y ninguno avisa antes.",
@@ -191,14 +191,14 @@
       "features": {
         "dial": "Un dock de diales en cualquier borde de la pantalla, que se expande al acercar el cursor y nunca roba el foco",
         "readOnly": "Solo lectura por diseño: lee las credenciales donde cada herramienta las guarda y no escribe nada",
-        "twoNatives": "Dos apps nativas, Swift/AppKit y C#/WPF, construidas desde una única especificación JSON compartida",
+        "natives": "Tres apps nativas, Swift/AppKit, C#/WPF y C#/Avalonia, construidas desde una única especificación JSON compartida",
         "install": "Instala las herramientas que te faltan con Homebrew, winget o npm, enseñando el comando exacto antes de ejecutarlo",
         "alerts": "Alertas en los umbrales que elijas, antes de que se reinicie una ventana y cuando se agota un límite",
         "languages": "Nueve proveedores, seis idiomas, de derecha a izquierda incluido"
       },
       "shotAlt": "La ventana de ajustes de Tokendial, con un dial y su consumo por cada proveedor",
-      "specLabel": "Una especificación, dos plataformas",
-      "specNote": "Las dos apps leen el mismo archivo. Un proveedor añadido aquí aparece en macOS y en Windows a la vez, y las suites de pruebas de ambos lados leen estos specs y no copias.",
+      "specLabel": "Una especificación, tres plataformas",
+      "specNote": "Las tres apps leen el mismo archivo. Un proveedor añadido aquí aparece en macOS, Windows y Linux a la vez, y las suites de pruebas de todos los lados leen estos specs y no copias.",
       "cta": {
         "github": "Ver en GitHub",
         "site": "Visitar tokendial"
