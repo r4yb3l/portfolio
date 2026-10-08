@@ -13,33 +13,71 @@
     "subtitle": "Full-stack product engineer with end-to-end ownership — from an initial direction to a shipped product.",
     "cta": {
       "projects": "View Projects",
-      "contact": "Get in Touch"
+      "contact": "Get in Touch",
+      "cv": "Download CV"
     }
   },
   "about": {
     "title": "About Me",
     "subtitle": "Senior Software Engineer",
     "description1": "Senior software engineer with 6+ years across web and mobile — a full-stack, product-minded builder with end-to-end ownership. Give me an initial direction and the authority to run with it, and I define the scope, decide the architecture, and implement changes on the fly, all the way to a shipped product. I work the whole stack: React/Next.js and TypeScript on the frontend; Node.js/NestJS, ASP.NET Core and PostgreSQL on the backend; cross-platform mobile with Flutter; and AI-powered features (LLMs, embeddings, vector search) on cloud infra like Supabase, Firebase, GCP and Cloudflare Workers.",
-    "description2": "I've owned products end to end — from SnapnFund and All in Biking to Mergejob, an AI-powered job board that scores listings by semantic fit using embeddings and pgvector. Along the way I've designed database schemas and secure APIs, integrated Stripe/QuickBooks and Google Cloud, and shipped scalable systems with smooth UX. I bring that same speed and precision to both code and collaboration.",
-    "technologies": {
-      "react": "React",
-      "nodejs": "Node.js",
-      "python": "Python"
-    }
+    "description2": "I've owned products end to end — from SnapnFund and All in Biking to Mergejob, an AI-powered job board that scores listings by semantic fit using embeddings and pgvector. Along the way I've designed database schemas and secure APIs, integrated Stripe and Google Cloud, and shipped scalable systems with smooth UX. I bring that same speed and precision to both code and collaboration."
   },
-
   "skills": {
     "title": "Skills",
     "frontend": "Frontend",
     "backend": "Backend",
     "cloud": "Cloud",
     "tags": {
-      "frontend": ["React.js", "Next.js", "Angular", "TypeScript", "JavaScript", "Responsive UI", "Design Systems"],
-      "backend": ["Node.js", "NestJS", "ASP.NET Core", "C#", "REST/GraphQL APIs", "PostgreSQL"],
-      "mobile": ["Flutter", "Flutter Web", "Dart", "Cross-platform architecture", "Complex state management"],
-      "cloud": ["Supabase", "Firebase", "Google Cloud Platform (GCP)", "Cloudflare Workers", "PostgreSQL / pgvector", "Neo4j"],
-      "tools": ["Git", "CI/CD", "GitHub Actions", "Docker", "Stripe", "LLMs & embeddings", "Vector search", "OCR"]
-    }
+      "frontend": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Responsive UI",
+        "Design Systems"
+      ],
+      "backend": [
+        "Node.js",
+        "NestJS",
+        "ASP.NET Core",
+        "C#",
+        "REST/GraphQL APIs",
+        "PostgreSQL"
+      ],
+      "mobile": [
+        "Flutter",
+        "Flutter Web",
+        "Dart",
+        "Cross-platform architecture",
+        "Complex state management"
+      ],
+      "cloud": [
+        "Supabase",
+        "Firebase",
+        "Google Cloud Platform (GCP)",
+        "Cloudflare Workers",
+        "Neo4j",
+        "PostgreSQL / pgvector",
+        "Valkey / Redis",
+        "Inngest"
+      ],
+      "tools": [
+        "Git",
+        "CI/CD",
+        "GitHub Actions",
+        "Docker",
+        "Stripe",
+        "LLMs & embeddings",
+        "Vector search",
+        "OCR",
+        "LLM pipelines",
+        "AI agents",
+        "LiteLLM / OpenRouter"
+      ]
+    },
+    "mobile": "Mobile",
+    "tools": "Tools & AI"
   },
   "projects": {
     "title": "Projects",
@@ -51,7 +89,7 @@
       },
       "mergejob": {
         "title": "Mergejob",
-        "description": "An AI-powered job board that scores every listing by semantic fit with a candidate's CV instead of by recency. I designed and built the platform end to end on a distributed architecture — Next.js on the frontend, Supabase/Postgres edge functions, and Cloudflare Workers as an LLM gateway. The matching pipeline parses the CV with an LLM, generates embeddings, retrieves candidates with pgvector, and reranks with an LLM. I implemented a credit-based monetization model with field-level paywalling (Postgres RLS + SECURITY DEFINER functions), Stripe payments, a realtime feed with polling fallback, and automated backups with per-user restore."
+        "description": "An AI-powered job board that scores every listing by semantic fit with a candidate's CV instead of by recency. I designed and built the platform end to end on a distributed architecture — Next.js on the frontend, Supabase/Postgres edge functions, and Cloudflare Workers as an LLM gateway. The matching pipeline parses the CV with an LLM, generates embeddings, retrieves candidates with pgvector, and reranks with an LLM. I implemented a credit-based monetization model with field-level paywalling (Postgres RLS + SECURITY DEFINER functions), Stripe payments, a realtime feed with polling fallback, and automated backups with per-user restore. The product was later discontinued."
       },
       "snapnfund": {
         "title": "SnapnFund",
@@ -71,11 +109,11 @@
       },
       "allInBiking": {
         "title": "All In Biking",
-        "description": "Led the frontend for a cyclist-focused social network on Android and iOS, enabling riders to share moments, enter competitions, and connect with organizations. Directed the Flutter implementation backed by Firebase, Google Cloud, and Neo4J to deliver seamless realtime data and resilient social features."
+        "description": "Led a team of 6 developers as de-facto tech lead on a cyclist-focused social network for Android and iOS, where riders share moments, enter competitions and connect with organizations. Built with Flutter on Firebase, Google Cloud and Neo4j for realtime data and resilient social features."
       },
       "retarificador": {
         "title": "Retarificador Alpha Brokers",
-        "description": "Contributed to the refactor and optimization of a legacy insurance re-quoting web platform. Applied software best practices and patterns to substantially boost performance and maintainability."
+        "description": "Six months as a frontend developer on an insurance re-rating web platform for Alpha Brokers: building and maintaining React screens, and shipping UI fixes and features alongside the rest of the team."
       },
       "eduq": {
         "title": "EduQ",
@@ -91,19 +129,7 @@
       },
       "groceryChefPro": {
         "title": "Grocery Chef Pro",
-        "description": "Development of an application focused on food tracking and AI-assisted shopping lists. The application allows users to manage their eating habits, create smart shopping lists, and receive personalized recommendations based on their preferences and nutritional needs."
-      },
-      "gestionKitDigital": {
-        "title": "Kit Digital",
-        "description": "Participation in the Frontend development of the platform. Developed the mobile frontend (Flutter) for managing dynamic forms and their dependency graphs, and the BackOffice (React) for agent management, performance analytics, and the document and news library."
-      },
-      "kitTokenComunidad": {
-        "title": "Community Token Management",
-        "description": "Built the frontend (React, previously Angular) in the app for the complete wallet flow, service transfers between club members, account management, and PIN security validation."
-      },
-      "gestorRRHH": {
-        "title": "HR Management",
-        "description": "Implementation in the application of the personal panel interface (React, previously Angular) and the mobile application (Flutter) for employee access to work data, policies, and communications. Includes the development of interfaces for tenant configuration and complex access management."
+        "description": "A food-tracking app with AI-assisted shopping lists: users log their eating habits, build smart shopping lists and get recommendations based on their preferences and nutritional needs. The app was well advanced when the project was cancelled before launch."
       }
     },
     "timeline": {
@@ -121,7 +147,7 @@
       },
       "qabit": {
         "name": "QA-BIT",
-        "title": "Senior Software Developer / Mobile Architect",
+        "title": "Senior Software Developer",
         "location": "Estonia",
         "period": "June 2022 to Present"
       },
@@ -132,27 +158,14 @@
         "period": "August 2025 to Present"
       }
     },
-    "technologies": {
-      "react": "React",
-      "nodejs": "Node.js",
-      "mongodb": "MongoDB",
-      "stripe": "Stripe",
-      "socketio": "Socket.io",
-      "express": "Express",
-      "postgresql": "PostgreSQL",
-      "vuejs": "Vue.js",
-      "chartjs": "Chart.js",
-      "api": "API Integration"
-    },
     "actions": {
-      "github": "GitHub",
-      "liveDemo": "Live Demo",
       "visitSite": "Visit Site",
       "notAvailable": "Private project, URL not available",
       "inDevelopment": "In development",
-      "readMore": "Read more",
-      "readLess": "Read less"
-    }
+      "cancelled": "Cancelled"
+    },
+    "pipeline": "Matching pipeline",
+    "flagshipTag": "AI Engineering"
   },
   "openSource": {
     "eyebrow": "Open Source",
@@ -178,32 +191,32 @@
     },
     "license": "MIT License"
   },
-    "tokendial": {
-      "eyebrow": "Open Source",
-      "name": "Tokendial",
-      "tagline": "Usage dials for AI coding assistants, native on macOS, Windows and Linux",
-      "license": "MIT · free",
-      "problemLabel": "The problem",
-      "problem": "You build with Claude Code, Codex, Cursor and Copilot at once, and the only way to find out you are out of quota is when a tool stops answering. Each vendor meters differently, and none of them tells you before it happens.",
-      "solutionLabel": "The solution",
-      "solution": "A dial per tool at the edge of the screen, reading the session each tool already keeps on the machine. It warns before a window resets, tells you when an agent has been waiting on your answer, and stays out of the way the rest of the time.",
-      "featuresLabel": "What it does",
-      "features": {
-        "dial": "A dock of dials on any screen edge, expanding when the cursor reaches it and never stealing focus",
-        "readOnly": "Read-only by design: it reads credentials where each tool stores them and writes nothing back",
-        "natives": "Three native apps, Swift/AppKit, C#/WPF and C#/Avalonia, built from one shared JSON specification",
-        "install": "Installs the tools you are missing through Homebrew, winget or npm, showing the exact command before it runs",
-        "alerts": "Alerts at the thresholds you choose, before a window resets, and when a limit is spent",
-        "languages": "Nine providers, six languages, right-to-left included"
-      },
-      "shotAlt": "The Tokendial settings window, with a dial and its usage for each provider",
-      "specLabel": "One specification, three platforms",
-      "specNote": "All three apps read the same file. A provider added here appears on macOS, Windows and Linux at once, and the test suites on every side read these specs rather than copies.",
-      "cta": {
-        "github": "View on GitHub",
-        "site": "Visit tokendial"
-      }
+  "tokendial": {
+    "eyebrow": "Open Source",
+    "name": "Tokendial",
+    "tagline": "Usage dials for AI coding assistants, native on macOS, Windows and Linux",
+    "license": "MIT · free",
+    "problemLabel": "The problem",
+    "problem": "You build with Claude Code, Codex, Cursor and Copilot at once, and the only way to find out you are out of quota is when a tool stops answering. Each vendor meters differently, and none of them tells you before it happens.",
+    "solutionLabel": "The solution",
+    "solution": "A dial per tool at the edge of the screen, reading the session each tool already keeps on the machine. It warns before a window resets, tells you when an agent has been waiting on your answer, and stays out of the way the rest of the time.",
+    "featuresLabel": "What it does",
+    "features": {
+      "dial": "A dock of dials on any screen edge, expanding when the cursor reaches it and never stealing focus",
+      "readOnly": "Read-only by design: it reads credentials where each tool stores them and writes nothing back",
+      "natives": "Three native apps, Swift/AppKit, C#/WPF and C#/Avalonia, built from one shared JSON specification",
+      "install": "Installs the tools you are missing through Homebrew, winget or npm, showing the exact command before it runs",
+      "alerts": "Alerts at the thresholds you choose, before a window resets, and when a limit is spent",
+      "languages": "Nine providers, six languages, right-to-left included"
     },
+    "shotAlt": "The Tokendial settings window, with a dial and its usage for each provider",
+    "specLabel": "One specification, three platforms",
+    "specNote": "All three apps read the same file. A provider added here appears on macOS, Windows and Linux at once, and the test suites on every side read these specs rather than copies.",
+    "cta": {
+      "github": "View on GitHub",
+      "site": "Visit tokendial"
+    }
+  },
   "contact": {
     "title": "Contact",
     "subtitle": "Let's Talk!",
@@ -228,5 +241,17 @@
     "connect": "Let's connect",
     "cv": "Download CV",
     "rights": "All rights reserved."
+  },
+  "a11y": {
+    "home": "Back to top",
+    "menu": "Open menu",
+    "closeMenu": "Close menu",
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme",
+    "language": "Language",
+    "profileAlt": "Portrait of Raybel Hernández",
+    "primaryNav": "Primary",
+    "projectScreenshot": "{{name}} screenshot",
+    "companyLogo": "{{name}} logo"
   }
 }

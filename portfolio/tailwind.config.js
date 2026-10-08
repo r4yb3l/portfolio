@@ -6,13 +6,28 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        canvas: 'var(--canvas)',
+        parchment: 'var(--parchment)',
+        card: 'var(--card)',
+        ink: 'var(--ink)',
+        'ink-muted': 'var(--ink-muted)',
+        'ink-subtle': 'var(--ink-subtle)',
+        link: 'var(--link)',
+        action: 'var(--action)',
+        hairline: 'var(--hairline)',
+        'hairline-soft': 'var(--hairline-soft)',
+      },
       fontFamily: {
-        sans: ['DM Sans Variable', 'DM Sans', 'system-ui', 'sans-serif'],
-        display: ['Space Grotesk Variable', 'Space Grotesk', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'ui-monospace', 'SF Mono', 'Menlo', 'monospace'],
+        sans: ['var(--font-text)'],
+        display: ['var(--font-display)'],
+        mono: ['var(--font-mono)'],
+      },
+      maxWidth: {
+        content: '980px',
+        wide: '1200px',
       },
     },
   },
   plugins: [],
 }
-

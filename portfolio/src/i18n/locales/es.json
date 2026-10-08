@@ -13,33 +13,71 @@
     "subtitle": "Full-stack product engineer con ownership end-to-end — de una dirección inicial a un producto lanzado.",
     "cta": {
       "projects": "Ver Proyectos",
-      "contact": "Contactar"
+      "contact": "Contactar",
+      "cv": "Descargar CV"
     }
   },
   "about": {
     "title": "Me presento",
     "subtitle": "Ingeniero de Software Senior",
     "description1": "Ingeniero de software senior con 6+ años entre web y móvil — un builder full-stack con mentalidad de producto y ownership end-to-end. Dame una dirección inicial y la autoridad para ejecutarla: defino el alcance, decido la arquitectura e implemento cambios sobre la marcha, hasta un producto lanzado. Trabajo todo el stack: React/Next.js y TypeScript en frontend; Node.js/NestJS, ASP.NET Core y PostgreSQL en backend; móvil multiplataforma con Flutter; y features potenciadas por IA (LLMs, embeddings, búsqueda vectorial) sobre infra cloud como Supabase, Firebase, GCP y Cloudflare Workers.",
-    "description2": "He llevado productos de punta a punta — desde SnapnFund y All in Biking hasta Mergejob, un job board con IA que puntúa ofertas por fit semántico usando embeddings y pgvector. En el camino he diseñado esquemas de base de datos y APIs seguras, integrado Stripe/QuickBooks y Google Cloud, y entregado sistemas escalables con una UX fluida. Traslado esa misma velocidad y precisión al código y al trabajo en equipo.",
-    "technologies": {
-      "react": "React",
-      "nodejs": "Node.js",
-      "python": "Python"
-    }
+    "description2": "He llevado productos de punta a punta — desde SnapnFund y All in Biking hasta Mergejob, un job board con IA que puntúa ofertas por fit semántico usando embeddings y pgvector. En el camino he diseñado esquemas de base de datos y APIs seguras, integrado Stripe y Google Cloud, y entregado sistemas escalables con una UX fluida. Traslado esa misma velocidad y precisión al código y al trabajo en equipo."
   },
-
   "skills": {
     "title": "Habilidades",
     "frontend": "Frontend",
     "backend": "Backend",
     "cloud": "Cloud",
     "tags": {
-      "frontend": ["React.js", "Next.js", "Angular", "TypeScript", "JavaScript", "UI responsiva", "Design Systems"],
-      "backend": ["Node.js", "NestJS", "ASP.NET Core", "C#", "REST/GraphQL APIs", "PostgreSQL"],
-      "mobile": ["Flutter", "Flutter Web", "Dart", "Arquitectura multiplataforma", "Gestión de estado compleja"],
-      "cloud": ["Supabase", "Firebase", "Google Cloud Platform (GCP)", "Cloudflare Workers", "PostgreSQL / pgvector", "Neo4j"],
-      "tools": ["Git", "CI/CD", "GitHub Actions", "Docker", "Stripe", "LLMs y embeddings", "Búsqueda vectorial", "OCR"]
-    }
+      "frontend": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "UI responsiva",
+        "Design Systems"
+      ],
+      "backend": [
+        "Node.js",
+        "NestJS",
+        "ASP.NET Core",
+        "C#",
+        "REST/GraphQL APIs",
+        "PostgreSQL"
+      ],
+      "mobile": [
+        "Flutter",
+        "Flutter Web",
+        "Dart",
+        "Arquitectura multiplataforma",
+        "Gestión de estado compleja"
+      ],
+      "cloud": [
+        "Supabase",
+        "Firebase",
+        "Google Cloud Platform (GCP)",
+        "Cloudflare Workers",
+        "Neo4j",
+        "PostgreSQL / pgvector",
+        "Valkey / Redis",
+        "Inngest"
+      ],
+      "tools": [
+        "Git",
+        "CI/CD",
+        "GitHub Actions",
+        "Docker",
+        "Stripe",
+        "LLMs y embeddings",
+        "Búsqueda vectorial",
+        "OCR",
+        "Pipelines de LLM",
+        "Agentes de IA",
+        "LiteLLM / OpenRouter"
+      ]
+    },
+    "mobile": "Móvil",
+    "tools": "Herramientas e IA"
   },
   "projects": {
     "title": "Proyectos",
@@ -51,7 +89,7 @@
       },
       "mergejob": {
         "title": "Mergejob",
-        "description": "Un job board con IA que puntúa cada oferta según el fit semántico con el CV del candidato en lugar de por recencia. Diseñé y construí la plataforma de punta a punta sobre una arquitectura distribuida — Next.js en el frontend, edge functions en Supabase/Postgres y Cloudflare Workers como gateway de LLM. El pipeline de matching parsea el CV con un LLM, genera embeddings, recupera candidatos con pgvector y hace reranking con un LLM. Implementé un modelo de monetización por créditos con paywall a nivel de campo (RLS de Postgres + funciones SECURITY DEFINER), pagos con Stripe, feed en tiempo real con fallback de polling y backups automáticos con restauración por usuario."
+        "description": "Un job board con IA que puntúa cada oferta según el fit semántico con el CV del candidato en lugar de por recencia. Diseñé y construí la plataforma de punta a punta sobre una arquitectura distribuida — Next.js en el frontend, edge functions en Supabase/Postgres y Cloudflare Workers como gateway de LLM. El pipeline de matching parsea el CV con un LLM, genera embeddings, recupera candidatos con pgvector y hace reranking con un LLM. Implementé un modelo de monetización por créditos con paywall a nivel de campo (RLS de Postgres + funciones SECURITY DEFINER), pagos con Stripe, feed en tiempo real con fallback de polling y backups automáticos con restauración por usuario. Más adelante el producto se discontinuó."
       },
       "snapnfund": {
         "title": "SnapnFund",
@@ -71,11 +109,11 @@
       },
       "allInBiking": {
         "title": "All In Biking",
-        "description": "Lideré el frontend de una red social para ciclistas en Android y iOS, donde los usuarios comparten experiencias, participan en competencias y se conectan con organizaciones. Dirigí la implementación en Flutter, apoyado en Firebase, Google Cloud y Neo4J para ofrecer datos en tiempo real y funcionalidades sociales robustas."
+        "description": "Lideré un equipo de 6 desarrolladores como tech lead de facto en una red social para ciclistas en Android e iOS, donde los usuarios comparten experiencias, participan en competencias y se conectan con organizaciones. Construida con Flutter sobre Firebase, Google Cloud y Neo4j para datos en tiempo real y funcionalidades sociales robustas."
       },
       "retarificador": {
         "title": "Retarificador Alpha Brokers",
-        "description": "Contribuí al refactor y optimización de un proyecto web heredado para retarificar seguros. Aplicando buenas prácticas y patrones de software mejoramos significativamente la performance y la mantenibilidad del producto."
+        "description": "Seis meses como desarrollador frontend en una plataforma web de retarificación de seguros para Alpha Brokers: construyendo y manteniendo pantallas en React, y entregando mejoras y correcciones de UI junto al resto del equipo."
       },
       "eduq": {
         "title": "EduQ",
@@ -91,19 +129,7 @@
       },
       "groceryChefPro": {
         "title": "Grocery Chef Pro",
-        "description": "Desarrollo de una aplicación enfocada al seguimiento de alimentación y listas de compras asistidas por inteligencia artificial. La aplicación permite a los usuarios gestionar sus hábitos alimenticios, crear listas de compras inteligentes y recibir recomendaciones personalizadas basadas en sus preferencias y necesidades nutricionales."
-      },
-      "gestionKitDigital": {
-        "title": "Kit Digital",
-        "description": "Participación en el desarrollo Frontend de la plataforma. Desarrollé el frontend móvil (Flutter) para la gestión de formularios dinámicos y sus grafos de dependencia, y el BackOffice (React) para gestión de agentes, analítica de rendimiento y la biblioteca de documentos y noticias."
-      },
-      "kitTokenComunidad": {
-        "title": "Gestión de Tókenes en Comunidad",
-        "description": "Construcción del frontend (React, anteriormente Angular) en la app para el flujo completo del monedero, transferencias de servicios entre socios del club, la gestión de cuentas y la validación con PIN de seguridad."
-      },
-      "gestorRRHH": {
-        "title": "Gestión de RRHH",
-        "description": "Implementación en la aplicación de la interfaz de panel personal (React, anteriormente Angular) y la aplicación móvil (Flutter) para el acceso de los empleados a datos laborales, políticas y comunicados. Incluye el desarrollo de interfaces para la configuración de tenants y la gestión de accesos complejos."
+        "description": "Una app de seguimiento de alimentación con listas de compra asistidas por IA: los usuarios registran sus hábitos, crean listas de compra inteligentes y reciben recomendaciones según sus preferencias y necesidades nutricionales. La app estaba muy avanzada cuando el proyecto se canceló antes del lanzamiento."
       }
     },
     "timeline": {
@@ -121,7 +147,7 @@
       },
       "qabit": {
         "name": "QA-BIT",
-        "title": "Senior Software Developer / Mobile Architect",
+        "title": "Senior Software Developer",
         "location": "Estonia",
         "period": "junio 2022 al presente"
       },
@@ -132,27 +158,14 @@
         "period": "agosto 2025 al presente"
       }
     },
-    "technologies": {
-      "react": "React",
-      "nodejs": "Node.js",
-      "mongodb": "MongoDB",
-      "stripe": "Stripe",
-      "socketio": "Socket.io",
-      "express": "Express",
-      "postgresql": "PostgreSQL",
-      "vuejs": "Vue.js",
-      "chartjs": "Chart.js",
-      "api": "API Integration"
-    },
     "actions": {
-      "github": "GitHub",
-      "liveDemo": "Live Demo",
       "visitSite": "Visitar sitio",
       "notAvailable": "Proyecto privado, URL no disponible",
       "inDevelopment": "En desarrollo",
-      "readMore": "Leer más",
-      "readLess": "Leer menos"
-    }
+      "cancelled": "Cancelado"
+    },
+    "pipeline": "Pipeline de matching",
+    "flagshipTag": "Ingeniería de IA"
   },
   "openSource": {
     "eyebrow": "Código Abierto",
@@ -178,32 +191,32 @@
     },
     "license": "Licencia MIT"
   },
-    "tokendial": {
-      "eyebrow": "Open Source",
-      "name": "Tokendial",
-      "tagline": "Diales de consumo para asistentes de programación con IA, nativos en macOS, Windows y Linux",
-      "license": "MIT · gratis",
-      "problemLabel": "El problema",
-      "problem": "Programas con Claude Code, Codex, Cursor y Copilot a la vez, y la única forma de enterarte de que se te acabó la cuota es cuando una herramienta deja de responder. Cada proveedor mide distinto y ninguno avisa antes.",
-      "solutionLabel": "La solución",
-      "solution": "Un dial por herramienta en el borde de la pantalla, leyendo la sesión que cada una ya guarda en el equipo. Avisa antes de que se reinicie una ventana, dice cuándo un agente lleva rato esperando tu respuesta, y el resto del tiempo no estorba.",
-      "featuresLabel": "Qué hace",
-      "features": {
-        "dial": "Un dock de diales en cualquier borde de la pantalla, que se expande al acercar el cursor y nunca roba el foco",
-        "readOnly": "Solo lectura por diseño: lee las credenciales donde cada herramienta las guarda y no escribe nada",
-        "natives": "Tres apps nativas, Swift/AppKit, C#/WPF y C#/Avalonia, construidas desde una única especificación JSON compartida",
-        "install": "Instala las herramientas que te faltan con Homebrew, winget o npm, enseñando el comando exacto antes de ejecutarlo",
-        "alerts": "Alertas en los umbrales que elijas, antes de que se reinicie una ventana y cuando se agota un límite",
-        "languages": "Nueve proveedores, seis idiomas, de derecha a izquierda incluido"
-      },
-      "shotAlt": "La ventana de ajustes de Tokendial, con un dial y su consumo por cada proveedor",
-      "specLabel": "Una especificación, tres plataformas",
-      "specNote": "Las tres apps leen el mismo archivo. Un proveedor añadido aquí aparece en macOS, Windows y Linux a la vez, y las suites de pruebas de todos los lados leen estos specs y no copias.",
-      "cta": {
-        "github": "Ver en GitHub",
-        "site": "Visitar tokendial"
-      }
+  "tokendial": {
+    "eyebrow": "Open Source",
+    "name": "Tokendial",
+    "tagline": "Diales de consumo para asistentes de programación con IA, nativos en macOS, Windows y Linux",
+    "license": "MIT · gratis",
+    "problemLabel": "El problema",
+    "problem": "Programas con Claude Code, Codex, Cursor y Copilot a la vez, y la única forma de enterarte de que se te acabó la cuota es cuando una herramienta deja de responder. Cada proveedor mide distinto y ninguno avisa antes.",
+    "solutionLabel": "La solución",
+    "solution": "Un dial por herramienta en el borde de la pantalla, leyendo la sesión que cada una ya guarda en el equipo. Avisa antes de que se reinicie una ventana, dice cuándo un agente lleva rato esperando tu respuesta, y el resto del tiempo no estorba.",
+    "featuresLabel": "Qué hace",
+    "features": {
+      "dial": "Un dock de diales en cualquier borde de la pantalla, que se expande al acercar el cursor y nunca roba el foco",
+      "readOnly": "Solo lectura por diseño: lee las credenciales donde cada herramienta las guarda y no escribe nada",
+      "natives": "Tres apps nativas, Swift/AppKit, C#/WPF y C#/Avalonia, construidas desde una única especificación JSON compartida",
+      "install": "Instala las herramientas que te faltan con Homebrew, winget o npm, enseñando el comando exacto antes de ejecutarlo",
+      "alerts": "Alertas en los umbrales que elijas, antes de que se reinicie una ventana y cuando se agota un límite",
+      "languages": "Nueve proveedores, seis idiomas, de derecha a izquierda incluido"
     },
+    "shotAlt": "La ventana de ajustes de Tokendial, con un dial y su consumo por cada proveedor",
+    "specLabel": "Una especificación, tres plataformas",
+    "specNote": "Las tres apps leen el mismo archivo. Un proveedor añadido aquí aparece en macOS, Windows y Linux a la vez, y las suites de pruebas de todos los lados leen estos specs y no copias.",
+    "cta": {
+      "github": "Ver en GitHub",
+      "site": "Visitar tokendial"
+    }
+  },
   "contact": {
     "title": "Contacto",
     "subtitle": "¡Hablemos!",
@@ -228,5 +241,17 @@
     "connect": "Conectemos",
     "cv": "Descargar CV",
     "rights": "Todos los derechos reservados."
+  },
+  "a11y": {
+    "home": "Volver al inicio",
+    "menu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "toLight": "Cambiar a tema claro",
+    "toDark": "Cambiar a tema oscuro",
+    "language": "Idioma",
+    "profileAlt": "Retrato de Raybel Hernández",
+    "primaryNav": "Principal",
+    "projectScreenshot": "Captura de {{name}}",
+    "companyLogo": "Logo de {{name}}"
   }
 }

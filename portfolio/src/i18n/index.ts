@@ -23,4 +23,11 @@ i18n
     }
   })
 
+const syncDocumentLanguage = (lng: string) => {
+  document.documentElement.lang = lng.split('-')[0]
+}
+
+syncDocumentLanguage(i18n.resolvedLanguage ?? 'es')
+i18n.on('languageChanged', syncDocumentLanguage)
+
 export default i18n
