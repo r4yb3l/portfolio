@@ -105,7 +105,7 @@
       },
       "timeforemost": {
         "title": "TimeForemost",
-        "description": "Participated in building an enterprise time tracking platform that grew from an internal tool into a full productivity monitoring and analytics service. Contributed to Flutter, NestJS, Google Cloud, and Stripe integrations, highlighting cross-platform delivery, backend orchestration, and payment processing expertise."
+        "description": "Built the Flutter mobile and Flutter Web frontend of an enterprise time-tracking platform as it grew from an internal tool into a full productivity monitoring and analytics service."
       },
       "allInBiking": {
         "title": "All In Biking",
@@ -141,7 +141,7 @@
       },
       "netforemost": {
         "name": "NetForemost",
-        "title": "Software Developer",
+        "title": "Frontend Developer",
         "location": "Panama City (Remote)",
         "period": "March 2022 to June 2022"
       },

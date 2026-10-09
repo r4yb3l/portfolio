@@ -44,7 +44,7 @@ export const companies: Company[] = [
     key: 'netforemost',
     logo: netforemostLogo,
     projects: [
-      { key: 'timeforemost', image: timeforemostImage, link: 'https://timeforemost.com/', stack: ['Flutter', 'NestJS', 'GCP', 'Stripe'] },
+      { key: 'timeforemost', image: timeforemostImage, link: 'https://timeforemost.com/', stack: ['Flutter', 'Flutter Web'] },
     ],
   },
   {
