@@ -149,13 +149,19 @@
         "name": "QA-BIT",
         "title": "Senior Software Developer",
         "location": "Estonia",
-        "period": "June 2022 to Present"
+        "period": "June 2022 to August 2025"
       },
       "astrocode": {
         "name": "AstroCode",
         "title": "Senior Full Stack Developer",
         "location": "Freelance",
         "period": "August 2025 to Present"
+      },
+      "topdevcrew": {
+        "name": "Top Dev Crew",
+        "title": "Senior Full-Stack Engineer",
+        "location": "United States (Remote)",
+        "period": "September 2025 to Present"
       }
     },
     "actions": {

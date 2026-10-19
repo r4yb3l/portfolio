@@ -2,6 +2,7 @@ import prodevLogo from '../../assets/logos/business/prodev.svg'
 import netforemostLogo from '../../assets/logos/business/netforemost.svg'
 import qaBitLogo from '../../assets/logos/business/qa-bit.svg'
 import astrocodeLogo from '../../assets/logos/business/astrocode.svg'
+import topDevCrewLogo from '../../assets/logos/business/top-dev-crew.svg'
 import snapnfundImage from '../../assets/images/snapnfund.png'
 import dealerslashImage from '../../assets/images/dealerslash.png'
 import followAppImage from '../../assets/images/followApp.png'
@@ -51,7 +52,6 @@ export const companies: Company[] = [
     key: 'qabit',
     logo: qaBitLogo,
     projects: [
-      { key: 'wetrust', image: wetrustImage, link: 'https://wetrustsystems.com/', stack: ['Voice AI', 'Fastify', 'Next.js', 'PostgreSQL', 'Twilio', 'Stripe'] },
       { key: 'allInBiking', image: allInBikingImage, link: 'https://allinbiking.com/', stack: ['Flutter', 'Firebase', 'GCP', 'Neo4j'] },
       { key: 'eduq', image: eduqImage, link: 'https://play.google.com/store/apps/details?id=com.qabit.eduq', stack: ['Flutter'] },
       { key: 'retarificador', image: retarificadorImage, link: 'https://retarificador.alphabrokers.es/', stack: ['React', 'Frontend'] },
@@ -64,6 +64,13 @@ export const companies: Company[] = [
     projects: [
       { key: 'chrona', image: chronaImage, status: 'inDevelopment', stack: ['Next.js', 'NestJS', 'Flutter'] },
       { key: 'manitas', image: manitasImage, status: 'inDevelopment', stack: ['Flutter', 'Next.js', 'Geolocation'] },
+    ],
+  },
+  {
+    key: 'topdevcrew',
+    logo: topDevCrewLogo,
+    projects: [
+      { key: 'wetrust', image: wetrustImage, link: 'https://wetrustsystems.com/', stack: ['Voice AI', 'Fastify', 'Next.js', 'PostgreSQL', 'Twilio', 'Stripe'] },
     ],
   },
 ]
