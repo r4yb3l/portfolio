@@ -10,7 +10,7 @@
   "hero": {
     "name": "Raybel Hernández",
     "title": "Senior Software Engineer",
-    "subtitle": "Full-stack product engineer with end-to-end ownership — from an initial direction to a shipped product.",
+    "subtitle": "Full-stack engineer working in TypeScript, React, Node.js and PostgreSQL. Seven years building web and mobile products for clients in the United States and Europe.",
     "cta": {
       "projects": "View Projects",
       "contact": "Get in Touch",
@@ -20,8 +20,8 @@
   "about": {
     "title": "About Me",
     "subtitle": "Senior Software Engineer",
-    "description1": "Senior software engineer with 7 years across web and mobile — a full-stack, product-minded builder with end-to-end ownership. Give me an initial direction and the authority to run with it, and I define the scope, decide the architecture, and implement changes on the fly, all the way to a shipped product. I work the whole stack: React/Next.js and TypeScript on the frontend; Node.js/NestJS, ASP.NET Core and PostgreSQL on the backend; cross-platform mobile with Flutter; and AI-powered features (LLMs, embeddings, vector search) on cloud infra like Supabase, Firebase, GCP and Cloudflare Workers.",
-    "description2": "I've owned products end to end — from SnapnFund and All in Biking to Mergejob, an AI-powered job board that scores listings by semantic fit using embeddings and pgvector. Along the way I've designed database schemas and secure APIs, integrated Stripe and Google Cloud, and shipped scalable systems with smooth UX. I bring that same speed and precision to both code and collaboration."
+    "description1": "I am a senior software engineer with seven years of experience on web and mobile products. My main stack is TypeScript: React and Next.js on the frontend, Node.js (Fastify, NestJS, Express) and PostgreSQL on the backend. I have also worked with ASP.NET Core, and with Flutter on mobile apps published on the App Store and Google Play.",
+    "description2": "In recent years I have built CRMs and sales tools, multi-tenant SaaS platforms with row-level security, payment flows with Stripe, and AI features based on LLMs, embeddings and vector search. I use AI coding tools every day and review each change before it is merged. I work remotely from Nicaragua (UTC-6) with teams in the United States and Europe."
   },
   "skills": {
     "title": "Skills",

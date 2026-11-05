@@ -10,7 +10,7 @@
   "hero": {
     "name": "Raybel Hernández",
     "title": "Ingeniero de Software Senior",
-    "subtitle": "Full-stack product engineer con ownership end-to-end — de una dirección inicial a un producto lanzado.",
+    "subtitle": "Ingeniero full-stack especializado en TypeScript, React, Node.js y PostgreSQL. Siete años desarrollando productos web y móviles para clientes de Estados Unidos y Europa.",
     "cta": {
       "projects": "Ver Proyectos",
       "contact": "Contactar",
@@ -20,8 +20,8 @@
   "about": {
     "title": "Me presento",
     "subtitle": "Ingeniero de Software Senior",
-    "description1": "Ingeniero de software senior con 7 años entre web y móvil — un builder full-stack con mentalidad de producto y ownership end-to-end. Dame una dirección inicial y la autoridad para ejecutarla: defino el alcance, decido la arquitectura e implemento cambios sobre la marcha, hasta un producto lanzado. Trabajo todo el stack: React/Next.js y TypeScript en frontend; Node.js/NestJS, ASP.NET Core y PostgreSQL en backend; móvil multiplataforma con Flutter; y features potenciadas por IA (LLMs, embeddings, búsqueda vectorial) sobre infra cloud como Supabase, Firebase, GCP y Cloudflare Workers.",
-    "description2": "He llevado productos de punta a punta — desde SnapnFund y All in Biking hasta Mergejob, un job board con IA que puntúa ofertas por fit semántico usando embeddings y pgvector. En el camino he diseñado esquemas de base de datos y APIs seguras, integrado Stripe y Google Cloud, y entregado sistemas escalables con una UX fluida. Traslado esa misma velocidad y precisión al código y al trabajo en equipo."
+    "description1": "Soy ingeniero de software senior con siete años de experiencia en productos web y móviles. Mi stack principal es TypeScript: React y Next.js en el frontend, Node.js (Fastify, NestJS, Express) y PostgreSQL en el backend. También he trabajado con ASP.NET Core, y con Flutter en apps móviles publicadas en App Store y Google Play.",
+    "description2": "En los últimos años he desarrollado CRMs y herramientas comerciales, plataformas SaaS multi-tenant con seguridad a nivel de fila, flujos de pago con Stripe y funcionalidades de IA basadas en LLMs, embeddings y búsqueda vectorial. Uso herramientas de IA para programar a diario y reviso cada cambio antes de integrarlo. Trabajo en remoto desde Nicaragua (UTC-6) con equipos de Estados Unidos y Europa."
   },
   "skills": {
     "title": "Habilidades",
