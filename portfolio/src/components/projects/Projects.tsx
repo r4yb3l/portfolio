@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import SectionHeader from '../ui/SectionHeader'
 import Reveal from '../ui/Reveal'
 import Flagship from './Flagship'
-import ProjectRow from './ProjectRow'
+import ProjectCard from './ProjectCard'
 import { companies, type Company } from './data'
 
 const CompanyGroup = ({ company }: { company: Company }) => {
@@ -24,9 +24,9 @@ const CompanyGroup = ({ company }: { company: Company }) => {
           <p className="type-caption text-ink-subtle">{t(`${base}.period`)}</p>
         </div>
       </Reveal>
-      <div className="space-y-16 lg:space-y-24">
-        {company.projects.map((project, i) => (
-          <ProjectRow key={project.key} project={project} reverse={i % 2 === 1} />
+      <div className="grid md:grid-cols-2 gap-5 lg:gap-6 items-stretch">
+        {company.projects.map((project) => (
+          <ProjectCard key={project.key} project={project} />
         ))}
       </div>
     </section>

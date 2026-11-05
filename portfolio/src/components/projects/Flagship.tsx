@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next'
-import mergejobImage from '../../assets/images/mergejob.png'
 import Reveal from '../ui/Reveal'
 import ProjectStatusBadge from './ProjectStatusBadge'
 import StackChips from './StackChips'
@@ -11,8 +10,8 @@ const Flagship = () => {
   const { t } = useTranslation()
 
   return (
-    <Reveal as="article" className="card overflow-hidden grid lg:grid-cols-2">
-      <div className="p-6 sm:p-10 flex flex-col justify-center">
+    <Reveal as="article" className="card overflow-hidden">
+      <div className="p-6 sm:p-10 max-w-3xl">
         <p className="type-eyebrow mb-3">
           {t('projects.flagship')} · {t('projects.flagshipTag')}
         </p>
@@ -39,16 +38,6 @@ const Flagship = () => {
         <div>
           <ProjectStatusBadge status="cancelled" />
         </div>
-      </div>
-
-      <div className="bg-parchment border-t lg:border-t-0 lg:border-l border-hairline-soft flex items-center justify-center p-6 sm:p-10">
-        <img
-          src={mergejobImage}
-          alt={t('a11y.projectScreenshot', { name: 'Mergejob' })}
-          loading="lazy"
-          decoding="async"
-          className="w-full h-auto rounded-lg product-shadow"
-        />
       </div>
     </Reveal>
   )

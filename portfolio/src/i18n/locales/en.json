@@ -20,7 +20,7 @@
   "about": {
     "title": "About Me",
     "subtitle": "Senior Software Engineer",
-    "description1": "Senior software engineer with 6+ years across web and mobile — a full-stack, product-minded builder with end-to-end ownership. Give me an initial direction and the authority to run with it, and I define the scope, decide the architecture, and implement changes on the fly, all the way to a shipped product. I work the whole stack: React/Next.js and TypeScript on the frontend; Node.js/NestJS, ASP.NET Core and PostgreSQL on the backend; cross-platform mobile with Flutter; and AI-powered features (LLMs, embeddings, vector search) on cloud infra like Supabase, Firebase, GCP and Cloudflare Workers.",
+    "description1": "Senior software engineer with 7 years across web and mobile — a full-stack, product-minded builder with end-to-end ownership. Give me an initial direction and the authority to run with it, and I define the scope, decide the architecture, and implement changes on the fly, all the way to a shipped product. I work the whole stack: React/Next.js and TypeScript on the frontend; Node.js/NestJS, ASP.NET Core and PostgreSQL on the backend; cross-platform mobile with Flutter; and AI-powered features (LLMs, embeddings, vector search) on cloud infra like Supabase, Firebase, GCP and Cloudflare Workers.",
     "description2": "I've owned products end to end — from SnapnFund and All in Biking to Mergejob, an AI-powered job board that scores listings by semantic fit using embeddings and pgvector. Along the way I've designed database schemas and secure APIs, integrated Stripe and Google Cloud, and shipped scalable systems with smooth UX. I bring that same speed and precision to both code and collaboration."
   },
   "skills": {
@@ -84,7 +84,7 @@
     "flagship": "Flagship",
     "entries": {
       "wetrust": {
-        "title": "WeTrust",
+        "title": "WeTrust (originally PalmLine)",
         "description": "A bilingual (English/Spanish) AI voice receptionist for local businesses that answers every inbound call, books, reschedules and cancels appointments straight into the business's real calendar, and hands off to a human the moment it matters. I designed and built the multi-tenant platform end to end: a Retell conversation-flow voice agent generated from each business's configuration, a Fastify/TypeScript backend with a range-based scheduling engine and calendar adapters (Google, Microsoft, native), a Next.js self-service client portal and internal console, and Twilio telephony with A2P 10DLC SMS confirmations and reminders across the whole appointment lifecycle. Rounded out with prepaid Stripe billing and a verification methodology of byte-for-byte flow-parity tests and live-call checks."
       },
       "mergejob": {
@@ -113,7 +113,7 @@
       },
       "retarificador": {
         "title": "Retarificador Alpha Brokers",
-        "description": "Six months as a frontend developer on an insurance re-rating web platform for Alpha Brokers: building and maintaining React screens, and shipping UI fixes and features alongside the rest of the team."
+        "description": "Frontend developer on an insurance re-rating platform built with React and TypeScript (MUI, Zustand, Azure AD sign-in): parallel requests to several rating APIs, results kept in a segmented global store, and the user notified and redirected when all finished, without blocking the interface."
       },
       "eduq": {
         "title": "EduQ",
@@ -130,6 +130,30 @@
       "groceryChefPro": {
         "title": "Grocery Chef Pro",
         "description": "A food-tracking app with AI-assisted shopping lists: users log their eating habits, build smart shopping lists and get recommendations based on their preferences and nutritional needs. The app was well advanced when the project was cancelled before launch."
+      },
+      "realCrm": {
+        "title": "RealCRM",
+        "description": "An agent-first CRM I built from scratch. React and TypeScript frontend with eleven agent screens generated from the design mockups, so design and code never drift apart. The Fastify + Drizzle API runs on PostgreSQL with multi-tenancy enforced by row-level security, OAuth tokens encrypted with a key manager, an audit trail, data-retention sweeps and Clerk authentication."
+      },
+      "talentPool": {
+        "title": "TopDevCrew Talent Pool",
+        "description": "Top Dev Crew's internal recruiting platform. Operators upload CVs that are parsed with Gemini and embedded into pgvector, create job openings from pasted text, rank the whole candidate pool against each job, run an AI kit per candidate and job, and share anonymized PDF reports. React 19 with TanStack Router and Query on the frontend, Express and TypeScript on AWS (RDS, S3, SES)."
+      },
+      "linkflow": {
+        "title": "LinkFlow",
+        "description": "A LinkedIn prospecting and outreach tool: prospect lists, prospect detail pages, automated message sequences and performance dashboards. Built the React and TypeScript frontend with Redux Toolkit and Mantine, sign-in with Google, LinkedIn and Microsoft, CSV import and a multilingual interface."
+      },
+      "cashback": {
+        "title": "Loyalty & Cashback PoC",
+        "description": "Proof of concept for loyalty programs, coupons, cashback and purchases with stock reservation. I built the Next.js back office integrated with the API (TanStack Query and Table, Zod forms, Recharts, Mapbox), plus work on the customer web portal and the Flutter app with Supabase auth."
+      },
+      "elzaburu": {
+        "title": "Elzaburu · Trademark similarity",
+        "description": "Contributed to the frontend of a trademark-similarity investigation tool for an intellectual-property firm: React 19 and TypeScript with MUI, Zustand, Azure AD sign-in through MSAL, real-time updates over socket.io and a hexagonal architecture per feature, deployed to Azure Static Web Apps."
+      },
+      "websites": {
+        "title": "Top Dev Crew & QA-BIT websites",
+        "description": "Built and maintain the marketing sites of Top Dev Crew and QA-BIT: React, Vite and Tailwind, bilingual English and Spanish, SEO metadata per language and fully responsive. Also built a gallery of twelve navigable redesign proposals the team used to pick the new direction."
       }
     },
     "timeline": {
@@ -146,22 +170,16 @@
         "period": "March 2022 to June 2022"
       },
       "qabit": {
-        "name": "QA-BIT",
-        "title": "Senior Software Developer",
-        "location": "Estonia",
-        "period": "June 2022 to August 2025"
+        "name": "QA-BIT / Top Dev Crew",
+        "title": "Senior Software Engineer",
+        "location": "Estonia · USA (Remote)",
+        "period": "June 2022 to Present"
       },
       "astrocode": {
         "name": "AstroCode",
         "title": "Founder & Full-Stack Developer",
         "location": "Own studio, side projects",
         "period": "August 2025 to Present"
-      },
-      "topdevcrew": {
-        "name": "Top Dev Crew",
-        "title": "Senior Full-Stack Engineer",
-        "location": "United States (Remote)",
-        "period": "September 2025 to Present"
       }
     },
     "actions": {
@@ -257,7 +275,6 @@
     "language": "Language",
     "profileAlt": "Portrait of Raybel Hernández",
     "primaryNav": "Primary",
-    "projectScreenshot": "{{name}} screenshot",
     "companyLogo": "{{name}} logo"
   }
 }

@@ -20,31 +20,22 @@ const ProjectFooter = ({ project, title }: { project: Project; title: string }) 
   return <span className="type-caption text-ink-subtle">{t('projects.actions.notAvailable')}</span>
 }
 
-const ProjectRow = ({ project, reverse }: { project: Project; reverse: boolean }) => {
+const ProjectCard = ({ project }: { project: Project }) => {
   const { t } = useTranslation()
   const title = t(`projects.entries.${project.key}.title`)
 
   return (
-    <Reveal as="article" className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
-      <div className={reverse ? 'lg:order-2' : ''}>
-        <h4 className="type-tagline text-ink mb-3">{title}</h4>
-        <p className="type-body text-ink-muted mb-5">{t(`projects.entries.${project.key}.description`)}</p>
-        <div className="mb-5">
-          <StackChips items={project.stack} />
-        </div>
-        <ProjectFooter project={project} title={title} />
+    <Reveal as="article" className="card p-6 sm:p-8 flex flex-col">
+      <h4 className="type-tagline text-ink mb-3 text-balance">{title}</h4>
+      <p className="type-body text-ink-muted mb-5 text-pretty">{t(`projects.entries.${project.key}.description`)}</p>
+      <div className="mb-5">
+        <StackChips items={project.stack} />
       </div>
-      <div className={`overflow-hidden rounded-[18px] bg-card border border-hairline-soft ${reverse ? 'lg:order-1' : ''}`}>
-        <img
-          src={project.image}
-          alt={t('a11y.projectScreenshot', { name: title })}
-          loading="lazy"
-          decoding="async"
-          className="w-full h-56 sm:h-72 lg:h-[24rem] object-cover object-top"
-        />
+      <div className="mt-auto">
+        <ProjectFooter project={project} title={title} />
       </div>
     </Reveal>
   )
 }
 
-export default ProjectRow
+export default ProjectCard

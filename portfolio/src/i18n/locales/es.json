@@ -20,7 +20,7 @@
   "about": {
     "title": "Me presento",
     "subtitle": "Ingeniero de Software Senior",
-    "description1": "Ingeniero de software senior con 6+ años entre web y móvil — un builder full-stack con mentalidad de producto y ownership end-to-end. Dame una dirección inicial y la autoridad para ejecutarla: defino el alcance, decido la arquitectura e implemento cambios sobre la marcha, hasta un producto lanzado. Trabajo todo el stack: React/Next.js y TypeScript en frontend; Node.js/NestJS, ASP.NET Core y PostgreSQL en backend; móvil multiplataforma con Flutter; y features potenciadas por IA (LLMs, embeddings, búsqueda vectorial) sobre infra cloud como Supabase, Firebase, GCP y Cloudflare Workers.",
+    "description1": "Ingeniero de software senior con 7 años entre web y móvil — un builder full-stack con mentalidad de producto y ownership end-to-end. Dame una dirección inicial y la autoridad para ejecutarla: defino el alcance, decido la arquitectura e implemento cambios sobre la marcha, hasta un producto lanzado. Trabajo todo el stack: React/Next.js y TypeScript en frontend; Node.js/NestJS, ASP.NET Core y PostgreSQL en backend; móvil multiplataforma con Flutter; y features potenciadas por IA (LLMs, embeddings, búsqueda vectorial) sobre infra cloud como Supabase, Firebase, GCP y Cloudflare Workers.",
     "description2": "He llevado productos de punta a punta — desde SnapnFund y All in Biking hasta Mergejob, un job board con IA que puntúa ofertas por fit semántico usando embeddings y pgvector. En el camino he diseñado esquemas de base de datos y APIs seguras, integrado Stripe y Google Cloud, y entregado sistemas escalables con una UX fluida. Traslado esa misma velocidad y precisión al código y al trabajo en equipo."
   },
   "skills": {
@@ -84,7 +84,7 @@
     "flagship": "Flagship",
     "entries": {
       "wetrust": {
-        "title": "WeTrust",
+        "title": "WeTrust (antes PalmLine)",
         "description": "Una recepcionista de voz con IA bilingüe (inglés/español) para negocios locales que contesta cada llamada entrante, agenda, reprograma y cancela citas directamente en el calendario real del negocio, y transfiere a una persona en el momento en que hace falta. Diseñé y construí la plataforma multi-tenant de punta a punta: un agente de voz de flujo conversacional en Retell generado desde la configuración de cada negocio, un backend en Fastify/TypeScript con un motor de agenda por rangos y adaptadores de calendario (Google, Microsoft, nativo), un portal de autogestión y una consola interna en Next.js, y telefonía Twilio con SMS A2P 10DLC de confirmación y recordatorios en todo el ciclo de vida de la cita. Rematado con cobro prepago vía Stripe y una metodología de verificación con tests de paridad de flujo byte a byte y pruebas en llamadas reales."
       },
       "mergejob": {
@@ -113,7 +113,7 @@
       },
       "retarificador": {
         "title": "Retarificador Alpha Brokers",
-        "description": "Seis meses como desarrollador frontend en una plataforma web de retarificación de seguros para Alpha Brokers: construyendo y manteniendo pantallas en React, y entregando mejoras y correcciones de UI junto al resto del equipo."
+        "description": "Desarrollador frontend en una plataforma de re-tarificación de seguros en React y TypeScript (MUI, Zustand, inicio de sesión con Azure AD): consultas en paralelo a varias APIs de tarificación, resultados en un estado global segmentado y el usuario notificado y redirigido al terminar todas, sin bloquear la interfaz."
       },
       "eduq": {
         "title": "EduQ",
@@ -130,6 +130,30 @@
       "groceryChefPro": {
         "title": "Grocery Chef Pro",
         "description": "Una app de seguimiento de alimentación con listas de compra asistidas por IA: los usuarios registran sus hábitos, crean listas de compra inteligentes y reciben recomendaciones según sus preferencias y necesidades nutricionales. La app estaba muy avanzada cuando el proyecto se canceló antes del lanzamiento."
+      },
+      "realCrm": {
+        "title": "RealCRM",
+        "description": "Un CRM pensado para agentes que construí desde cero. Frontend en React y TypeScript con once pantallas del agente generadas desde los mockups de diseño, para que diseño y código no se separen nunca. La API en Fastify + Drizzle corre sobre PostgreSQL con multi-tenancy aplicado con seguridad a nivel de fila, tokens OAuth cifrados con un gestor de claves, registro de auditoría, purgas de retención de datos y autenticación con Clerk."
+      },
+      "talentPool": {
+        "title": "TopDevCrew Talent Pool",
+        "description": "Plataforma interna de reclutamiento de Top Dev Crew. Los operadores suben CVs que se parsean con Gemini y se vectorizan en pgvector, crean ofertas a partir de texto pegado, rankean todo el pool de candidatos contra cada oferta, ejecutan un kit de IA por candidato y oferta, y comparten reportes anónimos en PDF. React 19 con TanStack Router y Query en el frontend, Express y TypeScript sobre AWS (RDS, S3, SES)."
+      },
+      "linkflow": {
+        "title": "LinkFlow",
+        "description": "Herramienta de prospección y outreach en LinkedIn: listas de prospectos, ficha de cada prospecto, secuencias automáticas de mensajes y dashboards de rendimiento. Construí el frontend en React y TypeScript con Redux Toolkit y Mantine, inicio de sesión con Google, LinkedIn y Microsoft, importación de CSV e interfaz multilingüe."
+      },
+      "cashback": {
+        "title": "PoC de Fidelización y Cashback",
+        "description": "Prueba de concepto para programas de fidelización, cupones, cashback y compras con reserva de stock. Construí el back office en Next.js integrado con la API (TanStack Query y Table, formularios con Zod, Recharts, Mapbox), además de trabajo en el portal web del cliente y la app Flutter con autenticación de Supabase."
+      },
+      "elzaburu": {
+        "title": "Elzaburu · Parecidos gráficos",
+        "description": "Contribuí al frontend de una herramienta de investigación de parecidos entre marcas para una firma de propiedad intelectual: React 19 y TypeScript con MUI, Zustand, inicio de sesión con Azure AD vía MSAL, actualizaciones en tiempo real por socket.io y arquitectura hexagonal por feature, desplegada en Azure Static Web Apps."
+      },
+      "websites": {
+        "title": "Webs de Top Dev Crew y QA-BIT",
+        "description": "Construyo y mantengo las webs corporativas de Top Dev Crew y QA-BIT: React, Vite y Tailwind, bilingües inglés y español, metadatos SEO por idioma y totalmente responsive. También monté una galería de doce propuestas de rediseño navegables con la que el equipo eligió la nueva dirección."
       }
     },
     "timeline": {
@@ -146,22 +170,16 @@
         "period": "marzo 2022 a junio de 2022"
       },
       "qabit": {
-        "name": "QA-BIT",
-        "title": "Senior Software Developer",
-        "location": "Estonia",
-        "period": "junio 2022 a agosto de 2025"
+        "name": "QA-BIT / Top Dev Crew",
+        "title": "Ingeniero de Software Senior",
+        "location": "Estonia · EE. UU. (Remoto)",
+        "period": "junio 2022 al presente"
       },
       "astrocode": {
         "name": "AstroCode",
         "title": "Fundador y desarrollador full-stack",
         "location": "Estudio propio, proyectos personales",
         "period": "agosto 2025 al presente"
-      },
-      "topdevcrew": {
-        "name": "Top Dev Crew",
-        "title": "Ingeniero Full-Stack Senior",
-        "location": "Estados Unidos (Remoto)",
-        "period": "septiembre 2025 al presente"
       }
     },
     "actions": {
@@ -257,7 +275,6 @@
     "language": "Idioma",
     "profileAlt": "Retrato de Raybel Hernández",
     "primaryNav": "Principal",
-    "projectScreenshot": "Captura de {{name}}",
     "companyLogo": "Logo de {{name}}"
   }
 }
